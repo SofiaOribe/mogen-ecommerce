@@ -1,0 +1,672 @@
+:root {
+  --hover-dropdown: #e4e4e759;
+}
+
+/*
+  # Class generated: .font-{size}-{weight}-{color?}
+  * <span class="font-x2-700-general">Bold Title</span>
+*/
+.font-x05625-300 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-x05625-400 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-x05625-500 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-x05625-600 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-x05625-700 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-x0625-300 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.625em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-x0625-400 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.625em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-x0625-500 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.625em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-x0625-600 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.625em;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-x0625-700 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.625em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-x06875-300 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-x06875-400 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-x06875-500 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-x06875-600 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-x06875-700 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-x07-300 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.7em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-x07-400 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.7em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-x07-500 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.7em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-x07-600 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-x07-700 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-x075-300 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-x075-400 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-x075-500 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-x075-600 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75em;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-x075-700 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-x08125-300 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-x08125-400 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-x08125-500 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-x08125-600 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-x08125-700 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-x0847-300 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.847em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-x0847-400 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.847em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-x0847-500 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.847em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-x0847-600 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.847em;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-x0847-700 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.847em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-x0875-300 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.875em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-x0875-400 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.875em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-x0875-500 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.875em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-x0875-600 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.875em;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-x0875-700 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.875em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-x09-300 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-x09-400 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-x09-500 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-x09-600 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-x09-700 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-x095-300 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-x095-400 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-x095-500 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-x095-600 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95em;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-x095-700 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-x1-300 {
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-x1-400 {
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-x1-500 {
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-x1-600 {
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-x1-700 {
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-x1125-300 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.125em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-x1125-400 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.125em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-x1125-500 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.125em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-x1125-600 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.125em;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-x1125-700 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.125em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-x117-300 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.117em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-x117-400 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.117em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-x117-500 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.117em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-x117-600 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.117em;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-x117-700 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.117em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-x125-300 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.25em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-x125-400 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-x125-500 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.25em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-x125-600 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-x125-700 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.25em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-x15-300 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-x15-400 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-x15-500 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-x15-600 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-x15-700 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-x1875-300 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.875em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-x1875-400 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.875em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-x1875-500 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.875em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-x1875-600 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.875em;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-x1875-700 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.875em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-x2-300 {
+  font-family: "Inter", sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-x2-400 {
+  font-family: "Inter", sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-x2-500 {
+  font-family: "Inter", sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-x2-600 {
+  font-family: "Inter", sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-x2-700 {
+  font-family: "Inter", sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*
+  # Class generated: .border-color-{color}
+  * <div class="border-color-primary"></div>
+*/
+/*
+  # Class generated: .bg-{color}
+  * <div class="bg-general"></div>
+*/
+.bg-active-dropdown {
+  background-color: var(--hover-dropdown);
+}
+
+/*
+  # Class generated: .color-{color}
+  * <p class="color-muted"></p>
+*/
+.color-none {
+  color: var();
+}
+
+.capitalize-first::first-letter {
+  text-transform: uppercase;
+}
+
+.hover-dropdown {
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+.hover-dropdown:hover {
+  background-color: var(--hover-dropdown) !important;
+}
+
+.input-error-placeholder::-moz-placeholder {
+  color: var(--color-main-error) !important;
+}
+
+.input-error-placeholder::placeholder {
+  color: var(--color-main-error) !important;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--color-border-general)) transparent;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  line-height: normal;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  scroll-behavior: smooth;
+  font-size: 1rem;
+}
+
+body {
+  margin: 0;
+  /*   font-family: $inter-Family; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden !important;
+  height: 100%;
+  background-color: var(--color-bg-general);
+  line-height: normal;
+}/*# sourceMappingURL=styles.css.map */

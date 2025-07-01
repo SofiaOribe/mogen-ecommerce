@@ -1,0 +1,65 @@
+// Fonts
+$inter-Family: "Inter", sans-serif;
+
+$fonts-sizes: (
+  x05625: 0.5625em,
+  x0625: 0.625em,
+  x06875: 0.6875em,
+  x07: 0.7em,
+  x075: 0.75em,
+  x08125: 0.8125em,
+  x0847: 0.847em,
+  x0875: 0.875em,
+  x09: 0.9em,
+  x095: 0.95em,
+  x1: 1em,
+  x1125: 1.125em,
+  x117: 1.117em,
+  x125: 1.25em,
+  x15: 1.5em,
+  x1875: 1.875em,
+  x2: 2em,
+);
+
+$font-weights: (
+  300: 300,
+  400: 400,
+  500: 500,
+  600: 600,
+  700: 700,
+);
+
+$text-colors: (
+  none: null,
+);
+
+// Border radius
+$border-radius: ();
+
+// Border width
+$border-width: (
+  none: 0,
+  1: 1px,
+  2: 2px,
+  3: 3px,
+);
+
+// Border colors
+$border-colors: ();
+
+// Background colors
+$background-colors: (
+  active-dropdown: --hover-dropdown,
+);
+
+$sizes: ();
+
+$directions: (
+  all: "",
+  top: "-t",
+  right: "-r",
+  bottom: "-b",
+  left: "-l",
+  x: "-x",
+  y: "-y",
+);

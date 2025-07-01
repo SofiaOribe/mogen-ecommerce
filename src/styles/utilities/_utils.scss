@@ -1,0 +1,68 @@
+/*
+  # Class generated: .font-{size}-{weight}-{color?}
+  * <span class="font-x2-700-general">Bold Title</span>
+*/
+
+@each $size-name, $size-val in $fonts-sizes {
+  @each $weight-name, $weight-val in $font-weights {
+    @each $color-name, $color-val in $text-colors {
+      .font-#{$size-name}-#{$weight-name}#{if($color-name != "none", "-#{$color-name}", "")} {
+        font-family: $inter-Family;
+        font-size: $size-val;
+        font-weight: $weight-val;
+        @if $color-val != null {
+          color: var(#{$color-val});
+        }
+        font-style: normal;
+      }
+    }
+  }
+}
+
+/*
+  # Class generated: .border-color-{color}
+  * <div class="border-color-primary"></div>
+*/
+
+@each $border-name, $border-val in $border-colors {
+  .border-color-#{"#{$border-name}"} {
+    border-color: var($border-val) !important;
+  }
+}
+
+/*
+  # Class generated: .bg-{color}
+  * <div class="bg-general"></div>
+*/
+
+@each $var, $color-val in $background-colors {
+  .bg-#{"#{$var}"} {
+    background-color: var($color-val);
+  }
+}
+
+/*
+  # Class generated: .color-{color}
+  * <p class="color-muted"></p>
+*/
+@each $var, $color-val in $text-colors {
+  .color-#{"#{$var}"} {
+    color: var($color-val);
+  }
+}
+
+.capitalize-first::first-letter {
+  text-transform: uppercase;
+}
+
+.hover-dropdown {
+  transition: all 0.1s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--hover-dropdown) !important;
+  }
+}
+
+.input-error-placeholder::placeholder {
+  color: var(--color-main-error) !important;
+}
