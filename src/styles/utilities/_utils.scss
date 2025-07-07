@@ -7,7 +7,7 @@
   @each $weight-name, $weight-val in $font-weights {
     @each $color-name, $color-val in $text-colors {
       .font-#{$size-name}-#{$weight-name}#{if($color-name != "none", "-#{$color-name}", "")} {
-        font-family: $inter-Family;
+        font-family: "Kumbh Sans", sans-serif;
         font-size: $size-val;
         font-weight: $weight-val;
         @if $color-val != null {

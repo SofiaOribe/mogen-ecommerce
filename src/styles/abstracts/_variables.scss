@@ -31,6 +31,15 @@ $font-weights: (
 
 $text-colors: (
   none: null,
+  primary: --primary,
+  secondary: --secondary,
+  tertiary: --tertiary,
+  coral: --coral,
+  light-peach: --light-peach,
+  green: --green,
+  blue: --blue,
+  light-gray: --light-gray,
+  dark-gray: --dark-gray,
 );
 
 // Border radius
@@ -50,6 +59,16 @@ $border-colors: ();
 // Background colors
 $background-colors: (
   active-dropdown: --hover-dropdown,
+  header-nav: --header-nav,
+  primary: --primary,
+  secondary: --secondary,
+  tertiary: --tertiary,
+  coral: --coral,
+  light-peach: --light-peach,
+  green: --green,
+  blue: --blue,
+  light-gray: --light-gray,
+  dark-gray: --dark-gray,
 );
 
 $sizes: ();

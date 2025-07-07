@@ -1,10 +1,12 @@
-import React from 'react'
+import React from "react"
+import Navigation from "./features/navigation"
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>
-        {children}
-    </div>
+    <>
+      <Navigation />
+      <div>{children}</div>
+    </>
   )
 }
 

@@ -1,5 +1,31 @@
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("/src/assets/fonts/KumbhSans-VariableFont_YOPQ,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  font-optical-sizing: auto;
+  font-variation-settings: "YOPQ" 300;
+}
+@font-face {
+  font-family: "Honeypirls";
+  src: url("/src/assets/fonts/Honeypirls-Regular.otf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  font-optical-sizing: auto;
+}
 :root {
   --hover-dropdown: #e4e4e759;
+  --header-nav: rgba(255, 255, 255, 0.41);
+  --primary: #fff;
+  --secondary: #242021;
+  --tertiary: #ababab;
+  --coral: #ffc3b7;
+  --light-peach: #ffede3;
+  --green: #c9e7cb;
+  --blue: #bccbe2;
+  --light-gray: #f4f4f4;
 }
 
 /*
@@ -7,597 +33,6717 @@
   * <span class="font-x2-700-general">Bold Title</span>
 */
 .font-x05625-300 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.5625em;
   font-weight: 300;
+  font-style: normal;
+}
+
+.font-x05625-300-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 300;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x05625-300-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 300;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x05625-300-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 300;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x05625-300-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 300;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x05625-300-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 300;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x05625-300-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 300;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x05625-300-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 300;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x05625-300-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 300;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x05625-300-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 300;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x05625-400 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.5625em;
   font-weight: 400;
+  font-style: normal;
+}
+
+.font-x05625-400-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 400;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x05625-400-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 400;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x05625-400-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 400;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x05625-400-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 400;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x05625-400-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 400;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x05625-400-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 400;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x05625-400-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 400;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x05625-400-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x05625-400-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 400;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x05625-500 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.5625em;
   font-weight: 500;
+  font-style: normal;
+}
+
+.font-x05625-500-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 500;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x05625-500-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 500;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x05625-500-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 500;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x05625-500-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 500;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x05625-500-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 500;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x05625-500-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 500;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x05625-500-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 500;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x05625-500-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 500;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x05625-500-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 500;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x05625-600 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.5625em;
   font-weight: 600;
+  font-style: normal;
+}
+
+.font-x05625-600-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 600;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x05625-600-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 600;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x05625-600-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 600;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x05625-600-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 600;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x05625-600-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 600;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x05625-600-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 600;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x05625-600-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x05625-600-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 600;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x05625-600-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 600;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x05625-700 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.5625em;
   font-weight: 700;
   font-style: normal;
 }
 
+.font-x05625-700-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 700;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x05625-700-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 700;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x05625-700-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 700;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x05625-700-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 700;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x05625-700-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 700;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x05625-700-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 700;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x05625-700-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 700;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x05625-700-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 700;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x05625-700-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.5625em;
+  font-weight: 700;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x0625-300 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.625em;
   font-weight: 300;
+  font-style: normal;
+}
+
+.font-x0625-300-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 300;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x0625-300-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 300;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x0625-300-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 300;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x0625-300-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 300;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x0625-300-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 300;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x0625-300-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 300;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x0625-300-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 300;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x0625-300-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 300;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x0625-300-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 300;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x0625-400 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.625em;
   font-weight: 400;
+  font-style: normal;
+}
+
+.font-x0625-400-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 400;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x0625-400-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 400;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x0625-400-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 400;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x0625-400-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 400;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x0625-400-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 400;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x0625-400-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 400;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x0625-400-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 400;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x0625-400-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x0625-400-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 400;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x0625-500 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.625em;
   font-weight: 500;
+  font-style: normal;
+}
+
+.font-x0625-500-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 500;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x0625-500-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 500;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x0625-500-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 500;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x0625-500-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 500;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x0625-500-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 500;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x0625-500-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 500;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x0625-500-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 500;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x0625-500-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 500;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x0625-500-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 500;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x0625-600 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.625em;
   font-weight: 600;
+  font-style: normal;
+}
+
+.font-x0625-600-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 600;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x0625-600-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 600;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x0625-600-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 600;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x0625-600-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 600;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x0625-600-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 600;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x0625-600-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 600;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x0625-600-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x0625-600-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 600;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x0625-600-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 600;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x0625-700 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.625em;
   font-weight: 700;
   font-style: normal;
 }
 
+.font-x0625-700-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 700;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x0625-700-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 700;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x0625-700-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 700;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x0625-700-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 700;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x0625-700-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 700;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x0625-700-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 700;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x0625-700-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 700;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x0625-700-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 700;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x0625-700-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.625em;
+  font-weight: 700;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x06875-300 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.6875em;
   font-weight: 300;
+  font-style: normal;
+}
+
+.font-x06875-300-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 300;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x06875-300-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 300;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x06875-300-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 300;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x06875-300-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 300;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x06875-300-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 300;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x06875-300-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 300;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x06875-300-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 300;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x06875-300-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 300;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x06875-300-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 300;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x06875-400 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.6875em;
   font-weight: 400;
+  font-style: normal;
+}
+
+.font-x06875-400-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 400;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x06875-400-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 400;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x06875-400-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 400;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x06875-400-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 400;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x06875-400-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 400;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x06875-400-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 400;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x06875-400-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 400;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x06875-400-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x06875-400-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 400;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x06875-500 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.6875em;
   font-weight: 500;
+  font-style: normal;
+}
+
+.font-x06875-500-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 500;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x06875-500-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 500;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x06875-500-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 500;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x06875-500-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 500;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x06875-500-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 500;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x06875-500-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 500;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x06875-500-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 500;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x06875-500-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 500;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x06875-500-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 500;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x06875-600 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.6875em;
   font-weight: 600;
+  font-style: normal;
+}
+
+.font-x06875-600-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 600;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x06875-600-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 600;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x06875-600-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 600;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x06875-600-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 600;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x06875-600-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 600;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x06875-600-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 600;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x06875-600-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x06875-600-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 600;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x06875-600-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 600;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x06875-700 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.6875em;
   font-weight: 700;
   font-style: normal;
 }
 
+.font-x06875-700-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 700;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x06875-700-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 700;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x06875-700-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 700;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x06875-700-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 700;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x06875-700-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 700;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x06875-700-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 700;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x06875-700-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 700;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x06875-700-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 700;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x06875-700-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.6875em;
+  font-weight: 700;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x07-300 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.7em;
   font-weight: 300;
+  font-style: normal;
+}
+
+.font-x07-300-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 300;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x07-300-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 300;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x07-300-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 300;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x07-300-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 300;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x07-300-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 300;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x07-300-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 300;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x07-300-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 300;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x07-300-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 300;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x07-300-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 300;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x07-400 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.7em;
   font-weight: 400;
+  font-style: normal;
+}
+
+.font-x07-400-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 400;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x07-400-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 400;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x07-400-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 400;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x07-400-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 400;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x07-400-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 400;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x07-400-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 400;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x07-400-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 400;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x07-400-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x07-400-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 400;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x07-500 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.7em;
   font-weight: 500;
+  font-style: normal;
+}
+
+.font-x07-500-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 500;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x07-500-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 500;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x07-500-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 500;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x07-500-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 500;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x07-500-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 500;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x07-500-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 500;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x07-500-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 500;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x07-500-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 500;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x07-500-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 500;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x07-600 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.7em;
   font-weight: 600;
+  font-style: normal;
+}
+
+.font-x07-600-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x07-600-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x07-600-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x07-600-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x07-600-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x07-600-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x07-600-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x07-600-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x07-600-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x07-700 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.7em;
   font-weight: 700;
   font-style: normal;
 }
 
+.font-x07-700-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x07-700-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x07-700-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x07-700-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x07-700-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x07-700-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x07-700-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x07-700-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x07-700-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x075-300 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.75em;
   font-weight: 300;
+  font-style: normal;
+}
+
+.font-x075-300-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 300;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x075-300-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 300;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x075-300-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 300;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x075-300-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 300;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x075-300-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 300;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x075-300-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 300;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x075-300-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 300;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x075-300-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 300;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x075-300-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 300;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x075-400 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.75em;
   font-weight: 400;
+  font-style: normal;
+}
+
+.font-x075-400-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x075-400-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x075-400-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x075-400-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x075-400-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x075-400-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x075-400-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x075-400-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x075-400-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x075-500 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.75em;
   font-weight: 500;
+  font-style: normal;
+}
+
+.font-x075-500-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x075-500-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x075-500-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x075-500-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x075-500-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x075-500-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x075-500-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x075-500-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x075-500-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x075-600 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.75em;
   font-weight: 600;
+  font-style: normal;
+}
+
+.font-x075-600-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 600;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x075-600-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 600;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x075-600-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 600;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x075-600-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 600;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x075-600-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 600;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x075-600-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 600;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x075-600-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x075-600-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 600;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x075-600-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 600;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x075-700 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.75em;
   font-weight: 700;
   font-style: normal;
 }
 
+.font-x075-700-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 700;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x075-700-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 700;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x075-700-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 700;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x075-700-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 700;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x075-700-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 700;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x075-700-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 700;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x075-700-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 700;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x075-700-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 700;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x075-700-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 700;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x08125-300 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.8125em;
   font-weight: 300;
+  font-style: normal;
+}
+
+.font-x08125-300-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 300;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x08125-300-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 300;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x08125-300-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 300;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x08125-300-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 300;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x08125-300-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 300;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x08125-300-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 300;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x08125-300-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 300;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x08125-300-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 300;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x08125-300-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 300;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x08125-400 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.8125em;
   font-weight: 400;
+  font-style: normal;
+}
+
+.font-x08125-400-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 400;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x08125-400-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 400;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x08125-400-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 400;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x08125-400-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 400;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x08125-400-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 400;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x08125-400-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 400;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x08125-400-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 400;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x08125-400-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x08125-400-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 400;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x08125-500 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.8125em;
   font-weight: 500;
+  font-style: normal;
+}
+
+.font-x08125-500-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 500;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x08125-500-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 500;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x08125-500-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 500;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x08125-500-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 500;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x08125-500-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 500;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x08125-500-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 500;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x08125-500-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 500;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x08125-500-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 500;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x08125-500-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 500;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x08125-600 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.8125em;
   font-weight: 600;
+  font-style: normal;
+}
+
+.font-x08125-600-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 600;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x08125-600-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 600;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x08125-600-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 600;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x08125-600-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 600;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x08125-600-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 600;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x08125-600-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 600;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x08125-600-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x08125-600-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 600;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x08125-600-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 600;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x08125-700 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.8125em;
   font-weight: 700;
   font-style: normal;
 }
 
+.font-x08125-700-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 700;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x08125-700-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 700;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x08125-700-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 700;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x08125-700-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 700;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x08125-700-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 700;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x08125-700-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 700;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x08125-700-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 700;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x08125-700-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 700;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x08125-700-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125em;
+  font-weight: 700;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x0847-300 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.847em;
   font-weight: 300;
+  font-style: normal;
+}
+
+.font-x0847-300-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 300;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x0847-300-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 300;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x0847-300-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 300;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x0847-300-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 300;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x0847-300-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 300;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x0847-300-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 300;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x0847-300-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 300;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x0847-300-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 300;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x0847-300-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 300;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x0847-400 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.847em;
   font-weight: 400;
+  font-style: normal;
+}
+
+.font-x0847-400-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 400;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x0847-400-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 400;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x0847-400-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 400;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x0847-400-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 400;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x0847-400-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 400;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x0847-400-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 400;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x0847-400-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 400;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x0847-400-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x0847-400-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 400;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x0847-500 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.847em;
   font-weight: 500;
+  font-style: normal;
+}
+
+.font-x0847-500-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 500;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x0847-500-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 500;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x0847-500-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 500;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x0847-500-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 500;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x0847-500-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 500;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x0847-500-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 500;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x0847-500-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 500;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x0847-500-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 500;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x0847-500-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 500;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x0847-600 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.847em;
   font-weight: 600;
+  font-style: normal;
+}
+
+.font-x0847-600-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 600;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x0847-600-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 600;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x0847-600-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 600;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x0847-600-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 600;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x0847-600-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 600;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x0847-600-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 600;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x0847-600-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x0847-600-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 600;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x0847-600-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 600;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x0847-700 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.847em;
   font-weight: 700;
   font-style: normal;
 }
 
+.font-x0847-700-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 700;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x0847-700-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 700;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x0847-700-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 700;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x0847-700-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 700;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x0847-700-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 700;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x0847-700-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 700;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x0847-700-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 700;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x0847-700-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 700;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x0847-700-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.847em;
+  font-weight: 700;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x0875-300 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.875em;
   font-weight: 300;
+  font-style: normal;
+}
+
+.font-x0875-300-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 300;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x0875-300-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 300;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x0875-300-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 300;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x0875-300-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 300;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x0875-300-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 300;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x0875-300-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 300;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x0875-300-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 300;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x0875-300-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 300;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x0875-300-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 300;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x0875-400 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.875em;
   font-weight: 400;
+  font-style: normal;
+}
+
+.font-x0875-400-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 400;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x0875-400-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 400;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x0875-400-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 400;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x0875-400-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 400;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x0875-400-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 400;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x0875-400-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 400;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x0875-400-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 400;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x0875-400-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x0875-400-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 400;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x0875-500 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.875em;
   font-weight: 500;
+  font-style: normal;
+}
+
+.font-x0875-500-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 500;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x0875-500-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 500;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x0875-500-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 500;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x0875-500-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 500;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x0875-500-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 500;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x0875-500-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 500;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x0875-500-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 500;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x0875-500-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 500;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x0875-500-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 500;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x0875-600 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.875em;
   font-weight: 600;
+  font-style: normal;
+}
+
+.font-x0875-600-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 600;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x0875-600-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 600;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x0875-600-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 600;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x0875-600-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 600;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x0875-600-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 600;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x0875-600-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 600;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x0875-600-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x0875-600-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 600;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x0875-600-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 600;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x0875-700 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.875em;
   font-weight: 700;
   font-style: normal;
 }
 
+.font-x0875-700-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 700;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x0875-700-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 700;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x0875-700-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 700;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x0875-700-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 700;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x0875-700-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 700;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x0875-700-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 700;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x0875-700-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 700;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x0875-700-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 700;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x0875-700-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875em;
+  font-weight: 700;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x09-300 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.9em;
   font-weight: 300;
+  font-style: normal;
+}
+
+.font-x09-300-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x09-300-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x09-300-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x09-300-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x09-300-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x09-300-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x09-300-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x09-300-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x09-300-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x09-400 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.9em;
   font-weight: 400;
+  font-style: normal;
+}
+
+.font-x09-400-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x09-400-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x09-400-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x09-400-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x09-400-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x09-400-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x09-400-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x09-400-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x09-400-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x09-500 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.9em;
   font-weight: 500;
+  font-style: normal;
+}
+
+.font-x09-500-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x09-500-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x09-500-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x09-500-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x09-500-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x09-500-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x09-500-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x09-500-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x09-500-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x09-600 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.9em;
   font-weight: 600;
+  font-style: normal;
+}
+
+.font-x09-600-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x09-600-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x09-600-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x09-600-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x09-600-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x09-600-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x09-600-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x09-600-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x09-600-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x09-700 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.9em;
   font-weight: 700;
   font-style: normal;
 }
 
+.font-x09-700-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x09-700-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x09-700-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x09-700-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x09-700-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x09-700-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x09-700-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x09-700-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x09-700-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x095-300 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.95em;
   font-weight: 300;
+  font-style: normal;
+}
+
+.font-x095-300-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 300;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x095-300-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 300;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x095-300-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 300;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x095-300-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 300;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x095-300-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 300;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x095-300-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 300;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x095-300-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 300;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x095-300-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 300;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x095-300-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 300;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x095-400 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.95em;
   font-weight: 400;
+  font-style: normal;
+}
+
+.font-x095-400-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 400;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x095-400-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 400;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x095-400-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 400;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x095-400-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 400;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x095-400-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 400;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x095-400-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 400;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x095-400-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 400;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x095-400-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x095-400-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 400;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x095-500 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.95em;
   font-weight: 500;
+  font-style: normal;
+}
+
+.font-x095-500-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 500;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x095-500-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 500;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x095-500-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 500;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x095-500-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 500;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x095-500-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 500;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x095-500-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 500;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x095-500-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 500;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x095-500-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 500;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x095-500-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 500;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x095-600 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.95em;
   font-weight: 600;
+  font-style: normal;
+}
+
+.font-x095-600-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x095-600-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x095-600-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x095-600-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x095-600-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x095-600-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x095-600-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x095-600-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x095-600-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x095-700 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.95em;
   font-weight: 700;
   font-style: normal;
 }
 
+.font-x095-700-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 700;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x095-700-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 700;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x095-700-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 700;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x095-700-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 700;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x095-700-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 700;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x095-700-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 700;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x095-700-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 700;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x095-700-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 700;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x095-700-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 700;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x1-300 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1em;
   font-weight: 300;
+  font-style: normal;
+}
+
+.font-x1-300-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x1-300-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x1-300-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x1-300-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x1-300-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x1-300-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x1-300-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x1-300-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x1-300-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x1-400 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1em;
   font-weight: 400;
+  font-style: normal;
+}
+
+.font-x1-400-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x1-400-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x1-400-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x1-400-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x1-400-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x1-400-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x1-400-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x1-400-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x1-400-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x1-500 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1em;
   font-weight: 500;
+  font-style: normal;
+}
+
+.font-x1-500-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x1-500-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x1-500-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x1-500-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x1-500-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x1-500-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x1-500-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x1-500-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x1-500-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x1-600 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1em;
   font-weight: 600;
+  font-style: normal;
+}
+
+.font-x1-600-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x1-600-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x1-600-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x1-600-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x1-600-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x1-600-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x1-600-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x1-600-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x1-600-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x1-700 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1em;
   font-weight: 700;
   font-style: normal;
 }
 
+.font-x1-700-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x1-700-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x1-700-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x1-700-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x1-700-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x1-700-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x1-700-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x1-700-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x1-700-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x1125-300 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.125em;
   font-weight: 300;
+  font-style: normal;
+}
+
+.font-x1125-300-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 300;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x1125-300-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 300;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x1125-300-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 300;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x1125-300-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 300;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x1125-300-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 300;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x1125-300-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 300;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x1125-300-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 300;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x1125-300-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 300;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x1125-300-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 300;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x1125-400 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.125em;
   font-weight: 400;
+  font-style: normal;
+}
+
+.font-x1125-400-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 400;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x1125-400-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 400;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x1125-400-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 400;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x1125-400-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 400;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x1125-400-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 400;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x1125-400-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 400;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x1125-400-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 400;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x1125-400-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x1125-400-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 400;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x1125-500 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.125em;
   font-weight: 500;
+  font-style: normal;
+}
+
+.font-x1125-500-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 500;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x1125-500-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 500;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x1125-500-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 500;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x1125-500-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 500;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x1125-500-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 500;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x1125-500-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 500;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x1125-500-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 500;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x1125-500-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 500;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x1125-500-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 500;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x1125-600 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.125em;
   font-weight: 600;
+  font-style: normal;
+}
+
+.font-x1125-600-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 600;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x1125-600-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 600;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x1125-600-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 600;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x1125-600-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 600;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x1125-600-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 600;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x1125-600-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 600;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x1125-600-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x1125-600-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 600;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x1125-600-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 600;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x1125-700 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.125em;
   font-weight: 700;
   font-style: normal;
 }
 
+.font-x1125-700-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 700;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x1125-700-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 700;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x1125-700-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 700;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x1125-700-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 700;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x1125-700-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 700;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x1125-700-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 700;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x1125-700-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 700;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x1125-700-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 700;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x1125-700-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125em;
+  font-weight: 700;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x117-300 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.117em;
   font-weight: 300;
+  font-style: normal;
+}
+
+.font-x117-300-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 300;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x117-300-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 300;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x117-300-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 300;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x117-300-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 300;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x117-300-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 300;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x117-300-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 300;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x117-300-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 300;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x117-300-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 300;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x117-300-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 300;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x117-400 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.117em;
   font-weight: 400;
+  font-style: normal;
+}
+
+.font-x117-400-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 400;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x117-400-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 400;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x117-400-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 400;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x117-400-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 400;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x117-400-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 400;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x117-400-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 400;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x117-400-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 400;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x117-400-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x117-400-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 400;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x117-500 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.117em;
   font-weight: 500;
+  font-style: normal;
+}
+
+.font-x117-500-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 500;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x117-500-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 500;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x117-500-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 500;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x117-500-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 500;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x117-500-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 500;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x117-500-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 500;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x117-500-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 500;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x117-500-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 500;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x117-500-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 500;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x117-600 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.117em;
   font-weight: 600;
+  font-style: normal;
+}
+
+.font-x117-600-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 600;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x117-600-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 600;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x117-600-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 600;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x117-600-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 600;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x117-600-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 600;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x117-600-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 600;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x117-600-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x117-600-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 600;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x117-600-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 600;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x117-700 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.117em;
   font-weight: 700;
   font-style: normal;
 }
 
+.font-x117-700-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 700;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x117-700-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 700;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x117-700-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 700;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x117-700-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 700;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x117-700-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 700;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x117-700-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 700;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x117-700-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 700;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x117-700-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 700;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x117-700-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.117em;
+  font-weight: 700;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x125-300 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.25em;
   font-weight: 300;
+  font-style: normal;
+}
+
+.font-x125-300-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 300;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x125-300-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 300;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x125-300-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 300;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x125-300-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 300;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x125-300-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 300;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x125-300-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 300;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x125-300-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 300;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x125-300-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 300;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x125-300-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 300;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x125-400 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.25em;
   font-weight: 400;
+  font-style: normal;
+}
+
+.font-x125-400-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x125-400-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x125-400-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x125-400-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x125-400-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x125-400-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x125-400-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x125-400-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x125-400-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x125-500 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.25em;
   font-weight: 500;
+  font-style: normal;
+}
+
+.font-x125-500-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 500;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x125-500-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 500;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x125-500-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 500;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x125-500-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 500;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x125-500-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 500;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x125-500-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 500;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x125-500-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 500;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x125-500-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 500;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x125-500-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 500;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x125-600 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.25em;
   font-weight: 600;
+  font-style: normal;
+}
+
+.font-x125-600-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x125-600-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x125-600-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x125-600-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x125-600-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x125-600-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x125-600-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x125-600-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x125-600-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x125-700 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.25em;
   font-weight: 700;
   font-style: normal;
 }
 
+.font-x125-700-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x125-700-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x125-700-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x125-700-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x125-700-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x125-700-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x125-700-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x125-700-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x125-700-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x15-300 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.5em;
   font-weight: 300;
+  font-style: normal;
+}
+
+.font-x15-300-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x15-300-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x15-300-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x15-300-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x15-300-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x15-300-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x15-300-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x15-300-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x15-300-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x15-400 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.5em;
   font-weight: 400;
+  font-style: normal;
+}
+
+.font-x15-400-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x15-400-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x15-400-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x15-400-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x15-400-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x15-400-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x15-400-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x15-400-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x15-400-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x15-500 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.5em;
   font-weight: 500;
+  font-style: normal;
+}
+
+.font-x15-500-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x15-500-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x15-500-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x15-500-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x15-500-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x15-500-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x15-500-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x15-500-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x15-500-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x15-600 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.5em;
   font-weight: 600;
+  font-style: normal;
+}
+
+.font-x15-600-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x15-600-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x15-600-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x15-600-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x15-600-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x15-600-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x15-600-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x15-600-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x15-600-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x15-700 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.5em;
   font-weight: 700;
   font-style: normal;
 }
 
+.font-x15-700-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x15-700-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x15-700-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x15-700-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x15-700-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x15-700-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x15-700-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x15-700-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x15-700-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x1875-300 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.875em;
   font-weight: 300;
+  font-style: normal;
+}
+
+.font-x1875-300-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 300;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x1875-300-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 300;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x1875-300-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 300;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x1875-300-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 300;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x1875-300-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 300;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x1875-300-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 300;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x1875-300-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 300;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x1875-300-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 300;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x1875-300-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 300;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
 .font-x1875-400 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.875em;
   font-weight: 400;
   font-style: normal;
 }
 
+.font-x1875-400-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 400;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x1875-400-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 400;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x1875-400-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 400;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x1875-400-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 400;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x1875-400-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 400;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x1875-400-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 400;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x1875-400-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 400;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x1875-400-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x1875-400-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 400;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x1875-500 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.875em;
   font-weight: 500;
   font-style: normal;
 }
 
+.font-x1875-500-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 500;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x1875-500-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 500;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x1875-500-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 500;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x1875-500-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 500;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x1875-500-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 500;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x1875-500-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 500;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x1875-500-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 500;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x1875-500-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 500;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x1875-500-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 500;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x1875-600 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.875em;
   font-weight: 600;
   font-style: normal;
 }
 
+.font-x1875-600-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 600;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x1875-600-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 600;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x1875-600-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 600;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x1875-600-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 600;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x1875-600-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 600;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x1875-600-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 600;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x1875-600-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x1875-600-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 600;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x1875-600-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 600;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x1875-700 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 1.875em;
   font-weight: 700;
   font-style: normal;
 }
 
+.font-x1875-700-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 700;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x1875-700-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 700;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x1875-700-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 700;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x1875-700-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 700;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x1875-700-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 700;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x1875-700-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 700;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x1875-700-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 700;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x1875-700-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 700;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x1875-700-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.875em;
+  font-weight: 700;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x2-300 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 2em;
   font-weight: 300;
   font-style: normal;
 }
 
+.font-x2-300-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x2-300-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x2-300-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x2-300-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x2-300-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x2-300-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x2-300-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x2-300-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x2-300-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x2-400 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 2em;
   font-weight: 400;
   font-style: normal;
 }
 
+.font-x2-400-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x2-400-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x2-400-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x2-400-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x2-400-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x2-400-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x2-400-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x2-400-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x2-400-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x2-500 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 2em;
   font-weight: 500;
   font-style: normal;
 }
 
+.font-x2-500-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x2-500-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x2-500-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x2-500-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x2-500-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x2-500-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x2-500-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x2-500-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x2-500-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x2-600 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 2em;
   font-weight: 600;
   font-style: normal;
 }
 
+.font-x2-600-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x2-600-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x2-600-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x2-600-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x2-600-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x2-600-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x2-600-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x2-600-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x2-600-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-x2-700 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 2em;
   font-weight: 700;
+  font-style: normal;
+}
+
+.font-x2-700-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.font-x2-700-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.font-x2-700-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x2-700-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x2-700-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x2-700-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x2-700-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x2-700-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x2-700-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--dark-gray);
   font-style: normal;
 }
 
@@ -613,12 +6759,88 @@
   background-color: var(--hover-dropdown);
 }
 
+.bg-header-nav {
+  background-color: var(--header-nav);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.bg-tertiary {
+  background-color: var(--tertiary);
+}
+
+.bg-coral {
+  background-color: var(--coral);
+}
+
+.bg-light-peach {
+  background-color: var(--light-peach);
+}
+
+.bg-green {
+  background-color: var(--green);
+}
+
+.bg-blue {
+  background-color: var(--blue);
+}
+
+.bg-light-gray {
+  background-color: var(--light-gray);
+}
+
+.bg-dark-gray {
+  background-color: var(--dark-gray);
+}
+
 /*
   # Class generated: .color-{color}
   * <p class="color-muted"></p>
 */
 .color-none {
   color: var();
+}
+
+.color-primary {
+  color: var(--primary);
+}
+
+.color-secondary {
+  color: var(--secondary);
+}
+
+.color-tertiary {
+  color: var(--tertiary);
+}
+
+.color-coral {
+  color: var(--coral);
+}
+
+.color-light-peach {
+  color: var(--light-peach);
+}
+
+.color-green {
+  color: var(--green);
+}
+
+.color-blue {
+  color: var(--blue);
+}
+
+.color-light-gray {
+  color: var(--light-gray);
+}
+
+.color-dark-gray {
+  color: var(--dark-gray);
 }
 
 .capitalize-first::first-letter {
@@ -662,11 +6884,11 @@ html {
 
 body {
   margin: 0;
-  /*   font-family: $inter-Family; */
+  font-family: "Kumbh Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden !important;
   height: 100%;
-  background-color: var(--color-bg-general);
+  background-color: var(--secondary);
   line-height: normal;
 }/*# sourceMappingURL=styles.css.map */
