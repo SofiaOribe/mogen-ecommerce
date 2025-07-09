@@ -12,7 +12,7 @@ import { navigationItems } from "./nav"
 const Navigation = () => {
   return (
     <header className="fixed w-full top-0 left-0 z-8 bg-transparent flex justify-center ">
-      <div className="py-4 px-8 max-w-[58.75em] w-full bg-header-nav my-4 rounded-[1em]">
+      <div className="py-4 px-8 max-w-[58.75em] w-full bg-header-nav my-4 rounded-[1em] flex flex-row items-center justify-between">
         <NavigationMenu>
           <NavigationMenuList>
             {navigationItems.map(nav => {
@@ -24,7 +24,7 @@ const Navigation = () => {
                         <Link to={nav.link}>{nav.title}</Link>
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
-                        <ul className="w-[100%] max-w-[300px]  grid grid-cols-3 gap-2">
+                        <ul className="w-[25em]  grid grid-cols-3 gap-2">
                           {nav.items.map(item => {
                             return (
                               <NavigationMenuLink
@@ -70,6 +70,7 @@ const Navigation = () => {
             })}
           </NavigationMenuList>
         </NavigationMenu>
+        <div>d</div>
       </div>
     </header>
   )
