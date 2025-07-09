@@ -70,8 +70,7 @@ const Navigation = () => {
             })}
           </NavigationMenuList>
         </NavigationMenu>
-        <div>
-      </div>
+        <div>d</div>
       </div>
     </header>
   )
