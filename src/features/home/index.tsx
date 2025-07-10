@@ -1,8 +1,10 @@
-
+import Landing from "./content/Landing"
 
 const Home = () => {
   return (
-    <div></div>
+    <div>
+      <Landing />
+    </div>
   )
 }
 
