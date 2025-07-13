@@ -17222,10 +17222,6 @@
   background-color: var(--hover-dropdown) !important;
 }
 
-.input-error-placeholder::-moz-placeholder {
-  color: var(--color-main-error) !important;
-}
-
 .input-error-placeholder::placeholder {
   color: var(--color-main-error) !important;
 }
