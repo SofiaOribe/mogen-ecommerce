@@ -17,14 +17,14 @@
 }
 :root {
   --hover-dropdown: #e4e4e759;
-  --header-nav: rgba(255, 255, 255, 0.41);
+  --header-nav: rgba(255, 255, 255, 0.65);
   --white: #fff;
   --black: #242021;
   --brown-light: #ababab;
   --light-cream: #f6f2f1;
   --coral: #ffc3b7;
   --light-peach: #ffede3;
-  --light-blue: #ACCDFF;
+  --light-blue: #accdff;
   --green: #c9e7cb;
   --blue: #bccbe2;
   --light-gray: #f4f4f4;
@@ -7613,6 +7613,480 @@
 .font-x2-800-dark-gray {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 2em;
+  font-weight: 800;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
+.font-x25-300 {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-x25-300-white {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: var(--white);
+  font-style: normal;
+}
+
+.font-x25-300-black {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: var(--black);
+  font-style: normal;
+}
+
+.font-x25-300-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x25-300-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x25-300-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x25-300-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x25-300-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x25-300-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x25-300-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
+.font-x25-400 {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-x25-400-white {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--white);
+  font-style: normal;
+}
+
+.font-x25-400-black {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--black);
+  font-style: normal;
+}
+
+.font-x25-400-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x25-400-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x25-400-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x25-400-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x25-400-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x25-400-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x25-400-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
+.font-x25-500 {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-x25-500-white {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--white);
+  font-style: normal;
+}
+
+.font-x25-500-black {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--black);
+  font-style: normal;
+}
+
+.font-x25-500-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x25-500-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x25-500-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x25-500-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x25-500-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x25-500-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x25-500-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
+.font-x25-600 {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-x25-600-white {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--white);
+  font-style: normal;
+}
+
+.font-x25-600-black {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--black);
+  font-style: normal;
+}
+
+.font-x25-600-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x25-600-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x25-600-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x25-600-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x25-600-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x25-600-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x25-600-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
+.font-x25-700 {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-x25-700-white {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--white);
+  font-style: normal;
+}
+
+.font-x25-700-black {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--black);
+  font-style: normal;
+}
+
+.font-x25-700-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x25-700-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x25-700-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x25-700-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x25-700-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x25-700-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x25-700-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
+.font-x25-800 {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.font-x25-800-white {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--white);
+  font-style: normal;
+}
+
+.font-x25-800-black {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--black);
+  font-style: normal;
+}
+
+.font-x25-800-tertiary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-x25-800-coral {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-x25-800-light-peach {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-x25-800-green {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-x25-800-blue {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-x25-800-light-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-x25-800-dark-gray {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5em;
   font-weight: 800;
   color: var(--dark-gray);
   font-style: normal;
@@ -16150,6 +16624,480 @@
   font-style: normal;
 }
 
+.font-honeypirls-x25-300 {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-honeypirls-x25-300-white {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: var(--white);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-300-black {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: var(--black);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-300-tertiary {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-300-coral {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-300-light-peach {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-300-green {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-300-blue {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-300-light-gray {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-300-dark-gray {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-400 {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-honeypirls-x25-400-white {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--white);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-400-black {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--black);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-400-tertiary {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-400-coral {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-400-light-peach {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-400-green {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-400-blue {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-400-light-gray {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-400-dark-gray {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-500 {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-honeypirls-x25-500-white {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--white);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-500-black {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--black);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-500-tertiary {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-500-coral {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-500-light-peach {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-500-green {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-500-blue {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-500-light-gray {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-500-dark-gray {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-600 {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-honeypirls-x25-600-white {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--white);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-600-black {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--black);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-600-tertiary {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-600-coral {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-600-light-peach {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-600-green {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-600-blue {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-600-light-gray {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-600-dark-gray {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-700 {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-honeypirls-x25-700-white {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--white);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-700-black {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--black);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-700-tertiary {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-700-coral {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-700-light-peach {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-700-green {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-700-blue {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-700-light-gray {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-700-dark-gray {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-800 {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.font-honeypirls-x25-800-white {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--white);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-800-black {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--black);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-800-tertiary {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--tertiary);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-800-coral {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--coral);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-800-light-peach {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--light-peach);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-800-green {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--green);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-800-blue {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-800-light-gray {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--light-gray);
+  font-style: normal;
+}
+
+.font-honeypirls-x25-800-dark-gray {
+  font-family: "Honeypirls", sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
 .font-honeypirls-x4-300 {
   font-family: "Honeypirls", sans-serif;
   font-size: 4em;
@@ -17222,8 +18170,84 @@
   background-color: var(--hover-dropdown) !important;
 }
 
+.input-error-placeholder::-moz-placeholder {
+  color: var(--color-main-error) !important;
+}
+
 .input-error-placeholder::placeholder {
   color: var(--color-main-error) !important;
+}
+
+.backgroundBlur {
+  position: absolute;
+  background: linear-gradient(180deg, rgba(255, 181, 181, 0.6666666667) 122.52%, rgba(255, 181, 181, 0.5764705882) 222.52%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.shadowBtnCustom {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.331);
+}
+
+.navigationSticky {
+  position: sticky;
+  top: 14.7em;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+.navShadow {
+  box-shadow: 0px 0px 10px #f7f7f7, 0px 0px 10px #ffffff;
+}
+
+.embla {
+  --slide-height: 25em;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 18em;
+  min-width: 0;
+}
+
+.embla__slide__number {
+  height: var(--slide-height);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.embla__button {
+  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.embla__button:disabled {
+  color: var(--detail-high-contrast);
 }
 
 * {

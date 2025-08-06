@@ -16,7 +16,7 @@ const Navigation = () => {
 
   return (
     <header className="fixed w-full top-0 left-0 z-8 bg-transparent flex justify-center ">
-      <div className="py-4 px-8 max-w-[58.75em] w-full bg-header-nav my-4 rounded-[1em] flex flex-row items-center justify-between">
+      <div className="py-4 px-8 max-w-[58.75em] w-full my-4 rounded-[1em] flex flex-row items-center justify-between bg-white/20 backdrop-blur-[2px] border border-white/30 navShadow">
         <NavigationMenu>
           <NavigationMenuList>
             {navigationItems.map(nav => {
@@ -78,24 +78,32 @@ const Navigation = () => {
           <ButtonPrimary
             variant="green"
             icon={ShoppingBag}
-            classes={{ paddingClass: "!p-1.5", borderClass: "rounded-full border border-color-black" }}
+            classes={{
+              paddingClass: "!p-1.5",
+              borderClass: "rounded-full border border-color-black",
+              roundedClass: "rounded-full",
+            }}
           />
           <ButtonPrimary
             variant="coral"
             icon={Bookmark}
-            classes={{ paddingClass: "!p-1.5", borderClass: "rounded-full border border-color-black" }}
+            classes={{ paddingClass: "!p-1.5", borderClass: "border border-color-black", roundedClass: "rounded-full" }}
           />
           {isUser && (
             <ButtonPrimary
               variant="lightCream"
               icon={UserRound}
-              classes={{ paddingClass: "!p-1.5", borderClass: "rounded-full border border-color-black" }}
+              classes={{
+                paddingClass: "!p-1.5",
+                borderClass: "rounded-full border border-color-black",
+                roundedClass: "rounded-full",
+              }}
             />
           )}
           <ButtonPrimary
             variant="primary"
             text={"Sign up"}
-            classes={{ borderClass: "rounded-full border border-color-black" }}
+            classes={{ borderClass: "rounded-full border border-color-black", roundedClass: "rounded-full" }}
             style={{
               minWidth: "5.25em",
             }}
@@ -103,7 +111,7 @@ const Navigation = () => {
           <ButtonPrimary
             variant="secondary"
             text={"Log in"}
-            classes={{ borderClass: "rounded-full border border-color-black" }}
+            classes={{ borderClass: "rounded-full border border-color-black", roundedClass: "rounded-full" }}
             style={{
               minWidth: "5.25em",
             }}

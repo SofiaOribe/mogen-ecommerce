@@ -81,3 +81,27 @@
 .input-error-placeholder::placeholder {
   color: var(--color-main-error) !important;
 }
+
+.backgroundBlur {
+  position: absolute;
+  background: linear-gradient(180deg, #ffb5b5aa 122.52%, #ffb5b593 222.52%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.shadowBtnCustom {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.331);
+}
+
+.navigationSticky {
+  position: sticky;
+  top: 14.7em;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+.navShadow {
+  box-shadow:
+    0px 0px 10px #f7f7f7,
+    -0px -0px 10px #ffffff;
+}

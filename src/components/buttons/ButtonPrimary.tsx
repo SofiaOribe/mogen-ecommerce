@@ -43,7 +43,7 @@ export const variantSquare = {
 }
 
 type TButtonPrimaryProps = {
-  variant: TVariantSquare
+  variant?: TVariantSquare
   classes?: {
     backgroundClass?: string
     colorClass?: string
@@ -51,6 +51,7 @@ type TButtonPrimaryProps = {
     iconClassName?: string
     borderClass?: string
     paddingClass?: string
+    roundedClass?: string
   }
   style?: {
     minWidth?: string
@@ -66,9 +67,9 @@ const ButtonPrimary = ({ variant = "primary", classes, style, disabled, text, ic
 
   return (
     <Button
-      className={`cursor-pointer gap-2 flex-row justify-center items-center rounded-lg w-fit h-fit ${
+      className={`cursor-pointer gap-2 flex-row justify-center items-center w-fit h-fit  ${
         classes?.backgroundClass ?? currentVariant.backgroundClass
-      } ${classes?.borderClass ?? currentVariant.borderClass} ${classes?.paddingClass ?? "py-[0.375em] px-4"} `}
+      } ${classes?.borderClass ?? currentVariant.borderClass} ${classes?.paddingClass ?? "py-[0.375em] px-4"} ${classes?.roundedClass ?? "rounded-lg"}`}
       style={{ minWidth: style?.minWidth ?? "0em" }}
       disabled={disabled}
       onClick={e => {
