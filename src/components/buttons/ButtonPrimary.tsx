@@ -2,7 +2,7 @@ import React from "react"
 import { Button } from "../ui/button"
 import { LucideIcon } from "lucide-react"
 
-export type TVariantSquare = "primary" | "secondary" | "green" | "coral" | "lightCream"
+export type TVariantSquare = "primary" | "secondary" | "green" | "coral" | "lightCream" | "lightGrey"
 
 export const variantSquare = {
   primary: {
@@ -40,6 +40,13 @@ export const variantSquare = {
     iconClassName: "w-4 h-4 color-black",
     borderClass: "border border-color-black",
   },
+  lightGrey: {
+    backgroundClass: "bg-light-gray",
+    colorClass: "color-black",
+    textClass: "font-x0875-500",
+    iconClassName: "w-4 h-4 color-black",
+    borderClass: "border-none",
+  },
 }
 
 type TButtonPrimaryProps = {
@@ -52,6 +59,7 @@ type TButtonPrimaryProps = {
     borderClass?: string
     paddingClass?: string
     roundedClass?: string
+    sizeClass?: string
   }
   style?: {
     minWidth?: string
@@ -69,7 +77,7 @@ const ButtonPrimary = ({ variant = "primary", classes, style, disabled, text, ic
     <Button
       className={`cursor-pointer gap-2 flex-row justify-center items-center w-fit h-fit  ${
         classes?.backgroundClass ?? currentVariant.backgroundClass
-      } ${classes?.borderClass ?? currentVariant.borderClass} ${classes?.paddingClass ?? "py-[0.375em] px-4"} ${classes?.roundedClass ?? "rounded-lg"}`}
+      } ${classes?.borderClass ?? currentVariant.borderClass} ${classes?.paddingClass ?? "py-[0.375em] px-4"} ${classes?.roundedClass ?? "rounded-lg"} ${classes?.sizeClass ?? ""}`}
       style={{ minWidth: style?.minWidth ?? "0em" }}
       disabled={disabled}
       onClick={e => {

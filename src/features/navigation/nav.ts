@@ -9,67 +9,67 @@ export const navigationItems = [
     items: [
       {
         title: "Body Care",
-        link: "/shop/body-care",
+        link: "/body-care",
         categories: [
           {
+            id: "cleansers",
             title: "Cleansers",
-            link: "/shop/facial-care/cleansers",
           },
           {
+            id: "moisturizers",
             title: "Moisturizers",
-            link: "/shop/facial-care/moisturizers",
           },
           {
+            id: "sunscreens",
             title: "Sunscreens",
-            link: "/shop/facial-care/sunscreens",
           },
           {
+            id: "exfoliator",
             title: "Exfoliator",
-            link: "/shop/facial-care/exfoliator",
           },
         ],
       },
       {
         title: "Facial Care",
-        link: "/shop/facial-care",
+        link: "/facial-care",
         categories: [
           {
+            id: "cleansers",
             title: "Cleansers",
-            link: "/shop/facial-care/cleansers",
           },
           {
+            id: "moisturizers",
             title: "Moisturizers",
-            link: "/shop/facial-care/moisturizers",
           },
           {
+            id: "serums",
             title: "Serums",
-            link: "/shop/facial-care/serums",
           },
           {
+            id: "sunscreens",
             title: "Sunscreens",
-            link: "/shop/facial-care/sunscreens",
           },
           {
+            id: "exfoliator",
             title: "Exfoliator",
-            link: "/shop/facial-care/exfoliator",
           },
         ],
       },
       {
         title: "Hair Care",
-        link: "/shop/hair-care",
+        link: "/hair-care",
         categories: [
           {
+            id: "shampoos",
             title: "Shampoos",
-            link: "/shop/hair-care/shampoos",
           },
           {
+            id: "conditioners",
             title: "Conditioners",
-            link: "/shop/hair-care/conditioners",
           },
           {
+            id: "hair-masks",
             title: "Hair Masks",
-            link: "/shop/hair-care/hair-masks",
           },
         ],
       },

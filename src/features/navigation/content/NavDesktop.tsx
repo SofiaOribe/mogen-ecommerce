@@ -1,10 +1,15 @@
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu"
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu"
 import { navigationItems } from "../nav"
 import { Link } from "react-router-dom"
 
 const NavDesktop = () => {
- 
-
   return (
     <NavigationMenu className="hidden sm:block">
       <NavigationMenuList>
@@ -26,19 +31,22 @@ const NavDesktop = () => {
                             className="hover:bg-transparent font-x0875-400 color-black"
                           >
                             <div className="flex flex-col">
-                              <Link to={item.link} className="w-full hover-dropdown px-2 py-1  rounded-sm">
+                              <Link
+                                to={`${nav.link + "/categories" + item.link}`}
+                                className="w-full hover-dropdown px-2 py-1  rounded-sm"
+                              >
                                 {item.title}
                               </Link>
                               <div className="flex flex-col gap-1 border-l border-color-light-gray ml-3">
                                 {item.categories.map(category => {
                                   return (
-                                    <Link
+                                    <span
                                       key={category.title}
-                                      to={category.link}
+                                      /*   to={`/shop/categories${category.link}`} */
                                       className="px-2 py-1 hover-dropdown ml-1 rounded-sm"
                                     >
                                       {category.title}
-                                    </Link>
+                                    </span>
                                   )
                                 })}
                               </div>
