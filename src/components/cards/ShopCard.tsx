@@ -1,6 +1,6 @@
 import { Bookmark, ShoppingBag } from "lucide-react"
 import ButtonPrimary from "../buttons/ButtonPrimary"
-import { Button } from "../ui/button"
+import { Link } from "react-router-dom"
 
 type TCardProps = {
   onSave?: () => void
@@ -9,11 +9,13 @@ type TCardProps = {
   image: string
   title: string
   price: string
+  link: string
 }
 
-const ShopCard = ({ onSave, onAddToCart, onClick, image, title, price }: TCardProps) => {
+const ShopCard = ({ onSave, onAddToCart, onClick, image, title, price, link }: TCardProps) => {
   return (
-    <Button
+    <Link
+      to={link}
       onClick={onClick}
       className="relative w-full h-full flex flex-col bg-white p-0 overflow-hidden shadow-none rounded-none"
     >
@@ -44,7 +46,7 @@ const ShopCard = ({ onSave, onAddToCart, onClick, image, title, price }: TCardPr
         <p className="font-x0875-500-black text-center">{title}</p>
         <p className="font-x0875-500-black text-center">${price}</p>
       </div>
-    </Button>
+    </Link>
   )
 }
 

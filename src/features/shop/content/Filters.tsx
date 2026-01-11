@@ -11,7 +11,7 @@ const Filters = () => {
   const [filteredProducts, setFilteredProducts] = useState<string[]>([])
   console.log("filteredProducts", filteredProducts)
   return (
-    <div className="border border-color-black py-6 px-4 w-[17em] h-fit navigationSticky">
+    <div className="border border-color-black py-6 px-4 w-[17em] h-fit bg-white top-[14.7em] lg:sticky self-start">
       <div className="flex flex-col gap-3">
         <p className="font-x0875-500">Products</p>
         {products.map(product => (
@@ -19,7 +19,7 @@ const Filters = () => {
             <Checkbox
               checked={filteredProducts.includes(product._id)}
               onChange={() => {
-                console.log("Checkbox clicked", product._id )
+                console.log("Checkbox clicked", product._id)
                 if (filteredProducts.includes(product._id)) {
                   setFilteredProducts(filteredProducts.filter(id => id !== product._id))
                 } else {

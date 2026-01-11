@@ -15,27 +15,20 @@ const Categories = () => {
   }[]
   return (
     <div className="relative">
-      <div className="grid grid-cols-3 border border-black">
+      <div className="grid grid-cols-2 sm:grid-cols-3 ">
         {temporary.map((item, index) => {
-          const isLastCol = (index + 1) % 3 === 0
-          const isLastRow = index >= data.length - (data.length % 3 || 3)
+          const isLastColMobile = (index + 1) % 2 === 0
+          const isLastRowMobile = index >= temporary.length - (temporary.length % 2 || 2)
+
+          const isLastColSm = (index + 1) % 3 === 0
+          const isLastRowSm = index >= temporary.length - (temporary.length % 3 || 3)
 
           return (
             <div
               key={item._id}
-              className={`border-black
-          ${!isLastCol ? "border-r" : ""}
-          ${!isLastRow ? "border-b" : ""}
-        `}
+           
             >
-              <ShopCard
-                title={item.name}
-                image={item.image}
-                price={item.price}
-                onClick={() => {}}
-                onSave={() => {}}
-                onAddToCart={() => {}}
-              />
+              <ShopCard title={item.name} image={item.image} price={item.price} link={`/shop/product/${item._id}`} />
             </div>
           )
         })}

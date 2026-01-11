@@ -8,68 +8,68 @@ export const navigationItems = [
     link: "/shop",
     items: [
       {
-        title: "Body Line",
-        link: "/shop/body-line",
+        title: "Body Care",
+        link: "/shop/body-care",
         categories: [
           {
             title: "Cleansers",
-            link: "/shop/facial-line/cleansers",
+            link: "/shop/facial-care/cleansers",
           },
           {
             title: "Moisturizers",
-            link: "/shop/facial-line/moisturizers",
+            link: "/shop/facial-care/moisturizers",
           },
           {
             title: "Sunscreens",
-            link: "/shop/facial-line/sunscreens",
+            link: "/shop/facial-care/sunscreens",
           },
           {
             title: "Exfoliator",
-            link: "/shop/facial-line/exfoliator",
+            link: "/shop/facial-care/exfoliator",
           },
         ],
       },
       {
-        title: "Facial Line",
-        link: "/shop/facial-line",
+        title: "Facial Care",
+        link: "/shop/facial-care",
         categories: [
           {
             title: "Cleansers",
-            link: "/shop/facial-line/cleansers",
+            link: "/shop/facial-care/cleansers",
           },
           {
             title: "Moisturizers",
-            link: "/shop/facial-line/moisturizers",
+            link: "/shop/facial-care/moisturizers",
           },
           {
             title: "Serums",
-            link: "/shop/facial-line/serums",
+            link: "/shop/facial-care/serums",
           },
           {
             title: "Sunscreens",
-            link: "/shop/facial-line/sunscreens",
+            link: "/shop/facial-care/sunscreens",
           },
           {
             title: "Exfoliator",
-            link: "/shop/facial-line/exfoliator",
+            link: "/shop/facial-care/exfoliator",
           },
         ],
       },
       {
-        title: "Hairline",
-        link: "/shop/hairline",
+        title: "Hair Care",
+        link: "/shop/hair-care",
         categories: [
           {
             title: "Shampoos",
-            link: "/shop/hairline/shampoos",
+            link: "/shop/hair-care/shampoos",
           },
           {
             title: "Conditioners",
-            link: "/shop/hairline/conditioners",
+            link: "/shop/hair-care/conditioners",
           },
           {
             title: "Hair Masks",
-            link: "/shop/hairline/hair-masks",
+            link: "/shop/hair-care/hair-masks",
           },
         ],
       },

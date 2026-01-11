@@ -18170,10 +18170,6 @@
   background-color: var(--hover-dropdown) !important;
 }
 
-.input-error-placeholder::-moz-placeholder {
-  color: var(--color-main-error) !important;
-}
-
 .input-error-placeholder::placeholder {
   color: var(--color-main-error) !important;
 }
@@ -18187,13 +18183,6 @@
 
 .shadowBtnCustom {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.331);
-}
-
-.navigationSticky {
-  position: sticky;
-  top: 14.7em;
-  align-self: flex-start;
-  transition: all 0.3s ease;
 }
 
 .navShadow {
@@ -18221,16 +18210,13 @@
 
 .embla__slide__number {
   height: var(--slide-height);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 .embla__button {
   -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   background-color: transparent;
   touch-action: manipulation;
   display: inline-flex;

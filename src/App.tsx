@@ -3,6 +3,7 @@ import Layout from "./Layout"
 import Home from "./features/home"
 import Shop from "./features/shop"
 import Categories from "./features/shop/content/Categories"
+import Product from "./features/shop/content/Product"
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
         <Route path="/*" element={<></>} />
         <Route path="/" element={<Home />} />
         <Route path="shop" element={<Shop />}>
-          <Route path="categories/:categoryId/*" element={<Categories />} />
+          <Route path="categories/:categoryId" element={<Categories />} />
+          <Route path="product/:productId" element={<Product />} />
         </Route>
       </Routes>
     </Layout>
@@ -19,4 +21,3 @@ function App() {
 }
 
 export default App
-
