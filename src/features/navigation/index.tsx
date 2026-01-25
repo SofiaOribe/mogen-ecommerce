@@ -3,9 +3,12 @@ import { Bookmark, Menu, ShoppingBag, UserRound, X } from "lucide-react"
 import NavDesktop from "./content/NavDesktop"
 import NavMobile from "./content/NavMobile"
 import { useState } from "react"
+import { useAppDispatch } from "@/app/hooks"
+import { setShowCart } from "../cart/slice"
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const dispatch = useAppDispatch()
 
   return (
     <header className="fixed w-full top-0 left-0 z-8 bg-transparent flex justify-center ">
@@ -34,6 +37,9 @@ const Navigation = () => {
                 paddingClass: "!p-1.5",
                 borderClass: "rounded-full border border-color-black",
                 roundedClass: "rounded-full",
+              }}
+              onClick={() => {
+                dispatch(setShowCart(true))
               }}
             />
             <ButtonPrimary

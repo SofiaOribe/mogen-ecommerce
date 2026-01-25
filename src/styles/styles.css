@@ -18185,12 +18185,21 @@
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.331);
 }
 
+.shadowDrawer {
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.331);
+}
+
 .navShadow {
   box-shadow: 0px 0px 10px #f7f7f7, 0px 0px 10px #ffffff;
 }
 
 .heightCustomProductView {
   height: calc(100dvh - 8em);
+}
+
+.image-hover-zoom:hover img {
+  transition: transform 300ms ease-out;
+  transform: scale(1.05);
 }
 
 .embla {
