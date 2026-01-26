@@ -16,14 +16,14 @@ const ProductImage = () => {
       <img src={imageSelected} alt="Product selected" className="w-full h-full" />
 
       <div className="w-full max-w-[15em] overflow-hidden">
-        <div className="flex flex-col overflow-auto h-full">
+        <div className="flex flex-col overflow-auto h-full scrollbar-none">
           {arrayImage.map((image, index) => (
             <Button
               key={index + 1}
               onClick={() => setImageSelected(image)}
               className="!h-full max-h-[23.75em] cursor-pointer shadow-none image-hover-zoom border-0"
             >
-              <img src={image} alt={`kez ${index + 1}`} className="h-full w-full" />
+              <img src={image} alt={`kez ${index + 1}`} className="h-full w-full object-contain" />
             </Button>
           ))}
         </div>

@@ -10,3 +10,16 @@ export type TInputData = {
   valid: boolean
   firstLoad: boolean
 }
+
+export type Product = {
+  _id: string
+  name: string
+  image: string
+  price: string
+  category: string
+  subcategory: string
+  description: string
+  updated: string
+  stock: number
+  quantity?: number
+}

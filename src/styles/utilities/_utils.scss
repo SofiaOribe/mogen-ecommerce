@@ -115,3 +115,22 @@
     }
   }
 }
+
+.scrollbar-none {
+  -ms-overflow-style: none; /* IE y Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* [data-vaul-drawer]:not([data-vaul-custom-container="true"])::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+} */
+[data-vaul-drawer]:not([data-vaul-custom-container="true"])::after {
+  content: none !important;
+}

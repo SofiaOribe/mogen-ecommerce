@@ -1,19 +1,10 @@
-import ButtonPrimary from "@/components/buttons/ButtonPrimary"
 import { selectCart, setShowCart } from "./slice"
 import { useAppDispatch, useAppSelector } from "@/app/hooks"
-import { Button } from "@/components/ui/button"
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer"
+import { Drawer, DrawerClose, DrawerContent, DrawerHeader, DrawerTitle } from "@/components/ui/drawer"
 import { cn } from "@/lib/utils"
 import { X } from "lucide-react"
+import Articles from "./content/Articles"
+import BottomCart from "./content/BottomCart"
 
 const CartShop = () => {
   const cart = useAppSelector(selectCart)
@@ -27,23 +18,20 @@ const CartShop = () => {
         dispatch(setShowCart(false))
       }}
     >
-      <DrawerTrigger asChild></DrawerTrigger>
-      <DrawerContent
-        className={cn(
-          "fixed m-4 bottom-0 top-0 right-0 z-50 flex h-[100dvh_-_1em] flex-col rounded-2xl w-[430px] shadowDrawer",
-        )}
-      >
+      {/*  <DrawerTrigger asChild></DrawerTrigger> */}
+      <DrawerContent className={cn("m-4 h-[100dvh_-_1em] rounded-2xl shadowDrawer bg-background flex flex-col")}>
         <div className="w-full flex justify-end">
-          <ButtonPrimary
-            icon={X}
-            classes={{
-              borderClass: "border-none shadow-none !p-4",
-            }}
-          />
+          <DrawerClose className="cursor-pointer pt-4 pr-4 ">
+            <X className="h-5 w-5 stroke-2" />
+          </DrawerClose>
         </div>
         <DrawerHeader>
           <DrawerTitle className="font-x125-700-general">Cart Shop</DrawerTitle>
         </DrawerHeader>
+        <div className="flex flex-col justify-between h-full box-border px-4 pb-8">
+          <Articles />
+          <BottomCart />
+        </div>
       </DrawerContent>
     </Drawer>
   )

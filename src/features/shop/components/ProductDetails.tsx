@@ -34,7 +34,7 @@ const ProductDetails = () => {
       <div className="flex flex-col md:flex-row md:items-end gap-4 md:gap-12 justify-between">
         <div className="flex flex-col gap-1">
           <span className="font-x075-600-black">Quantity</span>
-          <ButtonCounter />
+         {/*  <ButtonCounter /> */}
         </div>
         <ButtonPrimary
           variant="coral"
