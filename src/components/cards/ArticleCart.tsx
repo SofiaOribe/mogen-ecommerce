@@ -17,7 +17,7 @@ const ArticleCart = ({
       </div>
       <div className="flex flex-col justify-between h-full w-full">
         <p className="font-x0875-600-black">{article.name}</p>
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row justify-between items-end">
           <ButtonCounter
             value={article?.quantity ?? 0}
             onIncrease={() => onIncrease(article._id)}

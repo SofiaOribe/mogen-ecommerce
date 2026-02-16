@@ -6,11 +6,15 @@ const ButtonCounter = ({
   onIncrease,
   onDecrease,
   cartArticle,
+  disabledIncrease,
+  disabledDecrease
 }: {
   value: number
   onIncrease: () => void
   onDecrease: () => void
   cartArticle?: boolean
+  disabledIncrease?: boolean
+  disabledDecrease?: boolean
 }) => {
   return (
     <div className="flex flex-row items-center gap-4">
@@ -23,6 +27,7 @@ const ButtonCounter = ({
           roundedClass: "!rounded-sm",
         }}
         style={{ minWidth: "2em" }}
+        disabled={disabledDecrease}
       />
       <p className="font-x08125-500-black">{value}</p>
       <ButtonPrimary
@@ -35,6 +40,7 @@ const ButtonCounter = ({
           roundedClass: "!rounded-sm",
         }}
         style={{ minWidth: "2em" }}
+        disabled={disabledIncrease}
       />
     </div>
   )

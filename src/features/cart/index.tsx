@@ -19,7 +19,7 @@ const CartShop = () => {
       }}
     >
       {/*  <DrawerTrigger asChild></DrawerTrigger> */}
-      <DrawerContent className={cn("m-4 h-[100dvh_-_1em] rounded-2xl shadowDrawer bg-background flex flex-col")}>
+      <DrawerContent className={cn("sm:m-4 h-[100dvh_-_1em] shadowDrawer bg-background flex flex-col ")}>
         <div className="w-full flex justify-end">
           <DrawerClose className="cursor-pointer pt-4 pr-4 ">
             <X className="h-5 w-5 stroke-2" />
