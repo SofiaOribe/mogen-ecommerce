@@ -1,58 +1,30 @@
+import BadgeCustom from "@/components/badges/BadgeCustom"
 import ButtonPrimary from "@/components/buttons/ButtonPrimary"
 import { Button } from "@/components/ui/button"
-import { ButtonGroup } from "@/components/ui/button-group"
 import { Input } from "@/components/ui/input"
-import { Minus, Plus, X } from "lucide-react"
+import { Plus, PlusIcon } from "lucide-react"
 import { useState } from "react"
 
 const BottomCart = () => {
-  const [openInput, setOpenInput] = useState(false)
   const [discountCode, setDiscountCode] = useState(false)
+  const [discountCodeValue, setDiscountCodeValue] = useState("")
+  const [isZipCodeValid, setIsZipCodeValid] = useState(false)
+  const validCodes = ["APOLOGIA"]
+
+  const handleDiscountCodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setDiscountCodeValue(e.target.value)
+  }
+  const handleValidateDiscountCode = () => {
+    if (discountCodeValue.length === validCodes[0].length && validCodes.includes(discountCodeValue.toUpperCase())) {
+      setIsZipCodeValid(true)
+    }
+  }
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col gap-2">
         <p className="font-x0875-600-black">Shipping methods</p>
-        <div className="flex flex-row gap-3">
-          <Input placeholder="Zip code" className="h-10 rounded-md" />
-          <ButtonPrimary
-            icon={Plus}
-            variant="green"
-            classes={{
-              borderClass: "border-none",
-              sizeClass: "!h-10 !w-10",
-            }}
-          />
-        </div>
-        <div className="flex flex-col gap-1 w-full">
-          {!openInput && (
-            <button
-              onClick={() => {
-                setOpenInput(true)
-              }}
-              className="border-none bg-none font-x075-500-black flex max-w-fit underline cursor-pointer"
-            >
-              I don't know my zip code
-            </button>
-          )}
-          {openInput && (
-            <div className="flex flex-col gap-1 w-full">
-              <p className="font-x075-500-black">Search by city oder state</p>
-              <ButtonGroup className="w-full">
-                <Input id="input-button-group" placeholder="City, State" className="h-10 rounded-md" />
-                <Button
-                  variant="outline"
-                  className="!h-10 cursor-pointer"
-                  onClick={() => {
-                    setOpenInput(false)
-                  }}
-                >
-                  <X className="w-4" />
-                </Button>
-              </ButtonGroup>
-            </div>
-          )}
-        </div>
       </div>
+
       <div className="flex flex-col gap-4 w-full">
         <Button
           variant="outline"
@@ -65,7 +37,38 @@ const BottomCart = () => {
 
           <Plus className={`w-4 transition-transform duration-300 ${discountCode ? "rotate-45" : "rotate-0"}`} />
         </Button>
-        <Input placeholder="Zip code" className="h-10 rounded-md" />
+
+        <div
+          className={`${discountCode ? "slide-down-inputs" : "slide-down-inputs-hidden"} flex flex-row gap-2 items-center`}
+        >
+          <Input
+            placeholder="Zip code"
+            className="h-10 rounded-md"
+            onChange={e => {
+              handleDiscountCodeChange(e)
+            }}
+          />
+          <ButtonPrimary
+            variant="green"
+            icon={PlusIcon}
+            classes={{
+              borderClass: "border-none",
+              sizeClass: "!h-9.5 !w-9.5",
+            }}
+            onClick={() => {
+              handleValidateDiscountCode()
+            }}
+          />
+        </div>
+        {discountCodeValue && isZipCodeValid && (
+          <BadgeCustom text={discountCodeValue} variant="coral" onDelete={() => {}} />
+        )}
+
+        <div className="flex flex-col gap-2">
+          <p className="font-x0875-500-black">Subtotal (no shipping): $211.65</p>
+          <p className="font-x075-400-black">or up to 3 installments of: $85.65</p>
+        </div>
+        <ButtonPrimary text={`Start shopping $${211.65}`} variant="secondary" classes={{ sizeClass: "w-full h-12", textClass:"font-x1-600-black" }} />
       </div>
     </div>
   )

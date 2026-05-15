@@ -5,10 +5,12 @@ import NavMobile from "./content/NavMobile"
 import { useState } from "react"
 import { useAppDispatch } from "@/app/hooks"
 import { setShowCart } from "../cart/slice"
+import { Link } from "react-router-dom"
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const dispatch = useAppDispatch()
+  const isUser = false
 
   return (
     <header className="fixed w-full top-0 left-0 z-8 bg-transparent flex justify-center ">
@@ -51,38 +53,30 @@ const Navigation = () => {
                 roundedClass: "rounded-full",
               }}
             />
+            {isUser && (
+              <ButtonPrimary
+                variant="lightCream"
+                icon={UserRound}
+                classes={{
+                  paddingClass: "!p-1.5",
+                  borderClass: "rounded-full border border-color-black",
+                  roundedClass: "rounded-full",
+                }}
+              />
+            )}
 
-            <ButtonPrimary
-              variant="lightCream"
-              icon={UserRound}
-              classes={{
-                paddingClass: "!p-1.5",
-                borderClass: "rounded-full border border-color-black",
-                roundedClass: "rounded-full",
-              }}
-            />
-            <ButtonPrimary
-              variant="primary"
-              text={"Sign up"}
-              classes={{
-                borderClass: "rounded-full border border-color-black hidden sm:block",
-                roundedClass: "rounded-full",
-              }}
-              style={{
-                minWidth: "5.25em",
-              }}
-            />
-            <ButtonPrimary
-              variant="secondary"
-              text={"Log in"}
-              classes={{
-                borderClass: "rounded-full border border-color-black hidden sm:block",
-                roundedClass: "rounded-full",
-              }}
-              style={{
-                minWidth: "5.25em",
-              }}
-            />
+            <Link
+              to=""
+              className="bg-white rounded-full border border-color-black hidden sm:block w-fit- h-fit py-[0.375em] px-4py-[0.375em] px-4 min-w-[5.25em]"
+            >
+              <p className="font-x08125-500 color-black text-center">Sign up</p>
+            </Link>
+            <Link
+              to="/auth/login"
+              className="bg-black rounded-full border border-color-black hidden sm:block w-fit- h-fit py-[0.375em] px-4py-[0.375em] px-4 min-w-[5.25em]"
+            >
+              <p className="font-x08125-500 color-white text-center">Log in</p>
+            </Link>
           </div>
         </div>
         {isMenuOpen && <NavMobile />}

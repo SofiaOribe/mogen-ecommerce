@@ -18221,6 +18221,21 @@
   content: none !important;
 }
 
+.slide-down-inputs {
+  max-height: 60px;
+  opacity: 1;
+  transform: translateY(0);
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.slide-down-inputs-hidden {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
 .embla {
   --slide-height: 25em;
 }

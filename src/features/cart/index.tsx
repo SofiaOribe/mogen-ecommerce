@@ -5,10 +5,12 @@ import { cn } from "@/lib/utils"
 import { X } from "lucide-react"
 import Articles from "./content/Articles"
 import BottomCart from "./content/BottomCart"
+import EmptyContent from "./content/EmptyContent"
 
 const CartShop = () => {
   const cart = useAppSelector(selectCart)
   const dispatch = useAppDispatch()
+  const isEmpty = false
 
   return (
     <Drawer
@@ -29,8 +31,14 @@ const CartShop = () => {
           <DrawerTitle className="font-x125-700-general">Cart Shop</DrawerTitle>
         </DrawerHeader>
         <div className="flex flex-col justify-between h-full box-border px-4 pb-8">
-          <Articles />
-          <BottomCart />
+          {isEmpty ? (
+            <EmptyContent />
+          ) : (
+            <>
+              <Articles />
+              <BottomCart />
+            </>
+          )}
         </div>
       </DrawerContent>
     </Drawer>
