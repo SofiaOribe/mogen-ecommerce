@@ -8,9 +8,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <>
       <CartShop />
       <Navigation />
-      <div className="flex flex-col min-h-[100dvh] justify-between pt-[8em]">
+      <div className="flex flex-col min-h-[100dvh] justify-between">
         <div className="h-full w-full">{children}</div>
-
         <Footer />
       </div>
     </>

@@ -13,7 +13,7 @@ const Navigation = () => {
   const isUser = false
 
   return (
-    <header className="fixed w-full top-0 left-0 z-8 bg-transparent flex justify-center ">
+    <header className="fixed w-full top-0 left-0 z-8 bg-transparent flex justify-center box-border ">
       <div className="py-2 px-2 mx-4 sm:py-4 sm:px-8 max-w-[58.75em] w-full my-4 rounded-[1em]  bg-white/20 backdrop-blur-[2px] border border-white/30 navShadow flex flex-col">
         <div className="flex flex-row items-center justify-between">
           <NavDesktop />
@@ -66,7 +66,7 @@ const Navigation = () => {
             )}
 
             <Link
-              to=""
+              to="/auth/register"
               className="bg-white rounded-full border border-color-black hidden sm:block w-fit- h-fit py-[0.375em] px-4py-[0.375em] px-4 min-w-[5.25em]"
             >
               <p className="font-x08125-500 color-black text-center">Sign up</p>

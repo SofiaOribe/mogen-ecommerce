@@ -155,3 +155,27 @@
     opacity 0.3s ease,
     transform 0.3s ease;
 }
+
+// Hide password reveal button in Edge and IE
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-password-toggle-button {
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .navShadow {
+    box-shadow: 0px 2px 10px (#00000029);
+    background-color: #ffffff;
+    border: none;
+  }
+}
+
+.mobileContainer {
+  height: calc(100dvh - 5em);
+}

@@ -9,10 +9,14 @@ TInputData =
 export type TRegister = {
   email: TInputData
   status: TStatus
+  firstName: TInputData
+  lastName: TInputData
+  password: TInputData
 }
 
 export type TLogin = {
   email: TInputData
+  password: TInputData
   status: TStatus
 }
 
@@ -32,11 +36,30 @@ export const auth_initial_state: TAuth = {
       valid: false,
       firstLoad: true,
     },
-
+    password: {
+      value: "",
+      valid: false,
+      firstLoad: true,
+    },
     status: "FULFILLED",
   },
   register: {
     email: {
+      value: "",
+      valid: false,
+      firstLoad: true,
+    },
+    firstName: {
+      value: "",
+      valid: false,
+      firstLoad: true,
+    },
+    lastName: {
+      value: "",
+      valid: false,
+      firstLoad: true,
+    },
+    password: {
       value: "",
       valid: false,
       firstLoad: true,

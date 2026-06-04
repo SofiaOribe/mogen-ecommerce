@@ -3,7 +3,7 @@ import LandingMobile from "../components/LandingMobile"
 
 const Landing = () => {
   return (
-    <div className="w-full flex flex-col items-center px-4 gap-4 md:h-[calc(100vh_-_15em)] md:justify-center">
+    <div className="w-full flex flex-col items-center px-4 gap-4 h-dvh justify-center">
       <h1 className="font-honeypirls-x4-400-black pb-4">MÖGEN</h1>
       <div className="hidden md:block">
         <LandingDesk />

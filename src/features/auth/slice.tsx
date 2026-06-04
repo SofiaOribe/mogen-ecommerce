@@ -17,9 +17,11 @@ export const authSlice = createAppSlice({
     }),
     setLogin: create.reducer((state, action: PayloadAction<TLogin>) => {
       state.login = action.payload
+      console.log(state.login, "login")
     }),
     setRegister: create.reducer((state, action: PayloadAction<TRegister>) => {
       state.register = action.payload
+      console.log(state.register, "register")
     }),
   }),
 })

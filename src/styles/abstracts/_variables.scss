@@ -53,6 +53,8 @@ $text-colors: (
   blue: --blue,
   light-gray: --light-gray,
   dark-gray: --dark-gray,
+  error: --error,
+  success: --success,
 );
 
 // Border width
@@ -84,6 +86,8 @@ $background-colors: (
   light-gray: --light-gray,
   light-cream: --light-cream,
   light-blue: --light-blue,
+  error: --error,
+  success: --success,
 );
 
 $sizes: ();
