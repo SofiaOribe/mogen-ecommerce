@@ -9,3 +9,4 @@ export const decreaseQuantity = (products: Product[], id: string): Product[] => 
     .map(product => (product._id === id ? { ...product, quantity: (product.quantity ?? 0) - 1 } : product))
     .filter(product => (product.quantity ?? 0) > 0)
 }
+

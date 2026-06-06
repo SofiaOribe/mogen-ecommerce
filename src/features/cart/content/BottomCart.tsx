@@ -68,7 +68,11 @@ const BottomCart = () => {
           <p className="font-x0875-500-black">Subtotal (no shipping): $211.65</p>
           <p className="font-x075-400-black">or up to 3 installments of: $85.65</p>
         </div>
-        <ButtonPrimary text={`Start shopping $${211.65}`} variant="secondary" classes={{ sizeClass: "w-full h-12", textClass:"font-x1-600-black" }} />
+        <ButtonPrimary
+          text={`Start shopping $${211.65}`}
+          variant="secondary"
+          classes={{ sizeClass: "w-full h-12", textClass: "font-x1-600-black" }}
+        />
       </div>
     </div>
   )

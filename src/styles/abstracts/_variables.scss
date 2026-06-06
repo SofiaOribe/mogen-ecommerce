@@ -51,6 +51,7 @@ $text-colors: (
   light-peach: --light-peach,
   green: --green,
   blue: --blue,
+  brown: --brown,
   light-gray: --light-gray,
   dark-gray: --dark-gray,
   error: --error,
@@ -69,6 +70,8 @@ $border-width: (
 $border-colors: (
   white: --white,
   black: --black,
+  brown: --brown,
+  coral: --coral,
 );
 
 // Background colors
@@ -86,8 +89,11 @@ $background-colors: (
   light-gray: --light-gray,
   light-cream: --light-cream,
   light-blue: --light-blue,
+  yellow: --yellow,
   error: --error,
   success: --success,
+  purchaseColor: --purchaseColor,
+  brown: --brown,
 );
 
 $sizes: ();

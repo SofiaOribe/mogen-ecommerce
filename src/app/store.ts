@@ -1,12 +1,13 @@
 import authReducer, { authSlice } from "@/features/auth/slice"
 import cartReducer, { cartSlice } from "@/features/cart/slice"
+import profileReducer, { profileSlice } from "@/features/profile/slice"
 import type { Action, ThunkAction } from "@reduxjs/toolkit"
 import { combineReducers, combineSlices, configureStore } from "@reduxjs/toolkit"
 import { setupListeners } from "@reduxjs/toolkit/query"
 import { createBrowserHistory } from "history"
 import { createReduxHistoryContext } from "redux-first-history"
 
-export const rootReducer = combineSlices(cartSlice, authSlice)
+export const rootReducer = combineSlices(cartSlice, authSlice, profileSlice)
 
 export type RootState = ReturnType<typeof rootReducer>
 
@@ -19,6 +20,7 @@ export const store = configureStore({
     router: routerReducer,
     cart: cartReducer,
     auth: authReducer,
+    profile: profileReducer,
   }),
 })
 

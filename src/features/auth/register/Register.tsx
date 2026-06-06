@@ -26,7 +26,7 @@ const Register = () => {
               value={auth.register.firstName.value}
               label="First name"
               placeholder="Francisco"
-              type="email"
+              type="text"
               borderClass="border-black border-t-0 border-x-0 rounded-none"
               onChangeValue={handleChangeData}
             />
@@ -35,7 +35,7 @@ const Register = () => {
               value={auth.register.lastName.value}
               label="Last name"
               placeholder="Wilson"
-              type="email"
+              type="text"
               borderClass="border-black border-t-0 border-x-0 rounded-none"
               onChangeValue={handleChangeData}
             />

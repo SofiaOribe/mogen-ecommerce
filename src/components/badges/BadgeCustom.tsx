@@ -17,11 +17,16 @@ export const variantSquare = {
   },
   green: {
     backgroundClass: "bg-green",
-    colorClass: "color-white",
+    colorClass: "color-black",
     iconClassName: "w-4 h-4 color-black",
   },
   coral: {
     backgroundClass: "bg-coral",
+    colorClass: "color-black",
+    iconClassName: "w-4 h-4 color-black",
+  },
+  yellow: {
+    backgroundClass: "bg-yellow",
     colorClass: "color-black",
     iconClassName: "w-4 h-4 color-black",
   },
@@ -49,7 +54,7 @@ const BadgeCustom = ({
   variant: TVariantSquare
   icon?: LucideIcon
   iconPosition?: "right" | "left"
-  onDelete: () => void
+  onDelete?: () => void
   classes?: {
     borderColor?: string
   }
@@ -59,7 +64,7 @@ const BadgeCustom = ({
   return (
     <Badge
       variant="outline"
-      className={`${currentVariant.backgroundClass} ${currentVariant.colorClass} ${classes?.borderColor ?? "border-none"} w-fit h-6`}
+      className={`${currentVariant.backgroundClass} ${currentVariant.colorClass} ${classes?.borderColor ?? "border-none"} w-fit h-6 font-x09-400 rounded-sm`}
     >
       {iconPosition === "right" &&
         icon &&

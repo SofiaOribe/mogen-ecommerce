@@ -11,6 +11,7 @@ const InputCustom = ({
   password = false,
   error,
   value,
+  classes,
   borderClass,
   onChangeValue,
 }: {
@@ -21,6 +22,7 @@ const InputCustom = ({
   password?: boolean
   error?: string
   borderClass?: string
+  classes?: string
   value?: string
   onChangeValue?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }) => {
@@ -47,7 +49,7 @@ const InputCustom = ({
           name={name}
           type={inputType}
           placeholder={placeholder}
-          className={`${borderClass ?? ""} ${error ? "color-error placeholder:color-error" : "color-black placeholder:color-error"}`}
+          className={`${classes ?? ""} ${borderClass ?? ""} ${error ? "color-error placeholder:color-error" : "color-black placeholder:color-error"}`}
           onChange={onChangeValue}
         />
         {password && (

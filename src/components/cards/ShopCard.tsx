@@ -10,9 +10,10 @@ type TCardProps = {
   title: string
   price: string
   link: string
+  wishlist?: boolean
 }
 
-const ShopCard = ({ onSave, onAddToCart, onClick, image, title, price, link }: TCardProps) => {
+const ShopCard = ({ onSave, onAddToCart, onClick, image, title, price, link, wishlist }: TCardProps) => {
   return (
     <Link
       to={link}
@@ -22,10 +23,16 @@ const ShopCard = ({ onSave, onAddToCart, onClick, image, title, price, link }: T
       {onSave && (
         <div className="absolute top-2 left-2">
           <ButtonPrimary
-            variant="primary"
+            variant={wishlist ? "coral" : "primary"}
             icon={Bookmark}
             onClick={onSave}
-            classes={{ paddingClass: "!p-1.5", borderClass: "border border-color-black", roundedClass: "rounded-full" }}
+            classes={{
+              paddingClass: "!p-1.5",
+              borderClass: "border border-color-black",
+              roundedClass: "rounded-full",
+              /*     iconClassName: wishlist ? "fill-[#ffc3b7] stroke-[#ffc3b7]" : "", */
+              backgroundClass: wishlist ? "" : "hover:bg-[#ffc3b7]",
+            }}
           />
         </div>
       )}
@@ -35,7 +42,12 @@ const ShopCard = ({ onSave, onAddToCart, onClick, image, title, price, link }: T
             variant="green"
             icon={ShoppingBag}
             onClick={onAddToCart}
-            classes={{ paddingClass: "!p-1.5", borderClass: "border border-color-black", roundedClass: "rounded-full" }}
+            classes={{
+              paddingClass: "!p-1.5",
+              borderClass: "border border-color-black",
+              roundedClass: "rounded-full",
+              backgroundClass: "hover:bg-[#c9e7cb]",
+            }}
           />
         </div>
       )}

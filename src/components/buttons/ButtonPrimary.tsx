@@ -2,7 +2,7 @@ import React from "react"
 import { Button } from "../ui/button"
 import { LucideIcon } from "lucide-react"
 
-export type TVariantSquare = "primary" | "secondary" | "green" | "coral" | "lightCream" | "lightGrey"
+export type TVariantSquare = "primary" | "secondary" | "green" | "coral" | "lightCream" | "lightGrey" | "yellow"
 
 export const variantSquare = {
   primary: {
@@ -47,6 +47,14 @@ export const variantSquare = {
     iconClassName: "w-4 h-4 color-black",
     borderClass: "border-none",
   },
+  yellow: {
+    backgroundClass: "bg-light-gray",
+    colorClass: "color-black",
+    textClass: "font-x0875-500",
+    iconClassName: "w-4 h-4 color-black",
+    borderClass: "border-none",
+  },
+
 }
 
 type TButtonPrimaryProps = {

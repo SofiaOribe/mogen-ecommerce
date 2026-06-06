@@ -31,7 +31,7 @@ export const useAuthHook = () => {
           password: data,
         }),
       )
-    } 
+    }
     /* else if (location.pathname.includes("/reset"))
       dispatch(
         setResetPass({
@@ -68,7 +68,7 @@ export const useAuthHook = () => {
     }
   }
 
-  const handleChangeData = (e: any) => {
+  const handleChangeData = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value: string = e.target.value
     const name: string = e.target.name
 
