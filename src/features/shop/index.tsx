@@ -11,10 +11,15 @@ const Shop = () => {
     <>
       {(location.pathname === "/shop" || location.pathname === "/shop/") && <Navigate to="./categories/all" replace />}
       {isCategories && (
-        <div className="w-full  px-4 flex justify-center pb-[16em] pt-40">
-          {/* <Filters /> */}
-          <div className="lg:p-4 w-full 2xl:max-w-[56em] flex flex-col gap-8">
+        <div className="w-full px-4 2xl:max-w-[calc(100vw-_17em)] flex justify-center pb-[16em] pt-30 sm:pt-40 relative">
+          <div className="hidden 2xl:block">
+            <Filters />
+          </div>
+          <div className="lg:p-4 w-full sm:max-w-[56em] flex flex-col gap-8">
             <NavPoint items={navShop} />
+            <div className="block 2xl:hidden">
+              <Filters />
+            </div>
             <Outlet />
           </div>
         </div>

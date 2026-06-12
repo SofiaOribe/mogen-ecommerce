@@ -35,9 +35,9 @@ const EmblaCarousel: React.FC<PropType> = props => {
   )
 
   return (
-    <section className="embla  relative">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container  divide-x-1 border-y-1 border-color-black divide-black divide border ">
+    <section className="embla relative">
+      <div className="embla__viewport border-y border-color-black" ref={emblaRef}>
+        <div className="embla__container  divide-x-1 border-color-black divide-black divide ">
           {slides.map(item => (
             <div className="embla__slide last:border-r last:border-black" key={item._id}>
               <div className="embla__slide__number ">

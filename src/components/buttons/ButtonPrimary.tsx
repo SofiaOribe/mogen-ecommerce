@@ -111,3 +111,20 @@ const ButtonPrimary = ({ variant = "primary", classes, style, disabled, text, ic
 }
 
 export default ButtonPrimary
+
+
+/*   {
+    "_id": "",
+    "name": "",
+    "images": [
+      "",
+      "",
+      ""
+    ],
+    "price": "14.149",
+    "category": "facial-line",
+    "subcategories": ["serum", "best-seller"],
+    "description": "",
+    "updated": "",
+    "stock": 25
+  } */

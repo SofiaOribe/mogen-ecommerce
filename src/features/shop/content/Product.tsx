@@ -4,8 +4,8 @@ import Recommended from "../components/Recommended"
 
 const Product = () => {
   return (
-    <div className="flex flex-col h-full w-full">
-      <div className="flex flex-col-reverse md:flex-row w-full heightCustomProductView h-full ">
+    <div className="flex flex-col h-full w-full pt-[6em]">
+      <div className="flex flex-col-reverse 2xl:flex-row w-full gap-10 lg:gap-4">
         <ProductDetails />
         <ProductImage />
       </div>

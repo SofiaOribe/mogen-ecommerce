@@ -11,7 +11,7 @@ import { Link } from "react-router-dom"
 
 const NavDesktop = () => {
   return (
-    <NavigationMenu className="hidden sm:block">
+    <NavigationMenu className="hidden md:block">
       <NavigationMenuList>
         {navigationItems.map(nav => {
           return (

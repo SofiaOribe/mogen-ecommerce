@@ -21,7 +21,7 @@ const Login = () => {
     <form action="" onSubmit={handleSubmit} className="w-full h-full relative box-border">
       <div className="flex flex-col justify-center sm:items-start items-center gap-8 w-full h-full">
         <h3 className="font-x5-600-black">Log in</h3>
-        <div className="grid grid-cols-2 gap-6 w-full sm:items-start items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full sm:items-start items-center">
           <div className="flex flex-col gap-3">
             <InputCustom
               value={auth.login.email.value}

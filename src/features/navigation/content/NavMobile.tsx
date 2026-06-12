@@ -7,11 +7,11 @@ import { Link } from "react-router-dom"
 const NavMobile = () => {
   /* font-honeypirls-x1875-400 */
   return (
-    <div className="w-full mobileContainer">
-      <div className="flex flex-col h-full w-full pt-8">
+    <div className="w-full mobileContainer ">
+      <div className="flex flex-col h-full w-full pt-8 ">
         {navigationItems.map(fileItem => {
           return (
-            <ul key={fileItem.title} className="w-full flex flex-col">
+            <ul key={fileItem.title} className="w-full flex flex-col px-2">
               {fileItem.items ? (
                 <>
                   {fileItem.items.map(item => {
@@ -59,6 +59,17 @@ const NavMobile = () => {
             </ul>
           )
         })}
+        <div className="flex flex-col items-center gap-2 border-t mt-8 py-8 px-2">
+          <span className="p-2 font-honeypirls-x1875-400">Account</span>
+          <div className="flex flex-col gap-4 px-2 w-full">
+            <Link to="/auth/register" className="bg-white rounded-full border  w-full h-fit py-4 ">
+              <p className="font-x08125-500 color-black text-center">Sign up</p>
+            </Link>
+            <Link to="/auth/login" className="bg-black rounded-full border border-color-black w-full h-fit py-4 ">
+              <p className="font-x08125-500 color-white text-center">Log in</p>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   )
