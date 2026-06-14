@@ -1,47 +1,40 @@
+import { useAppDispatch, useAppSelector } from "@/app/hooks"
 import ShopCard from "@/components/cards/ShopCard"
-import data from "../data.json"
+import { getProductsAsync, selectShop } from "../slice"
+import { useEffect } from "react"
+import { useParams } from "react-router-dom"
 
 const Categories = () => {
-  const temporary = data as {
-    _id: string
-    name: string
-    image: string
-    price: string
-    description: string
-    category: string
-    subcategory: string
-    stock: number
-    updated: string
-  }[]
+  const dispatch = useAppDispatch()
+  const { categoryId } = useParams()
 
-  const total = temporary.length
-  const singleLastRowMobile = total % 2 === 1
-  const singleLastRowDesktop = total % 3 === 1
+  const { products, status } = useAppSelector(selectShop)
+
+  useEffect(() => {
+    if (!products.length) {
+      dispatch(getProductsAsync())
+    }
+  }, [])
+
+  const filteredProducts = products.filter(product => {
+    if (!categoryId || categoryId === "all") return true
+
+    if (categoryId === "best-seller") {
+      return product.subcategories?.includes("best-seller")
+    }
+
+    return product.category === categoryId
+  })
 
   return (
     <div className="relative">
-      <div className="grid grid-cols-2 sm:grid-cols-3 border border-color-black divide-y  divide-black">
-        {temporary.map((item, index) => {
-          const isLastItem = index === total - 1
-
-          const isEndRowMobile = (index + 1) % 2 === 0
-          const showBorderMobile =
-            !isEndRowMobile && !(isLastItem && !singleLastRowMobile) ? true : isLastItem && singleLastRowMobile
-
-          const isEndRowDesktop = (index + 1) % 3 === 0
-          const showBorderDesktop =
-            !isEndRowDesktop && !(isLastItem && !singleLastRowDesktop) ? true : isLastItem && singleLastRowDesktop
+      <div className="grid grid-cols-2 sm:grid-cols-3 border-t border-l border-black">
+        {filteredProducts.map(item => {
           return (
-            <div
-              key={item._id}
-              className={`
-                ${showBorderMobile ? "border-r border-black" : ""}
-                ${showBorderDesktop ? "sm:border-r sm:border-black" : "sm:border-r-0"}
-              `}
-            >
+            <div key={item._id} className="border-b border-r border-black ">
               <ShopCard
                 title={item.name}
-                image={item.image}
+                image={item.images[0]}
                 price={item.price}
                 link={`/shop/product/${item._id}`}
                 onAddToCart={() => {}}

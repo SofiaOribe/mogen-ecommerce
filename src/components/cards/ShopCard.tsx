@@ -8,7 +8,7 @@ type TCardProps = {
   onClick?: () => void
   image: string
   title: string
-  price: string
+  price: number
   link: string
   wishlist?: boolean
 }
@@ -51,11 +51,11 @@ const ShopCard = ({ onSave, onAddToCart, onClick, image, title, price, link, wis
           />
         </div>
       )}
-      <div className="max-h-[32.375em] h-full overflow-hidden">
-        <img src={image} alt={title} className="object-cover w-full h-full " />
+      <div className="h-[10em] sm:h-[23em] overflow-hidden">
+        <img src={image} alt={title} className="object-bottom object-contain w-full h-full " />
       </div>
       <div className="p-3 flex flex-col gap-2 justify-center w-full h-16.5">
-        <p className="font-x0875-500-black text-center">{title}</p>
+        <p className="font-x0875-500-black text-center  line-clamp-2">{title}</p>
         <p className="font-x0875-500-black text-center">${price}</p>
       </div>
     </Link>

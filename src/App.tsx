@@ -12,8 +12,21 @@ import Orders from "./features/profile/orders/Orders"
 import Profile from "./features/profile"
 import Contact from "./features/contact"
 import Wishlist from "./features/wishlist"
+import { useEffect } from "react"
+import { useAppDispatch, useAppSelector } from "./app/hooks"
+import { selectShop, getProductsAsync } from "./features/shop/slice"
 
 function App() {
+  const dispatch = useAppDispatch()
+
+  const { products } = useAppSelector(selectShop)
+
+  useEffect(() => {
+    if (!products.length) {
+      dispatch(getProductsAsync())
+    }
+  }, [])
+
   return (
     <Layout>
       <Routes>

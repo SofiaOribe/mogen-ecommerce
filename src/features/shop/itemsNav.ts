@@ -5,9 +5,9 @@ export const navShop = [
     link: "/shop/categories/all",
   },
   {
-    _id: "best-sellers",
+    _id: "best-seller",
     name: "Best Sellers",
-    link: "/shop/categories/best-sellers",
+    link: "/shop/categories/best-seller",
     subcategories: [
       {
         _id: "cleaners",
@@ -68,7 +68,7 @@ export const navShop = [
   {
     _id: "hairline",
     name: "Hairline",
-    link: "/shop/categories/hairline",
+    link: "/shop/categories/hair-line",
     subcategories: [
       {
         _id: "shampoos",

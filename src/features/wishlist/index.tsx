@@ -1,8 +1,8 @@
 import React from "react"
-import data from "../shop/data.json"
+/* import data from "../shop/data.json" */
 import ShopCard from "@/components/cards/ShopCard"
 const Wishlist = () => {
-  const temporary = data as {
+/*   const temporary = data as {
     _id: string
     name: string
     image: string
@@ -12,15 +12,15 @@ const Wishlist = () => {
     subcategory: string
     stock: number
     updated: string
-  }[]
-  const total = temporary.length
+  }[] */
+/*   const total = temporary.length
   const singleLastRowMobile = total % 2 === 1
-  const singleLastRowDesktop = total % 3 === 1
+  const singleLastRowDesktop = total % 3 === 1 */
   return (
     <div className="w-full  px-4 flex justify-center pb-[16em] pt-40">
       <div className="lg:p-4 w-full 2xl:max-w-[56em] flex flex-col gap-8">
         <div className="grid grid-cols-2 sm:grid-cols-3 border border-color-black divide-y  divide-black">
-          {temporary.map((item, index) => {
+          {/* {temporary.map((item, index) => {
             const isLastItem = index === total - 1
 
             const isEndRowMobile = (index + 1) % 2 === 0
@@ -49,7 +49,7 @@ const Wishlist = () => {
                 />
               </div>
             )
-          })}
+          })} */}
         </div>
       </div>
     </div>

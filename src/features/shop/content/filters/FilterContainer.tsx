@@ -39,7 +39,7 @@ const FilterContainer = () => {
     setFilteredProducts(prev => (checked === true ? [...prev, productId] : prev.filter(id => id !== productId)))
   }
 
-  console.log("filteredProducts", filteredProducts)
+  /*   console.log("filteredProducts", filteredProducts) */
   return (
     <div className="flex flex-col gap-5">
       <div className="flex flex-col gap-3">
