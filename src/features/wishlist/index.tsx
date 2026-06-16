@@ -1,6 +1,6 @@
 
 /* import data from "../shop/data.json" */
-import ShopCard from "@/components/cards/ShopCard"
+/* import ShopCard from "@/components/cards/ShopCard" */
 const Wishlist = () => {
 /*   const temporary = data as {
     _id: string
