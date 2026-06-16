@@ -30,21 +30,18 @@ const NavMobile = () => {
                           <div className="flex flex-col gap-2">
                             {item.categories.map(category => {
                               return (
-                                <span
-                                  /*   to={`/shop/categories${category.id}`} */
+                                <Link
+                                  to={`/shop/categories${item.link}/${category.id}`}
                                   key={category.id}
                                   className="w-full py-2 font-x1-400"
                                 >
                                   {category.title}
-                                </span>
+                                </Link>
                               )
                             })}
-                            <span
-                              /*   to={`/shop/categories${category.id}`} */
-                              className="w-full py-2 font-x1-400"
-                            >
+                            <Link to={`/shop/categories${item.link}`} className="w-full py-2 font-x1-400">
                               View all
-                            </span>
+                            </Link>
                           </div>
                         </CollapsibleContent>
                       </Collapsible>

@@ -1,17 +1,15 @@
-import { Checkbox } from "@/components/ui/checkbox"
+import { useAppDispatch, useAppSelector } from "@/app/hooks"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Slider } from "@/components/ui/slider"
-import { useState } from "react"
-
-const products = [
-  {
-    _id: "moisturizers",
-    name: "Moisturizers",
-  },
-]
+import { selectShop, setSortBy } from "../../slice"
+import { Link, useParams } from "react-router-dom"
+import { capitalizeFirstLetter, formatString } from "@/features/common/functions"
 
 const filterByOr = [
+  {
+    _id: "default",
+    name: "Default",
+  },
   {
     _id: "lowest_price",
     name: "Lowest price",
@@ -20,54 +18,71 @@ const filterByOr = [
     _id: "higher_price",
     name: "Higher price",
   },
-  {
-    _id: "new_releases",
-    name: "New releases",
-  },
-  {
-    _id: "sale",
-    name: "Sale",
-  },
 ]
 
 const FilterContainer = () => {
-  const [filteredProducts, setFilteredProducts] = useState<string[]>([])
-  const [valuePrice, setPriceValue] = useState([0, 500])
-  const [selectedFilter, setSelectedFilter] = useState("new_releases")
+  const dispatch = useAppDispatch()
+  const { categoryId, subcategoryId } = useParams()
+  const { products, status, sortBy } = useAppSelector(selectShop)
 
-  const handleProductCheckboxChange = (productId: string, checked: boolean | "indeterminate" | undefined) => {
-    setFilteredProducts(prev => (checked === true ? [...prev, productId] : prev.filter(id => id !== productId)))
-  }
+  const subcategories = Array.from(
+    new Set(products.filter(p => p.category === categoryId).flatMap(p => p.subcategories || [])),
+  ).filter(sub => sub !== "best-seller")
 
-  /*   console.log("filteredProducts", filteredProducts) */
   return (
     <div className="flex flex-col gap-5">
-      <div className="flex flex-col gap-3">
-        <Label className="font-x095-500">Products</Label>
-        {products.map(product => (
-          <div key={product._id} className="flex flex-row items-center gap-2">
-            <Checkbox
-              checked={filteredProducts.includes(product._id)}
-              onCheckedChange={checked => handleProductCheckboxChange(product._id, checked)}
-            />
-            <p className="font-x0875-500">{product.name}</p>
+      {categoryId !== "best-seller" && categoryId !== "all" && (
+        <div className="flex flex-col gap-3">
+          <Label className="font-x095-500">Products</Label>
+          <div className="flex flex-col items-start gap-2 border-l ml-1">
+            <Link
+              to={`/shop/categories/${categoryId}`}
+              className={`font-x0875-300 ${!subcategoryId && "font-x0875-500"} pl-3`}
+            >
+              All
+            </Link>
+            {subcategories.map(sub => (
+              <div key={sub} className="flex flex-row items-center gap-2 pl-3">
+                <Link
+                  key={sub}
+                  to={`/shop/categories/${categoryId}/${sub}`}
+                  className={`font-x0875-300 ${subcategoryId === sub ? "font-x0875-600 " : ""} capitalize  `}
+                >
+                  {formatString(sub)}
+                </Link>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-      <div className="flex flex-col gap-3">
+        </div>
+      )}
+
+      {/*   <div className="flex flex-col gap-3">
         <Label htmlFor="slider-demo-temperature" className="font-x095-500">
           Price
         </Label>
         <div className="flex items-center justify-between gap-2">
-          <span className="font-x0875-500-black">${valuePrice[0]}</span>
-          <span className="font-x0875-500-black">${valuePrice[1]}</span>
+          <span className="font-x0875-500-black">${priceRange[0]}</span>
+          <span className="font-x0875-500-black">${priceRange[1]}</span>
         </div>
-        <Slider defaultValue={[0, 500]} value={valuePrice} onValueChange={setPriceValue} min={0} max={500} step={2} />
-      </div>
+        <Slider
+          defaultValue={[0, 500]}
+          value={priceRange}
+          onValueChange={value => {
+            const tuple: [number, number] = [value[0] ?? 0, value[1] ?? 0]
+            dispatch(setPriceRange(tuple))
+          }}
+          min={0}
+          max={50}
+          step={2}
+        />
+      </div> */}
       <div className="flex flex-col gap-3">
-        <Select value={selectedFilter} onValueChange={setSelectedFilter}>
+        <Label className="font-x095-500">Sorted by</Label>
+        <Select value={sortBy} onValueChange={value => dispatch(setSortBy(value))}>
           <SelectTrigger>
-            <SelectValue placeholder="Select" />
+            <SelectValue placeholder="Sort by">
+              <span>{capitalizeFirstLetter(sortBy.replace(/_/g, " "))}</span>
+            </SelectValue>
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>

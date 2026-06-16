@@ -19,12 +19,14 @@ export type TShop = {
   status: TStatus
   products: TProduct[]
   article: TProduct
+  sortBy: string
 }
 
 export const shop_initial_state: TShop = {
   error: null,
   status: "FULFILLED",
   products: [],
+  sortBy: "",
   article: {
     _id: "",
     name: "",

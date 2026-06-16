@@ -40,13 +40,13 @@ const NavDesktop = () => {
                               <div className="flex flex-col gap-1 border-l border-color-light-gray ml-3">
                                 {item.categories.map(category => {
                                   return (
-                                    <span
+                                    <Link
                                       key={category.title}
-                                      /*   to={`/shop/categories${category.link}`} */
+                                      to={`/shop/categories${item.link}/${category.id}`}
                                       className="px-2 py-1 hover-dropdown ml-1 rounded-sm"
                                     >
                                       {category.title}
-                                    </span>
+                                    </Link>
                                   )
                                 })}
                               </div>

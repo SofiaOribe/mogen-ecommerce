@@ -1,30 +1,17 @@
+import { useAppSelector } from "@/app/hooks"
 import ButtonCounter from "@/components/buttons/ButtonCounter"
 import ButtonPrimary from "@/components/buttons/ButtonPrimary"
-import { Product } from "@/features/common/types"
 import { CircleQuestionMark } from "lucide-react"
 import { useState } from "react"
-
-const productData: Product = {
-  _id: "3",
-  name: "Serum Double Trouble",
-  image:
-    "https://acdn-us.mitiendanube.com/stores/817/155/products/veganis_catalogo_200225_43439-54631c3ec0e1a18fb817422425269236-1024-1024.webp",
-  price: "14.149",
-  category: "facial-line",
-  subcategory: "serum",
-  description:
-    "This Veganis Hyaluronic Acid Facial Serum has the ability to attract and retain water molecules. This increases the hydration of our skin cells, making them firmer. It's also involved in the regeneration and repair of various tissues. It also combats sagging skin and boosts skin firmness. This is because hyaluronic acid facilitates collagen synthesis. This compound has powerful anti-aging properties. It adds volume to the skin and fills in wrinkles and fine lines. This helps our skin stay younger for longer.",
-  updated: "2023-10-01T12:00:00Z",
-  stock: 25,
-}
+import { selectShop } from "../slice"
 
 const ProductDetails = () => {
-  const product = productData
+  const { article } = useAppSelector(selectShop)
   const [valueQuantity, setValueQuantity] = useState(0)
   const [messageQuantity, setMessageQuantity] = useState("")
 
   const handleIncrease = () => {
-    if (valueQuantity < product.stock) {
+    if (valueQuantity < article.stock) {
       setValueQuantity(prev => prev + 1)
     } else {
       setMessageQuantity("No more stock available")
@@ -41,14 +28,14 @@ const ProductDetails = () => {
     <div className="pt-15 p-4 md:p-8 2xl:pl-16 flex 2xl:justify-center items-center w-full">
       <div className=" w-full flex flex-col justify-center gap-8 2xl:max-w-[800px] box-border">
         <div className="flex flex-col gap-5 w-full">
-          <h1 className="font-x2-700-black">{product.name}</h1>
+          <h1 className="font-x2-700-black">{article.name}</h1>
           <div className="flex flex-row justify-between items-center">
             <p itemProp="price" content="12" className="font-x15-400-black">
-              ${product.price}
+              ${article.price}
             </p>
-            <p className="font-x1-400-black">3 interest-free installments $3.99</p>
+            <p className="font-x1-400-black">3 interest-free installments ${(article.price / 3).toFixed(2)} each</p>
           </div>
-          <h2 className="font-x0875-400-black text-justify leading-[1.3em]">{product.description}</h2>
+          <h2 className="font-x0875-400-black text-justify leading-[1.3em]">{article.description}</h2>
           <div className="items-center flex gap-3">
             <span className="font-x1-500-black">Payment Methods</span>
             <ButtonPrimary

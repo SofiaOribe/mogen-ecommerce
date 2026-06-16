@@ -51,7 +51,7 @@ const ShopCard = ({ onSave, onAddToCart, onClick, image, title, price, link, wis
           />
         </div>
       )}
-      <div className="h-[10em] sm:h-[23em] overflow-hidden">
+      <div className="h-full w-full overflow-hidden">
         <img src={image} alt={title} className="object-bottom object-contain w-full h-full " />
       </div>
       <div className="p-3 flex flex-col gap-2 justify-center w-full h-16.5">

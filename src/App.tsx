@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, useLocation } from "react-router-dom"
 import Layout from "./Layout"
 import Home from "./features/home"
 import Shop from "./features/shop"
@@ -18,7 +18,7 @@ import { selectShop, getProductsAsync } from "./features/shop/slice"
 
 function App() {
   const dispatch = useAppDispatch()
-
+  const { pathname } = useLocation()
   const { products } = useAppSelector(selectShop)
 
   useEffect(() => {
@@ -27,6 +27,10 @@ function App() {
     }
   }, [])
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  
   return (
     <Layout>
       <Routes>
@@ -39,7 +43,7 @@ function App() {
           <Route path="register" element={<Register />} />
         </Route>
         <Route path="shop" element={<Shop />}>
-          <Route path="categories/:categoryId" element={<Categories />} />
+          <Route path="categories/:categoryId/:subcategoryId?" element={<Categories />} />
           <Route path="product/:productId" element={<Product />} />
         </Route>
         <Route path="profile" element={<Profile />}>

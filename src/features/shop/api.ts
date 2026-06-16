@@ -2,9 +2,11 @@ import { supabase } from "@/lib/supabaseClient"
 
 export const getProducts = async () => {
   const { data, error } = await supabase.from("products").select("*")
+  return { data, error }
+}
 
-  console.log("DATA:", data)
-  console.log("ERROR:", error)
-  console.log(import.meta.env.VITE_SUPABASE_URL)
+export const getProductById = async (_id: string) => {
+  const { data, error } = await supabase.from("products").select("*").eq("_id", _id).single()
+
   return { data, error }
 }

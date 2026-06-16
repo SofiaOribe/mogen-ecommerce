@@ -5,14 +5,10 @@ import Autoplay from "embla-carousel-autoplay"
 import useEmblaCarousel from "embla-carousel-react"
 import { NextButton, PrevButton, usePrevNextButtons } from "./EmblaButtons"
 import ShopCard from "@/components/cards/ShopCard"
+import { TProduct } from "@/features/shop/types"
 
 type PropType = {
-  slides: {
-    _id: string
-    name: string
-    image: string
-    price: string
-  }[]
+  slides: TProduct[]
   options?: EmblaOptionsType
 }
 
@@ -43,9 +39,9 @@ const EmblaCarousel: React.FC<PropType> = props => {
               <div className="embla__slide__number ">
                 <ShopCard
                   title={item.name}
-                  image={item.image}
+                  image={item.images[0]}
                   price={item.price}
-                  link={item._id}
+                  link={`/shop/product/${item._id}`}
                   onClick={() => {}}
                   onSave={() => {}}
                   onAddToCart={() => {}}

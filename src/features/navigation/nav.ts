@@ -9,12 +9,8 @@ export const navigationItems = [
     items: [
       {
         title: "Body Care",
-        link: "/body-care",
+        link: "/body-line",
         categories: [
-          {
-            id: "cleansers",
-            title: "Cleansers",
-          },
           {
             id: "moisturizers",
             title: "Moisturizers",
@@ -31,10 +27,10 @@ export const navigationItems = [
       },
       {
         title: "Facial Care",
-        link: "/facial-care",
+        link: "/facial-line",
         categories: [
           {
-            id: "cleansers",
+            id: "cleaners",
             title: "Cleansers",
           },
           {
@@ -42,22 +38,18 @@ export const navigationItems = [
             title: "Moisturizers",
           },
           {
-            id: "serums",
+            id: "serum",
             title: "Serums",
           },
           {
             id: "sunscreens",
             title: "Sunscreens",
           },
-          {
-            id: "exfoliator",
-            title: "Exfoliator",
-          },
         ],
       },
       {
         title: "Hair Care",
-        link: "/hair-care",
+        link: "/hair-line",
         categories: [
           {
             id: "shampoos",
@@ -68,7 +60,7 @@ export const navigationItems = [
             title: "Conditioners",
           },
           {
-            id: "hair-masks",
+            id: "masks",
             title: "Hair Masks",
           },
         ],

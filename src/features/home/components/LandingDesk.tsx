@@ -16,7 +16,7 @@ const LandingDesk = () => {
       </div>
       <div className={`${generalClass} ${imageClass}`} style={{ backgroundImage: `url(${skin_1})` }} />
       <div className={`${generalClass} flex items-center justify-center bg-transparent`}></div>
-      <Link to={""} className={`group [perspective:1000px] ${generalClass}`}>
+      <Link to={`/shop/categories/facial-line/moisturizers`} className={`group [perspective:1000px] ${generalClass}`}>
         <div className="relative w-full h-full transition-transform duration-600 [transform-style:preserve-3d] group-hover:rotate-y-180">
           <div
             className={`${generalClass} ${imageClass} absolute inset-0 bg-cover bg-center backface-hidden`}
@@ -31,7 +31,7 @@ const LandingDesk = () => {
         </div>
       </Link>
       <Link
-        to={""}
+        to={`/shop/categories/body-line/exfoliator`}
         className={`${generalClass} flex items-center justify-center bg-green group relative transition-shadow duration-300 `}
       >
         <span className="font-x125-700-black p-4">SCRUBS</span>
@@ -43,7 +43,10 @@ const LandingDesk = () => {
         </div>
       </Link>
 
-      <Link to={""} className={`${generalClass} ${imageClass} group relative overflow-hidden`}>
+      <Link
+        to={`/shop/categories/facial-line/serum`}
+        className={`${generalClass} ${imageClass} group relative overflow-hidden`}
+      >
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:translate-y-full z-0"
           style={{ backgroundImage: `url(${serumSkin})` }}
@@ -59,7 +62,10 @@ const LandingDesk = () => {
 
       <div className={`${generalClass} ${imageClass}`} style={{ backgroundImage: `url(${flower})` }} />
 
-      <Link to={""} className={`${generalClass} ${imageClass} group relative overflow-hidden`}>
+      <Link
+        to={`/shop/categories/facial-line/cleaners`}
+        className={`${generalClass} ${imageClass} group relative overflow-hidden`}
+      >
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:translate-x-full z-0"
           style={{ backgroundImage: `url(${cleaners})` }}
@@ -70,7 +76,7 @@ const LandingDesk = () => {
       </Link>
 
       <Link
-        to={""}
+        to={`/shop`}
         className={`${generalClass} flex items-center justify-center text-center bg-coral group relative transition-shadow duration-300 hover:shadow-[-3px_3px_0_#000]`}
       >
         <span className="font-x125-700-black p-4 uppercase transform transition-transform duration-300 group-hover:-translate-y-2">

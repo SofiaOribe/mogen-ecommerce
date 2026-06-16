@@ -8,24 +8,6 @@ export const navShop = [
     _id: "best-seller",
     name: "Best Sellers",
     link: "/shop/categories/best-seller",
-    subcategories: [
-      {
-        _id: "cleaners",
-        name: "Cleaners",
-      },
-      {
-        _id: "serums",
-        name: "Serums",
-      },
-      {
-        _id: "moisturizers",
-        name: "Moisturizers",
-      },
-      {
-        _id: "exfoliants",
-        name: "Exfoliants",
-      },
-    ],
   },
   {
     _id: "body-line",
@@ -33,12 +15,16 @@ export const navShop = [
     link: "/shop/categories/body-line",
     subcategories: [
       {
-        _id: "exfoliants",
-        name: "Exfoliants",
+        id: "moisturizers",
+        title: "Moisturizers",
       },
       {
-        _id: "liquid-soaps",
-        name: "Liquid Soaps",
+        id: "sunscreens",
+        title: "Sunscreens",
+      },
+      {
+        id: "exfoliator",
+        title: "Exfoliator",
       },
     ],
   },
@@ -48,35 +34,39 @@ export const navShop = [
     link: "/shop/categories/facial-line",
     subcategories: [
       {
-        _id: "cleaners",
-        name: "Cleaners",
+        id: "cleaners",
+        title: "Cleansers",
       },
       {
-        _id: "serums",
-        name: "Serums",
+        id: "moisturizers",
+        title: "Moisturizers",
       },
       {
-        _id: "moisturizers",
-        name: "Moisturizers",
+        id: "serum",
+        title: "Serums",
       },
       {
-        _id: "exfoliants",
-        name: "Exfoliants",
+        id: "sunscreens",
+        title: "Sunscreens",
       },
     ],
   },
   {
-    _id: "hairline",
-    name: "Hairline",
+    _id: "hair-line",
+    name: "Hair Line",
     link: "/shop/categories/hair-line",
     subcategories: [
       {
-        _id: "shampoos",
-        name: "Shampoos",
+        id: "shampoos",
+        title: "Shampoos",
       },
       {
-        _id: "conditioners",
-        name: "Conditioners",
+        id: "conditioners",
+        title: "Conditioners",
+      },
+      {
+        id: "masks",
+        title: "Hair Masks",
       },
     ],
   },
