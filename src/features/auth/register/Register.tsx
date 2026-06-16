@@ -1,4 +1,4 @@
-import { useAppDispatch, useAppSelector } from "@/app/hooks"
+import { /* useAppDispatch, */ useAppSelector } from "@/app/hooks"
 import React from "react"
 import { selectAuth } from "../slice"
 import InputCustom from "@/components/inputs/InputCustom"
@@ -8,7 +8,7 @@ import { useAuthHook } from "../useAuthHook"
 
 const Register = () => {
   const auth = useAppSelector(selectAuth)
-  const dispatch = useAppDispatch()
+  /*   const dispatch = useAppDispatch() */
   const { handlePassword, handleEmailChange, handleChangeData } = useAuthHook()
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

@@ -1,4 +1,4 @@
-import { useAppDispatch, useAppSelector } from "@/app/hooks"
+import { /* useAppDispatch, */ useAppSelector } from "@/app/hooks"
 import React, { useState } from "react"
 import { selectAuth } from "../slice"
 import InputCustom from "@/components/inputs/InputCustom"
@@ -9,7 +9,7 @@ import { useAuthHook } from "../useAuthHook"
 
 const Login = () => {
   const auth = useAppSelector(selectAuth)
-  const dispatch = useAppDispatch()
+/*   const dispatch = useAppDispatch() */
   const [rememberMe, setRememberMe] = useState(false)
   const { handlePassword, handleEmailChange } = useAuthHook()
 
