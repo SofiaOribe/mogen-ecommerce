@@ -23,7 +23,7 @@
     "noUncheckedSideEffectImports": true,
 
     "baseUrl": ".",
-    "ignoreDeprecations": "6.0", // Ignore deprecation warnings for features that will be removed in TypeScript 6.0
+
     "paths": {
       "@/*": ["./src/*"]
     }
