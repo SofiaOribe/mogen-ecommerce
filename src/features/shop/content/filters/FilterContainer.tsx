@@ -23,7 +23,7 @@ const filterByOr = [
 const FilterContainer = () => {
   const dispatch = useAppDispatch()
   const { categoryId, subcategoryId } = useParams()
-  const { products, status, sortBy } = useAppSelector(selectShop)
+  const { products, sortBy } = useAppSelector(selectShop)
 
   const subcategories = Array.from(
     new Set(products.filter(p => p.category === categoryId).flatMap(p => p.subcategories || [])),

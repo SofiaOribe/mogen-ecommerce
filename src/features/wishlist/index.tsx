@@ -1,4 +1,4 @@
-import React from "react"
+
 /* import data from "../shop/data.json" */
 import ShopCard from "@/components/cards/ShopCard"
 const Wishlist = () => {
