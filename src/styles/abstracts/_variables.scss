@@ -1,24 +1,36 @@
 // Fonts
-$inter-Family: "Inter", sans-serif;
+$kumbh-Family: "Kumbh Sans", sans-serif;
+$honeypirls-Family: "Honeypirls", sans-serif;
 
 $fonts-sizes: (
   x05625: 0.5625em,
   x0625: 0.625em,
   x06875: 0.6875em,
   x07: 0.7em,
+  // 12px
   x075: 0.75em,
+  // 13px
   x08125: 0.8125em,
-  x0847: 0.847em,
+  // 14px
   x0875: 0.875em,
+  // 14.4
   x09: 0.9em,
+  // 15.2px
   x095: 0.95em,
+  // 16px
   x1: 1em,
+  // 18px
   x1125: 1.125em,
-  x117: 1.117em,
+  // 20px
   x125: 1.25em,
+  // 24px
   x15: 1.5em,
+  x1625: 1.625em,
   x1875: 1.875em,
   x2: 2em,
+  x25: 2.5em,
+  x4: 4em,
+  x5: 5em,
 );
 
 $font-weights: (
@@ -27,14 +39,24 @@ $font-weights: (
   500: 500,
   600: 600,
   700: 700,
+  800: 800,
 );
 
 $text-colors: (
   none: null,
+  white: --white,
+  black: --black,
+  tertiary: --tertiary,
+  coral: --coral,
+  light-peach: --light-peach,
+  green: --green,
+  blue: --blue,
+  brown: --brown,
+  light-gray: --light-gray,
+  dark-gray: --dark-gray,
+  error: --error,
+  success: --success,
 );
-
-// Border radius
-$border-radius: ();
 
 // Border width
 $border-width: (
@@ -45,11 +67,33 @@ $border-width: (
 );
 
 // Border colors
-$border-colors: ();
+$border-colors: (
+  white: --white,
+  black: --black,
+  brown: --brown,
+  coral: --coral,
+);
 
 // Background colors
 $background-colors: (
   active-dropdown: --hover-dropdown,
+  header-nav: --header-nav,
+  white: --white,
+  black: --black,
+  tertiary: --tertiary,
+  coral: --coral,
+  light-peach: --light-peach,
+  green: --green,
+  blue: --blue,
+  dark-gray: --dark-gray,
+  light-gray: --light-gray,
+  light-cream: --light-cream,
+  light-blue: --light-blue,
+  yellow: --yellow,
+  error: --error,
+  success: --success,
+  purchaseColor: --purchaseColor,
+  brown: --brown,
 );
 
 $sizes: ();

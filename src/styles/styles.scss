@@ -3,6 +3,8 @@
 @import "./abstracts/themes";
 @import "./abstracts/variables";
 @import "./utilities/utils";
+@import "./utilities/embla";
+@import "./utilities/components";
 
 * {
   scrollbar-width: thin;
@@ -25,11 +27,11 @@ html {
 
 body {
   margin: 0;
-/*   font-family: $inter-Family; */
+  font-family: "Kumbh Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden !important;
   height: 100%;
-  background-color: var(--color-bg-general);
+  background-color: var(--white);
   line-height: normal;
 }
