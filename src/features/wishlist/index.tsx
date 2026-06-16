@@ -1,8 +1,7 @@
-
 /* import data from "../shop/data.json" */
 /* import ShopCard from "@/components/cards/ShopCard" */
 const Wishlist = () => {
-/*   const temporary = data as {
+  /*   const temporary = data as {
     _id: string
     name: string
     image: string
@@ -13,7 +12,7 @@ const Wishlist = () => {
     stock: number
     updated: string
   }[] */
-/*   const total = temporary.length
+  /*   const total = temporary.length
   const singleLastRowMobile = total % 2 === 1
   const singleLastRowDesktop = total % 3 === 1 */
   return (
