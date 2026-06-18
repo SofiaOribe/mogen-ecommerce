@@ -14,23 +14,26 @@ import Contact from "./features/contact"
 import Wishlist from "./features/wishlist"
 import { useEffect } from "react"
 import { useAppDispatch, useAppSelector } from "./app/hooks"
-import { selectShop, getProductsAsync } from "./features/shop/slice"
+import { getProductsAsync } from "./features/shop/slice"
+import { useAuthHook } from "./features/auth/useAuthHook"
+import { selectAuth } from "./features/auth/slice"
 
 function App() {
   const dispatch = useAppDispatch()
   const { pathname } = useLocation()
-  const { products } = useAppSelector(selectShop)
+  const { useAuthListener } = useAuthHook()
+  const auth = useAppSelector(selectAuth)
+  console.log(auth)
+  useAuthListener()
 
   useEffect(() => {
-    if (!products.length) {
-      dispatch(getProductsAsync())
-    }
+    dispatch(getProductsAsync())
   }, [])
 
   useEffect(() => {
-    window.scrollTo(0, 0)
+    globalThis.scrollTo(0, 0)
   }, [pathname])
-  
+
   return (
     <Layout>
       <Routes>

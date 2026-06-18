@@ -1,18 +1,62 @@
-import { /* useAppDispatch, */ useAppSelector } from "@/app/hooks"
+import { useAppDispatch, useAppSelector } from "@/app/hooks"
 import React from "react"
-import { selectAuth } from "../slice"
+import { selectAuth, userRegisterAsync } from "../slice"
 import InputCustom from "@/components/inputs/InputCustom"
-import ButtonPrimary from "@/components/buttons/ButtonPrimary"
 import { Link } from "react-router-dom"
 import { useAuthHook } from "../useAuthHook"
+import { Button } from "@/components/ui/button"
+import { toast } from "sonner"
+import { StyleToaster } from "@/components/ui/sonner"
 
 const Register = () => {
   const auth = useAppSelector(selectAuth)
-  /*   const dispatch = useAppDispatch() */
+  const dispatch = useAppDispatch()
   const { handlePassword, handleEmailChange, handleChangeData } = useAuthHook()
+  const user = auth.register
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    if (user.first_name.valid && user.last_name.valid && user.email.valid && user.password.valid) {
+      dispatch(
+        userRegisterAsync({
+          email: user.email.value,
+          password: user.password.value,
+          first_name: user.first_name.value,
+          last_name: user.last_name.value,
+        }),
+      ).then((data: any) => {
+        if (data.payload) {
+          const dataPayload = data.payload
+          if (dataPayload.data?.user && !dataPayload.data?.session) {
+            toast.success("Account created! Please check your email to confirm your account.", {
+              position: "bottom-center",
+              style: StyleToaster.success,
+            })
+            return
+          }
+          if (dataPayload.error) {
+            if (dataPayload.error.code === "identity_already_exists") {
+              toast.warning("Try a different email address.", {
+                position: "bottom-center",
+                style: StyleToaster.warning,
+              })
+              return
+            } else {
+              toast.warning(dataPayload.message || "Oops, an error has occurred", {
+                position: "bottom-center",
+                style: StyleToaster.warning,
+              })
+              return
+            }
+          }
+        }
+      })
+    } else {
+      toast.warning("Warning: Please review the form fields before continuing.", {
+        position: "bottom-center",
+        style: StyleToaster.warning,
+      })
+    }
   }
 
   return (
@@ -22,41 +66,54 @@ const Register = () => {
         <div className="flex flex-col gap-6 w-full sm:items-start items-center">
           <div className="flex sm:flex-row flex-col gap-6 w-full sm:items-start items-center">
             <InputCustom
-              name="firstName"
-              value={auth.register.firstName.value}
+              name="first_name"
+              value={user.first_name.value}
               label="First name"
               placeholder="Francisco"
               type="text"
               borderClass="border-black border-t-0 border-x-0 rounded-none"
               onChangeValue={handleChangeData}
+              error={
+                !user.first_name.valid && !user.first_name.firstLoad
+                  ? "First name contains invalid characters. Only letters are allowed."
+                  : ""
+              }
             />
             <InputCustom
-              name="lastName"
-              value={auth.register.lastName.value}
+              name="last_name"
+              value={user.last_name.value}
               label="Last name"
               placeholder="Wilson"
               type="text"
               borderClass="border-black border-t-0 border-x-0 rounded-none"
               onChangeValue={handleChangeData}
+              error={
+                !user.last_name.valid && !user.last_name.firstLoad
+                  ? "Last name contains invalid characters. Only letters are allowed."
+                  : ""
+              }
             />
           </div>
           <div className="flex sm:flex-row flex-col gap-6 w-full sm:items-start items-center">
             <InputCustom
-              value={auth.register.email.value}
+              value={user.email.value}
               label="Email"
               placeholder="email@example.com"
               type="email"
-              error={
-                !auth.register.email.firstLoad && !auth.register.email.valid ? "Invalid email, please try again" : ""
-              }
+              error={!user.email.firstLoad && !user.email.valid ? "Invalid email, please try again" : ""}
               borderClass="border-black border-t-0 border-x-0 rounded-none"
               onChangeValue={handleEmailChange}
             />
             <InputCustom
-              value={auth.register.password.value}
+              value={user.password.value}
               label="Password"
               placeholder="Enter your password"
               type="password"
+              error={
+                !user.password.firstLoad && !user.password.valid
+                  ? "Password must be at least 8 characters and include uppercase and lowercase letters, numbers, and a special character. Please try again.”"
+                  : ""
+              }
               password={true}
               borderClass="border-black border-t-0 border-x-0 rounded-none"
               onChangeValue={handlePassword}
@@ -68,15 +125,12 @@ const Register = () => {
         </div>
 
         <div className="w-full flex justify-center ">
-          <ButtonPrimary
-            variant="secondary"
-            text="Sign Up"
-            classes={{
-              sizeClass: "h-[3em] w-full max-w-[320px] ",
-              borderClass: "border-none shadow-md ",
-              roundedClass: "rounded-full",
-            }}
-          />
+          <Button
+            type="submit"
+            className="h-[3em] w-full max-w-[320px] border-none shadow-md rounded-full bg-black font-x0875-500-white "
+          >
+            Sign Up
+          </Button>
         </div>
       </div>
     </form>

@@ -1,7 +1,9 @@
 import { useAppDispatch, useAppSelector } from "@/app/hooks"
 import { TInputData, validEmailRegex, validNameRegex, validPasswordRegex } from "../common/types"
-import { selectAuth, setLogin, setRegister } from "./slice"
+import { getUserProfileAsync, selectAuth, setLogin, setRegister } from "./slice"
 import { useLocation } from "react-router-dom"
+import { useEffect } from "react"
+import { supabase } from "@/lib/supabaseClient"
 
 export const useAuthHook = () => {
   const dispatch = useAppDispatch()
@@ -49,7 +51,6 @@ export const useAuthHook = () => {
       valid: value.length >= 3 && !!validEmailRegex.exec(value),
     }
     if (location.pathname.includes("/login")) {
-      console.log(data, "data login")
       dispatch(
         setLogin({
           ...auth.login,
@@ -58,7 +59,6 @@ export const useAuthHook = () => {
       )
     }
     if (location.pathname.includes("/register")) {
-      console.log(data, "data register")
       dispatch(
         setRegister({
           ...auth.register,
@@ -85,9 +85,40 @@ export const useAuthHook = () => {
     dispatch(setRegister(registerInfo))
   }
 
+  const useAuthListener = () => {
+    const dispatch = useAppDispatch()
+
+    useEffect(() => {
+      const initSession = async () => {
+        const {
+          data: { session },
+        } = await supabase.auth.getSession()
+
+        if (session?.user) {
+          dispatch(getUserProfileAsync({ userId: session.user.id })).then(response => {
+            console.log(response)
+          })
+        }
+      }
+
+      initSession()
+
+      const { data: listener } = supabase.auth.onAuthStateChange((event, session) => {
+        if (session?.user) {
+          dispatch(getUserProfileAsync({ userId: session.user.id }))
+        }
+      })
+
+      return () => {
+        listener.subscription.unsubscribe()
+      }
+    }, [dispatch])
+  }
+
   return {
-    handlePassword,
+    handlePassword, 
     handleEmailChange,
     handleChangeData,
+    useAuthListener,
   }
 }

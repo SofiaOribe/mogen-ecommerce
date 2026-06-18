@@ -1,20 +1,63 @@
-import { /* useAppDispatch, */ useAppSelector } from "@/app/hooks"
+import { useAppDispatch, useAppSelector } from "@/app/hooks"
 import React, { useState } from "react"
-import { selectAuth } from "../slice"
+import { selectAuth, userLoginAsync } from "../slice"
 import InputCustom from "@/components/inputs/InputCustom"
-import ButtonPrimary from "@/components/buttons/ButtonPrimary"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { Checkbox } from "@/components/ui/checkbox"
 import { useAuthHook } from "../useAuthHook"
+import { toast } from "sonner"
+import { StyleToaster } from "@/components/ui/sonner"
+import { Button } from "@/components/ui/button"
 
 const Login = () => {
   const auth = useAppSelector(selectAuth)
-/*   const dispatch = useAppDispatch() */
+  const user = auth.login
+  const dispatch = useAppDispatch()
   const [rememberMe, setRememberMe] = useState(false)
   const { handlePassword, handleEmailChange } = useAuthHook()
+  const navigate = useNavigate()
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    if (user.email.valid && user.password.valid) {
+      dispatch(
+        userLoginAsync({
+          email: user.email.value,
+          password: user.password.value,
+        }),
+      ).then((data: any) => {
+        if (data.payload) {
+          const dataPayload = data.payload
+          //Redirect
+          // Message
+          if (dataPayload.error) {
+            if (dataPayload?.error.code === "email_not_confirmed") {
+              toast.warning("Info: You must confirm your email address before logging in", {
+                position: "bottom-center",
+                style: StyleToaster.info,
+              })
+            } else if (dataPayload?.error.code === "identity_not_found") {
+              toast.warning("Warning: Invalid email, try again", {
+                position: "bottom-center",
+                style: StyleToaster.warning,
+              })
+            } else {
+              toast.warning("Warning: Something else has happened, try again", {
+                position: "bottom-center",
+                style: StyleToaster.warning,
+              })
+            }
+          } else {
+            navigate("/profile")
+          }
+        }
+      })
+    } else {
+      toast.warning("Warning: Please review the form fields before continuing.", {
+        position: "bottom-center",
+        style: StyleToaster.warning,
+      })
+    }
   }
 
   return (
@@ -63,15 +106,12 @@ const Login = () => {
         </Link>
 
         <div className="w-full flex justify-center ">
-          <ButtonPrimary
-            variant="secondary"
-            text="Sign In"
-            classes={{
-              sizeClass: "h-[3em] w-full max-w-[320px] ",
-              borderClass: "border-none shadow-md ",
-              roundedClass: "rounded-full",
-            }}
-          />
+          <Button
+            type="submit"
+            className="h-[3em] w-full max-w-[320px] border-none shadow-md rounded-full bg-black font-x0875-500-white "
+          >
+            Sign In
+          </Button>
         </div>
       </div>
     </form>

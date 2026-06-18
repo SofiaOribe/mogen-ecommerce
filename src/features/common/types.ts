@@ -12,7 +12,7 @@ export type TInputData = {
 }
 
 export type Product = {
-  _id: string
+  id: string
   name: string
   image: string
   price: string

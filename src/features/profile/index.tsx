@@ -2,19 +2,19 @@ import NavPoint from "@/components/navigations.tsx/NavPoint"
 import { Navigate, Outlet, useLocation } from "react-router-dom"
 
 type TProfileProps = {
-  _id: string
+  id: string
   name: string
   link: string
 }
 
 const navProfile: TProfileProps[] = [
   {
-    _id: "account",
+    id: "account",
     name: "Account",
     link: "./account",
   },
   {
-    _id: "orders",
+    id: "orders",
     name: "Orders",
     link: "./orders",
   },

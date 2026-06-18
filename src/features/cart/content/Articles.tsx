@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 
 const initialProducts: Product[] = [
   {
-    _id: "1",
+    id: "1",
     name: "Serum Double Trouble",
     image:
       "https://acdn-us.mitiendanube.com/stores/817/155/products/veganis_catalogo_200225_43439-54631c3ec0e1a18fb817422425269236-1024-1024.webp",
@@ -19,7 +19,7 @@ const initialProducts: Product[] = [
     quantity: 2,
   },
   {
-    _id: "2",
+    id: "2",
     name: "Serum Double Trouble",
     image:
       "https://acdn-us.mitiendanube.com/stores/817/155/products/veganis_catalogo_200225_43439-54631c3ec0e1a18fb817422425269236-1024-1024.webp",
@@ -33,7 +33,7 @@ const initialProducts: Product[] = [
     quantity: 2,
   },
   {
-    _id: "3",
+    id: "3",
     name: "Serum Double Trouble",
     image:
       "https://acdn-us.mitiendanube.com/stores/817/155/products/veganis_catalogo_200225_43439-54631c3ec0e1a18fb817422425269236-1024-1024.webp",
@@ -67,7 +67,7 @@ const Articles = () => {
       <div className="flex flex-col h-full overflow-auto">
         {products.map(product => {
           return (
-            <ArticleCart key={product._id} article={product} onIncrease={handleIncrease} onDecrease={handleDecrease} />
+            <ArticleCart key={product.id} article={product} onIncrease={handleIncrease} onDecrease={handleDecrease} />
           )
         })}
       </div>

@@ -7,10 +7,10 @@ import { MapPin } from "lucide-react"
 const Account = () => {
   const profile = useAppSelector(selectProfile)
   const initials =
-    `${profile.account.firstName.value?.[0] ?? ""}${profile.account.lastName.value?.[0] ?? ""}`.toUpperCase()
+    `${profile.account.first_name.value?.[0] ?? ""}${profile.account.last_name.value?.[0] ?? ""}`.toUpperCase()
   const name =
-    profile.account.firstName.value && profile.account.lastName.value
-      ? `${profile.account.firstName.value} ${profile.account.lastName.value}`
+    profile.account.first_name.value && profile.account.last_name.value
+      ? `${profile.account.first_name.value} ${profile.account.last_name.value}`
       : "User Name"
 
   return (

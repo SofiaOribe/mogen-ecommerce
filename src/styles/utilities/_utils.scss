@@ -66,6 +66,12 @@
   }
 }
 
+.disabledButton {
+  &:disabled {
+    background-color: #6f6f6fe1 !important;
+  }
+}
+
 .capitalize-first::first-letter {
   text-transform: uppercase;
 }
@@ -79,7 +85,7 @@
 }
 
 .input-error-placeholder::placeholder {
-  color: var(--color-main-error) !important;
+  color: var(--color-error) !important;
 }
 
 .backgroundBlur {
@@ -125,12 +131,6 @@
   display: none; /* Chrome, Safari */
 }
 
-/* [data-vaul-drawer]:not([data-vaul-custom-container="true"])::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-} */
 [data-vaul-drawer]:not([data-vaul-custom-container="true"])::after {
   content: none !important;
 }

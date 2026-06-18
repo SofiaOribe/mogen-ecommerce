@@ -22,16 +22,16 @@ const PersonalInformation = () => {
       </div>
       <div className="grid grid-cols-2 gap-4">
         <InputCustom
-          name="firstName"
-          value={profile.account.firstName.value}
+          name="first_name"
+          value={profile.account.first_name.value}
           label="First name"
           placeholder="Francisco"
           type="text"
           /*       onChangeValue={handleChangeData} */
         />
         <InputCustom
-          name="lastName"
-          value={profile.account.lastName.value}
+          name="last_name"
+          value={profile.account.last_name.value}
           label="Last name"
           placeholder="Wilson"
           type="text"

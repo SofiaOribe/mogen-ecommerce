@@ -54,8 +54,8 @@ export const shopSlice = createAppSlice({
       },
     ),
     getProductByIdAsync: create.asyncThunk(
-      async (_id: string) => {
-        const response = await getProductById(_id)
+      async (id: string) => {
+        const response = await getProductById(id)
         return response
       },
       {

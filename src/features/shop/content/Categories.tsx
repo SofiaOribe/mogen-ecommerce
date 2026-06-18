@@ -49,14 +49,14 @@ const Categories = () => {
             const borderTopMobile = index < 2
             return (
               <div
-                key={item._id}
+                key={item.id}
                 className={`border-r border-b border-black ${borderTopDesktop ? "sm:border-t" : ""} ${borderTopMobile ? "border-t" : ""} h-[24em] md:h-[28em] `}
               >
                 <ShopCard
                   title={item.name}
                   image={item.images[0]}
                   price={item.price}
-                  link={`/shop/product/${item._id}`}
+                  link={`/shop/product/${item.id}`}
                   onAddToCart={() => {}}
                   onSave={() => {}}
                 />

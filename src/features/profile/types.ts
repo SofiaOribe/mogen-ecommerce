@@ -4,8 +4,8 @@ export type TAccount = {
   image: string
   email: TInputData
   status: TStatus
-  firstName: TInputData
-  lastName: TInputData
+  first_name: TInputData
+  last_name: TInputData
   country: string
   province: string
   city: string
@@ -14,7 +14,7 @@ export type TAccount = {
   phoneNumber: string
 }
 export type TOrders = {
-  _id: string
+  id: string
   date: string
   total: string
   address: string
@@ -23,7 +23,7 @@ export type TOrders = {
   status: string
   country: string
   product: {
-    _id: string
+    id: string
     name: string
     image: string
     price: string
@@ -49,12 +49,12 @@ export const profile_initial_state: TProfile = {
       valid: false,
       firstLoad: true,
     },
-    firstName: {
+    first_name: {
       value: "",
       valid: false,
       firstLoad: true,
     },
-    lastName: {
+    last_name: {
       value: "",
       valid: false,
       firstLoad: true,

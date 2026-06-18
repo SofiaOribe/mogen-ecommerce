@@ -20,8 +20,8 @@ const ArticleCart = ({
         <div className="flex flex-row justify-between items-end">
           <ButtonCounter
             value={article?.quantity ?? 0}
-            onIncrease={() => onIncrease(article._id)}
-            onDecrease={() => onDecrease(article._id)}
+            onIncrease={() => onIncrease(article.id)}
+            onDecrease={() => onDecrease(article.id)}
             cartArticle={true}
           />
           <p className="font-x0875-600-black">${article.price}</p>
