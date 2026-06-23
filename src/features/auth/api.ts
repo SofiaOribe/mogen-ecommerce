@@ -15,6 +15,7 @@ export const userRegister = async ({ email, password, first_name, last_name }: I
       data: {
         first_name: first_name,
         last_name: last_name,
+        email,
       },
     },
   })
@@ -34,12 +35,10 @@ export const userLogout = async () => {
   return { error }
 }
 
-export const getUserProfile = async (userId: string) => {
-  const { data, error } = await supabase
-    .from("profiles")
-    .select("*")
-    .eq("id", userId)
-    .single()
+export const sendPasswordResetEmail = async (email: string) => {
+  const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
+    redirectTo: "http://localhost:400/reset-password",
+  })
 
   return { data, error }
 }

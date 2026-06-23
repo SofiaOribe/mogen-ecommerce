@@ -1,14 +1,14 @@
 import { useAppDispatch, useAppSelector } from "@/app/hooks"
 import { TInputData, validEmailRegex, validNameRegex, validPasswordRegex } from "../common/types"
-import { getUserProfileAsync, selectAuth, setLogin, setRegister } from "./slice"
-import { useLocation } from "react-router-dom"
-import { useEffect } from "react"
-import { supabase } from "@/lib/supabaseClient"
+import { logoutAsync, selectAuth, setLogin, setRegister, setResetUser } from "./slice"
+import { useLocation, useNavigate } from "react-router-dom"
+import { setCartFromServer } from "../cart/slice"
 
 export const useAuthHook = () => {
   const dispatch = useAppDispatch()
   const auth = useAppSelector(selectAuth)
   const location = useLocation()
+  const navigate = useNavigate()
 
   const handlePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value: string = e.target.value
@@ -85,40 +85,20 @@ export const useAuthHook = () => {
     dispatch(setRegister(registerInfo))
   }
 
-  const useAuthListener = () => {
-    const dispatch = useAppDispatch()
+  const handleLogout = async () => {
+    dispatch(logoutAsync()).then(() => {
+      dispatch(setResetUser())
+      localStorage.removeItem("cart")
+      dispatch(setCartFromServer([]))
+    })
 
-    useEffect(() => {
-      const initSession = async () => {
-        const {
-          data: { session },
-        } = await supabase.auth.getSession()
-
-        if (session?.user) {
-          dispatch(getUserProfileAsync({ userId: session.user.id })).then(response => {
-            console.log(response)
-          })
-        }
-      }
-
-      initSession()
-
-      const { data: listener } = supabase.auth.onAuthStateChange((event, session) => {
-        if (session?.user) {
-          dispatch(getUserProfileAsync({ userId: session.user.id }))
-        }
-      })
-
-      return () => {
-        listener.subscription.unsubscribe()
-      }
-    }, [dispatch])
+    navigate("/")
   }
 
   return {
-    handlePassword, 
+    handlePassword,
     handleEmailChange,
     handleChangeData,
-    useAuthListener,
+    handleLogout,
   }
 }

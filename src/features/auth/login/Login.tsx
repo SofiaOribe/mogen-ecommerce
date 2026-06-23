@@ -1,22 +1,38 @@
 import { useAppDispatch, useAppSelector } from "@/app/hooks"
-import React, { useState } from "react"
+import React from "react"
 import { selectAuth, userLoginAsync } from "../slice"
 import InputCustom from "@/components/inputs/InputCustom"
 import { Link, useNavigate } from "react-router-dom"
-import { Checkbox } from "@/components/ui/checkbox"
 import { useAuthHook } from "../useAuthHook"
 import { toast } from "sonner"
 import { StyleToaster } from "@/components/ui/sonner"
 import { Button } from "@/components/ui/button"
+import { getUserProfileAsync, selectProfile } from "@/features/profile/slice"
+import { getCart } from "@/features/cart/api"
+import { setCartFromServer } from "@/features/cart/slice"
 
 const Login = () => {
   const auth = useAppSelector(selectAuth)
   const user = auth.login
   const dispatch = useAppDispatch()
-  const [rememberMe, setRememberMe] = useState(false)
   const { handlePassword, handleEmailChange } = useAuthHook()
   const navigate = useNavigate()
+  const profile = useAppSelector(selectProfile)
+  const loadCart = async (userId: string) => {
+    const { data } = await getCart(userId)
 
+    if (data) {
+      const formatted = data.map(item => ({
+        id: item.product_id,
+        name: item.name,
+        image: item.image,
+        price: item.price,
+        stock: item.stock,
+        quantity: item.quantity,
+      }))
+      dispatch(setCartFromServer(formatted))
+    }
+  }
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (user.email.valid && user.password.valid) {
@@ -48,6 +64,11 @@ const Login = () => {
               })
             }
           } else {
+            if (profile.account?.id) {
+              dispatch(getUserProfileAsync({ userId: profile.account.id }))
+              localStorage.removeItem("cart")
+              loadCart(profile.account.id)
+            }
             navigate("/profile")
           }
         }
@@ -65,27 +86,15 @@ const Login = () => {
       <div className="flex flex-col justify-center sm:items-start items-center gap-8 w-full h-full">
         <h3 className="font-x5-600-black">Log in</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full sm:items-start items-center">
-          <div className="flex flex-col gap-3">
-            <InputCustom
-              value={auth.login.email.value}
-              label="Email"
-              placeholder="email@example.com"
-              type="email"
-              error={!auth.login.email.firstLoad && !auth.login.email.valid ? "Invalid email, please try again" : ""}
-              borderClass="border-black border-t-0 border-x-0 rounded-none"
-              onChangeValue={handleEmailChange}
-            />
-            <div className="flex flex-row gap-2">
-              <Checkbox
-                checked={rememberMe}
-                onChange={() => {
-                  setRememberMe(prev => !prev)
-                }}
-                className="border-black"
-              />
-              <p className="font-x075-400">Remember me?</p>
-            </div>
-          </div>
+          <InputCustom
+            value={auth.login.email.value}
+            label="Email"
+            placeholder="email@example.com"
+            type="email"
+            error={!auth.login.email.firstLoad && !auth.login.email.valid ? "Invalid email, please try again" : ""}
+            borderClass="border-black border-t-0 border-x-0 rounded-none"
+            onChangeValue={handleEmailChange}
+          />
           <div className="flex flex-col gap-3">
             <InputCustom
               value={auth.login.password.value}
@@ -96,7 +105,7 @@ const Login = () => {
               borderClass="border-black border-t-0 border-x-0 rounded-none"
               onChangeValue={handlePassword}
             />
-            <Link to="" className="font-x075-500">
+            <Link to="/auth/forgot-password" className="font-x075-500">
               Forgot password?
             </Link>
           </div>

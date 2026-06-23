@@ -14,6 +14,7 @@ const InputCustom = ({
   classes,
   borderClass,
   onChangeValue,
+  disabled,
 }: {
   placeholder: string
   label?: string
@@ -25,6 +26,7 @@ const InputCustom = ({
   classes?: string
   value?: string
   onChangeValue?: (e: React.ChangeEvent<HTMLInputElement>) => void
+  disabled?: boolean
 }) => {
   const [isVisible, setIsVisible] = useState(false)
 
@@ -51,6 +53,7 @@ const InputCustom = ({
           placeholder={placeholder}
           className={`${classes ?? ""} ${borderClass ?? ""} ${error ? "color-error placeholder:color-error border-color-error" : "color-black"}`}
           onChange={onChangeValue}
+          disabled={disabled}
         />
         {password && (
           <Button

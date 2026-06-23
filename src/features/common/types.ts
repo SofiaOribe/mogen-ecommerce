@@ -11,19 +11,6 @@ export type TInputData = {
   firstLoad: boolean
 }
 
-export type Product = {
-  id: string
-  name: string
-  image: string
-  price: string
-  category: string
-  subcategory: string
-  description: string
-  updated: string
-  stock: number
-  quantity?: number
-}
-
 export const validEmailRegex =
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 

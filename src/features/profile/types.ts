@@ -1,9 +1,23 @@
-import { TInputData, TStatus } from "../common/types"
+import { TStatus } from "../common/types"
 
-export type TAccount = {
+const EmptyAccount = {
+  id: "",
+  first_name: "",
+  last_name: "",
+  image: "",
+  email: "",
+  country: "",
+  province: "",
+  city: "",
+  address: "",
+  postal_code: "",
+  phone_number: "",
+  created_at: "",
+}
+
+/* export type TAccount = {
   image: string
   email: TInputData
-  status: TStatus
   first_name: TInputData
   last_name: TInputData
   country: string
@@ -12,7 +26,7 @@ export type TAccount = {
   address: string
   postalCode: string
   phoneNumber: string
-}
+} */
 export type TOrders = {
   id: string
   date: string
@@ -31,41 +45,33 @@ export type TOrders = {
   }[]
 }
 
+export type TAccount = {
+  id: string
+  first_name: string
+  last_name: string
+  image: string
+  email: string
+  country: string
+  province: string
+  city: string
+  address: string
+  postal_code: string
+  phone_number: string
+  created_at: string
+}
+
 export type TProfile = {
   error: string
   status: TStatus
-  account: TAccount
   orders: TOrders[]
+  account: TAccount
+  updateStatus: "SUCCESS" | "DECLINED" | ""
 }
 
 export const profile_initial_state: TProfile = {
   error: "",
   status: "FULFILLED",
-
-  account: {
-    image: "",
-    email: {
-      value: "",
-      valid: false,
-      firstLoad: true,
-    },
-    first_name: {
-      value: "",
-      valid: false,
-      firstLoad: true,
-    },
-    last_name: {
-      value: "",
-      valid: false,
-      firstLoad: true,
-    },
-    country: "",
-    city: "",
-    province: "",
-    address: "",
-    postalCode: "",
-    phoneNumber: "",
-    status: "FULFILLED",
-  },
+  account: EmptyAccount,
   orders: [],
+  updateStatus: "",
 }

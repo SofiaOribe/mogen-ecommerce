@@ -3,9 +3,11 @@ import { navigationItems } from "../nav"
 import { Button } from "@/components/ui/button"
 import { ChevronRightIcon } from "lucide-react"
 import { Link } from "react-router-dom"
+import { useAuth } from "@/providers/AuthProvider"
 
 const NavMobile = () => {
-  /* font-honeypirls-x1875-400 */
+  const { session } = useAuth()
+  const isUser = session?.user.id
   return (
     <div className="w-full mobileContainer ">
       <div className="flex flex-col h-full w-full pt-8 ">
@@ -56,17 +58,19 @@ const NavMobile = () => {
             </ul>
           )
         })}
-        <div className="flex flex-col items-center gap-2 border-t mt-8 py-8 px-2">
-          <span className="p-2 font-honeypirls-x1875-400">Account</span>
-          <div className="flex flex-col gap-4 px-2 w-full">
-            <Link to="/auth/register" className="bg-white rounded-full border  w-full h-fit py-4 ">
-              <p className="font-x08125-500 color-black text-center">Sign up</p>
-            </Link>
-            <Link to="/auth/login" className="bg-black rounded-full border border-color-black w-full h-fit py-4 ">
-              <p className="font-x08125-500 color-white text-center">Log in</p>
-            </Link>
+        {!isUser && (
+          <div className="flex flex-col items-center gap-2 border-t mt-8 py-8 px-2">
+            <span className="p-2 font-honeypirls-x1875-400">Account</span>
+            <div className="flex flex-col gap-4 px-2 w-full">
+              <Link to="/auth/register" className="bg-white rounded-full border  w-full h-fit py-4 ">
+                <p className="font-x08125-500 color-black text-center">Sign up</p>
+              </Link>
+              <Link to="/auth/login" className="bg-black rounded-full border border-color-black w-full h-fit py-4 ">
+                <p className="font-x08125-500 color-white text-center">Log in</p>
+              </Link>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   )

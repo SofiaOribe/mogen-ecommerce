@@ -3,13 +3,16 @@ import ShopCard from "@/components/cards/ShopCard"
 import { getProductsAsync, selectShop } from "../slice"
 import { useEffect } from "react"
 import { useParams } from "react-router-dom"
+import { addToCartAsync } from "@/features/cart/slice"
+import { toast } from "sonner"
+import { StyleToaster } from "@/components/ui/sonner"
+import { useAuth } from "@/providers/AuthProvider"
 
 const Categories = () => {
   const dispatch = useAppDispatch()
   const { categoryId, subcategoryId } = useParams()
-
   const { products, status, sortBy } = useAppSelector(selectShop)
-
+  const { session } = useAuth()
   useEffect(() => {
     if (!products.length) {
       dispatch(getProductsAsync())
@@ -57,7 +60,35 @@ const Categories = () => {
                   image={item.images[0]}
                   price={item.price}
                   link={`/shop/product/${item.id}`}
-                  onAddToCart={() => {}}
+                  onAddToCart={() => {
+                    if (item.id)
+                      dispatch(
+                        addToCartAsync({
+                          userId: session?.user.id,
+                          product: {
+                            id: item.id,
+                            name: item.name,
+                            image: item.images[0],
+                            price: item.price,
+                            stock: item.stock,
+                            quantity: 1,
+                          },
+                        }),
+                      ).then(res => {
+                        if (res.meta.requestStatus === "fulfilled") {
+                          toast.success(item.name + "has been successfully added", {
+                            position: "bottom-center",
+                            style: StyleToaster.success,
+                            closeButton: true,
+                          })
+                        } else {
+                          toast.warning("Oops, an error has occurred", {
+                            position: "bottom-center",
+                            style: StyleToaster.warning,
+                          })
+                        }
+                      })
+                  }}
                   onSave={() => {}}
                 />
               </div>

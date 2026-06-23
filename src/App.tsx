@@ -15,16 +15,15 @@ import Wishlist from "./features/wishlist"
 import { useEffect } from "react"
 import { useAppDispatch, useAppSelector } from "./app/hooks"
 import { getProductsAsync } from "./features/shop/slice"
-import { useAuthHook } from "./features/auth/useAuthHook"
-import { selectAuth } from "./features/auth/slice"
+import ResetPassword from "./features/auth/reset/ResetPassword"
+import ForgotPassword from "./features/auth/reset/ForgotPassword"
+import { selectCart } from "./features/cart/slice"
+
 
 function App() {
   const dispatch = useAppDispatch()
   const { pathname } = useLocation()
-  const { useAuthListener } = useAuthHook()
-  const auth = useAppSelector(selectAuth)
-  console.log(auth)
-  useAuthListener()
+  const { items } = useAppSelector(selectCart)
 
   useEffect(() => {
     dispatch(getProductsAsync())
@@ -33,6 +32,10 @@ function App() {
   useEffect(() => {
     globalThis.scrollTo(0, 0)
   }, [pathname])
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(items))
+  }, [items])
 
   return (
     <Layout>
@@ -44,11 +47,14 @@ function App() {
         <Route path="auth" element={<Auth />}>
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="forgot-password" element={<ForgotPassword />} />
+          <Route path="reset-password" element={<ResetPassword />} />
         </Route>
         <Route path="shop" element={<Shop />}>
           <Route path="categories/:categoryId/:subcategoryId?" element={<Categories />} />
           <Route path="product/:productId" element={<Product />} />
         </Route>
+
         <Route path="profile" element={<Profile />}>
           <Route path="account" element={<Account />} />
           <Route path="orders" element={<Orders />} />

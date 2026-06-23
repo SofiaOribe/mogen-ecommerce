@@ -3,13 +3,16 @@ import { RootState } from "../../app/store"
 import { createAppSlice } from "../../app/createAppSlice"
 import { auth_initial_state, TLogin, TRegister } from "./types"
 import { TStatus } from "../common/types"
-import { getUserProfile, IRegister, userLogin, userRegister } from "./api"
+import { IRegister, sendPasswordResetEmail, userLogin, userLogout, userRegister } from "./api"
 
 const initialState = auth_initial_state
 export const authSlice = createAppSlice({
   name: "auth",
   initialState,
   reducers: create => ({
+    setResetUser: create.reducer(state => {
+      state.user = auth_initial_state.user
+    }),
     setAuthError: create.reducer((state, action: PayloadAction<string>) => {
       state.error = action.payload
     }),
@@ -21,11 +24,9 @@ export const authSlice = createAppSlice({
     }),
     setLogin: create.reducer((state, action: PayloadAction<TLogin>) => {
       state.login = action.payload
-      console.log(state.login, "login")
     }),
     setRegister: create.reducer((state, action: PayloadAction<TRegister>) => {
       state.register = action.payload
-      console.log(state.register, "register")
     }),
     userRegisterAsync: create.asyncThunk(
       async (registerData: IRegister) => {
@@ -43,12 +44,10 @@ export const authSlice = createAppSlice({
 
           if (action.payload.data.user) {
             state.user = action.payload.data.user
-            console.log(action.payload.data.user)
           }
 
           if (action.payload.error) {
             state.error = action.payload.error.message
-            console.log(action.payload.error)
           }
         },
 
@@ -70,10 +69,8 @@ export const authSlice = createAppSlice({
         fulfilled: (state, action) => {
           state.status = "FULFILLED"
 
-          const user = action.payload.data?.user
-
-          if (user) {
-            state.user = user
+          if (action.payload.data?.user) {
+            state.user = action.payload.data?.user
           }
 
           if (action.payload.error) {
@@ -86,30 +83,37 @@ export const authSlice = createAppSlice({
         },
       },
     ),
-    getUserProfileAsync: create.asyncThunk(
-      async ({ userId }: { userId: string }) => {
-        const response = await getUserProfile(userId)
+    logoutAsync: create.asyncThunk(
+      async () => {
+        const response = await userLogout()
         return response
       },
       {
         pending: state => {
           state.status = "PENDING"
         },
+        fulfilled: state => {
+          state.user = auth_initial_state.user
 
-        fulfilled: (state, action) => {
           state.status = "FULFILLED"
-
-          const user = action.payload
-          console.log("user")
-          /* if (user) {
-            state.user = user
-          }
-
-          if (action.payload.error) {
-            state.error = action.payload.error.message
-          } */
         },
-
+        rejected: state => {
+          state.status = "REJECTED"
+        },
+      },
+    ),
+    sendPasswordResetEmailAsync: create.asyncThunk(
+      async (email: string) => {
+        const response = await sendPasswordResetEmail(email)
+        return response
+      },
+      {
+        pending: state => {
+          state.status = "PENDING"
+        },
+        fulfilled: state => {
+          state.status = "FULFILLED"
+        },
         rejected: state => {
           state.status = "REJECTED"
         },
@@ -119,6 +123,7 @@ export const authSlice = createAppSlice({
 })
 
 export const {
+  setResetUser,
   setAuthError,
   setAuthStatus,
   setLogin,
@@ -126,7 +131,8 @@ export const {
   setResetErrorAuth,
   userRegisterAsync,
   userLoginAsync,
-  getUserProfileAsync,
+  logoutAsync,
+  sendPasswordResetEmailAsync,
 } = authSlice.actions
 
 export const selectAuth = (state: RootState) => state.auth

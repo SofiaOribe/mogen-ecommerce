@@ -10,7 +10,7 @@ import EmptyContent from "./content/EmptyContent"
 const CartShop = () => {
   const cart = useAppSelector(selectCart)
   const dispatch = useAppDispatch()
-  const isEmpty = false
+  const isEmpty = cart.items.length === 0
 
   return (
     <Drawer
