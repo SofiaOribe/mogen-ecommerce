@@ -2,7 +2,7 @@
 /* import ShopCard from "@/components/cards/ShopCard" */
 const Wishlist = () => {
   /*   const temporary = data as {
-    _id: string
+    id: string
     name: string
     image: string
     price: string
@@ -31,7 +31,7 @@ const Wishlist = () => {
               !isEndRowDesktop && !(isLastItem && !singleLastRowDesktop) ? true : isLastItem && singleLastRowDesktop
             return (
               <div
-                key={item._id}
+                key={item.id}
                 className={`
                 ${showBorderMobile ? "border-r border-black" : ""}
                 ${showBorderDesktop ? "sm:border-r sm:border-black" : "sm:border-r-0"}
@@ -41,7 +41,7 @@ const Wishlist = () => {
                   title={item.name}
                   image={item.image}
                   price={item.price}
-                  link={`/shop/product/${item._id}`}
+                  link={`/shop/product/${item.id}`}
                   onAddToCart={() => {}}
                   onSave={() => {}}
                   wishlist

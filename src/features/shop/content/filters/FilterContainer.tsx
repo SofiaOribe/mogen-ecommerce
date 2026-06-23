@@ -3,19 +3,19 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { selectShop, setSortBy } from "../../slice"
 import { Link, useParams } from "react-router-dom"
-import { capitalizeFirstLetter, formatString } from "@/features/common/functions"
+import { formatString } from "@/features/common/functions"
 
 const filterByOr = [
   {
-    _id: "default",
+    id: "default",
     name: "Default",
   },
   {
-    _id: "lowest_price",
+    id: "lowest_price",
     name: "Lowest price",
   },
   {
-    _id: "higher_price",
+    id: "higher_price",
     name: "Higher price",
   },
 ]
@@ -81,14 +81,14 @@ const FilterContainer = () => {
         <Select value={sortBy} onValueChange={value => dispatch(setSortBy(value))}>
           <SelectTrigger>
             <SelectValue placeholder="Sort by">
-              <span>{capitalizeFirstLetter(sortBy.replace(/_/g, " "))}</span>
+              <span className="capitalize-first">{sortBy.replace(/_/g, " ")}</span>
             </SelectValue>
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
               {filterByOr.map(filter => {
                 return (
-                  <SelectItem key={filter._id} value={filter._id}>
+                  <SelectItem key={filter.id} value={filter.id}>
                     {filter.name}
                   </SelectItem>
                 )

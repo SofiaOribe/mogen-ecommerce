@@ -1,7 +1,7 @@
 import { TStatus } from "../common/types"
 
 export type TProduct = {
-  _id: string
+  id: string
   name: string
   images: string[]
   price: number
@@ -28,7 +28,7 @@ export const shop_initial_state: TShop = {
   products: [],
   sortBy: "",
   article: {
-    _id: "",
+    id: "",
     name: "",
     images: [],
     price: 0,

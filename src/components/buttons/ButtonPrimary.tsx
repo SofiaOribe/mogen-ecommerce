@@ -75,9 +75,19 @@ type TButtonPrimaryProps = {
   text?: string
   icon?: LucideIcon
   onClick?: () => void
+  type?: "button" | "submit" | "reset"
 }
 
-const ButtonPrimary = ({ variant = "primary", classes, style, disabled, text, icon, onClick }: TButtonPrimaryProps) => {
+const ButtonPrimary = ({
+  variant = "primary",
+  classes,
+  style,
+  disabled,
+  text,
+  icon,
+  onClick,
+  type = "button",
+}: TButtonPrimaryProps) => {
   const currentVariant = variantSquare[variant]
 
   return (
@@ -92,6 +102,7 @@ const ButtonPrimary = ({ variant = "primary", classes, style, disabled, text, ic
         e.stopPropagation()
         onClick?.()
       }}
+      type={type}
     >
       {icon &&
         React.createElement(icon, {

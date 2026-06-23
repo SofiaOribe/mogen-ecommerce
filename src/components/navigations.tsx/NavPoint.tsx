@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom"
 
 type TNavPointProps = {
   items: {
-    _id: string
+    id: string
     name: string
     link: string
   }[]
@@ -15,9 +15,9 @@ const NavPoint = ({ items }: TNavPointProps) => {
   return (
     <div className="flex flex-row w-full items-center">
       {items.map(item => {
-        const isActive = location.pathname.includes(item._id)
+        const isActive = location.pathname.includes(item.id)
         return (
-          <Link to={`${item.link}`} key={item._id} className="w-full flex flex-col gap-2.5 justify-center items-center">
+          <Link to={`${item.link}`} key={item.id} className="w-full flex flex-col gap-2.5 justify-center items-center">
             <p
               className={`
           font-x0875-500-black
@@ -28,7 +28,7 @@ const NavPoint = ({ items }: TNavPointProps) => {
               <span className="sm:hidden">{item.name.split(" ")[0]}</span>
               <span className="hidden sm:inline">{item.name}</span>
             </p>
-            {location.pathname.includes(item._id) && (
+            {location.pathname.includes(item.id) && (
               <Dot
                 className={`
           w-8 h-8

@@ -1,12 +1,14 @@
 import { useAppDispatch, useAppSelector } from "@/app/hooks"
 import { TInputData, validEmailRegex, validNameRegex, validPasswordRegex } from "../common/types"
-import { selectAuth, setLogin, setRegister } from "./slice"
-import { useLocation } from "react-router-dom"
+import { logoutAsync, selectAuth, setLogin, setRegister, setResetUser } from "./slice"
+import { useLocation, useNavigate } from "react-router-dom"
+import { setCartFromServer } from "../cart/slice"
 
 export const useAuthHook = () => {
   const dispatch = useAppDispatch()
   const auth = useAppSelector(selectAuth)
   const location = useLocation()
+  const navigate = useNavigate()
 
   const handlePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value: string = e.target.value
@@ -49,7 +51,6 @@ export const useAuthHook = () => {
       valid: value.length >= 3 && !!validEmailRegex.exec(value),
     }
     if (location.pathname.includes("/login")) {
-      console.log(data, "data login")
       dispatch(
         setLogin({
           ...auth.login,
@@ -58,7 +59,6 @@ export const useAuthHook = () => {
       )
     }
     if (location.pathname.includes("/register")) {
-      console.log(data, "data register")
       dispatch(
         setRegister({
           ...auth.register,
@@ -85,9 +85,20 @@ export const useAuthHook = () => {
     dispatch(setRegister(registerInfo))
   }
 
+  const handleLogout = async () => {
+    dispatch(logoutAsync()).then(() => {
+      dispatch(setResetUser())
+      localStorage.removeItem("cart")
+      dispatch(setCartFromServer([]))
+    })
+
+    navigate("/")
+  }
+
   return {
     handlePassword,
     handleEmailChange,
     handleChangeData,
+    handleLogout,
   }
 }

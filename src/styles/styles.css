@@ -23544,6 +23544,10 @@
   border-color: var(--coral) !important;
 }
 
+.border-color-error {
+  border-color: var(--error) !important;
+}
+
 /*
   # Class generated: .bg-{color}
   * <div class="bg-general"></div>
@@ -23676,6 +23680,10 @@
   color: var(--success);
 }
 
+.disabledButton:disabled {
+  background-color: rgba(111, 111, 111, 0.8823529412) !important;
+}
+
 .capitalize-first::first-letter {
   text-transform: uppercase;
 }
@@ -23689,7 +23697,7 @@
 }
 
 .input-error-placeholder::placeholder {
-  color: var(--color-main-error) !important;
+  color: var(--color-error) !important;
 }
 
 .backgroundBlur {
@@ -23729,12 +23737,6 @@
   display: none; /* Chrome, Safari */
 }
 
-/* [data-vaul-drawer]:not([data-vaul-custom-container="true"])::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-} */
 [data-vaul-drawer]:not([data-vaul-custom-container=true])::after {
   content: none !important;
 }
