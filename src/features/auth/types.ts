@@ -1,3 +1,4 @@
+import { User } from "@supabase/supabase-js"
 import { TInputData, TStatus } from "../common/types"
 
 /*    
@@ -9,8 +10,8 @@ TInputData =
 export type TRegister = {
   email: TInputData
   status: TStatus
-  firstName: TInputData
-  lastName: TInputData
+  first_name: TInputData
+  last_name: TInputData
   password: TInputData
 }
 
@@ -25,11 +26,13 @@ export type TAuth = {
   status: TStatus
   login: TLogin
   register: TRegister
+  user: User | null
 }
 
 export const auth_initial_state: TAuth = {
   error: "",
   status: "FULFILLED",
+  user: null,
   login: {
     email: {
       value: "",
@@ -49,12 +52,12 @@ export const auth_initial_state: TAuth = {
       valid: false,
       firstLoad: true,
     },
-    firstName: {
+    first_name: {
       value: "",
       valid: false,
       firstLoad: true,
     },
-    lastName: {
+    last_name: {
       value: "",
       valid: false,
       firstLoad: true,

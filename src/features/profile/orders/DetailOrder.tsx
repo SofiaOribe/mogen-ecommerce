@@ -23,7 +23,7 @@ const DetailOrder = ({ details }: { details: TOrders }) => {
   return (
     <div className="w-full flex flex-col gap-4 border-b border-color-black pb-4">
       <div className="flex flex-row justify-between items-center">
-        <p className="font-x1-600-brown">#{details._id}</p>
+        <p className="font-x1-600-brown">#{details.id}</p>
         <div className="flex flex-row w-full justify-end gap-4 items-center">
           <p className="font-x1-600-black">${details.total}</p>
           <BadgeCustom text={details.status} variant={variantBadge} />
@@ -36,7 +36,7 @@ const DetailOrder = ({ details }: { details: TOrders }) => {
       </div>
       <div className="w-full grid grid-cols-2 gap-4">
         {details.product.map(article => (
-          <div key={article._id} className="flex flex-row gap-4 bg-light-gray rounded-md px-2.5 py-2 h-[90px]">
+          <div key={article.id} className="flex flex-row gap-4 bg-light-gray rounded-md px-2.5 py-2 h-[90px]">
             <div className="h-full w-[4em] rounded-sm overflow-hidden">
               <img src={article.image} alt="" className="w-full h-full object-cover object-bottom" />
             </div>

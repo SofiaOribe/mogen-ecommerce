@@ -1,20 +1,21 @@
 import NavPoint from "@/components/navigations.tsx/NavPoint"
 import { Navigate, Outlet, useLocation } from "react-router-dom"
+import { useAuth } from "@/providers/AuthProvider"
 
 type TProfileProps = {
-  _id: string
+  id: string
   name: string
   link: string
 }
 
 const navProfile: TProfileProps[] = [
   {
-    _id: "account",
+    id: "account",
     name: "Account",
     link: "./account",
   },
   {
-    _id: "orders",
+    id: "orders",
     name: "Orders",
     link: "./orders",
   },
@@ -22,6 +23,12 @@ const navProfile: TProfileProps[] = [
 
 const Profile = () => {
   const location = useLocation()
+  const { session } = useAuth()
+ 
+  if (!session?.user.id) {
+    return <Navigate to="/auth/login" replace />
+  }
+
   return (
     <>
       {(location.pathname === "/profile" || location.pathname === "/profile/") && <Navigate to="./account" replace />}

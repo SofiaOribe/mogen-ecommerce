@@ -1,16 +1,16 @@
 export const navShop = [
   {
-    _id: "all",
+    id: "all",
     name: "All",
     link: "/shop/categories/all",
   },
   {
-    _id: "best-seller",
+    id: "best-seller",
     name: "Best Sellers",
     link: "/shop/categories/best-seller",
   },
   {
-    _id: "body-line",
+    id: "body-line",
     name: "Body Line",
     link: "/shop/categories/body-line",
     subcategories: [
@@ -29,7 +29,7 @@ export const navShop = [
     ],
   },
   {
-    _id: "facial-line",
+    id: "facial-line",
     name: "Facial Line",
     link: "/shop/categories/facial-line",
     subcategories: [
@@ -52,7 +52,7 @@ export const navShop = [
     ],
   },
   {
-    _id: "hair-line",
+    id: "hair-line",
     name: "Hair Line",
     link: "/shop/categories/hair-line",
     subcategories: [

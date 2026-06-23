@@ -14,17 +14,19 @@ const InputCustom = ({
   classes,
   borderClass,
   onChangeValue,
+  disabled,
 }: {
   placeholder: string
   label?: string
   name?: string
   type: "email" | "password" | "text"
   password?: boolean
-  error?: string
+  error?: string | null
   borderClass?: string
   classes?: string
   value?: string
   onChangeValue?: (e: React.ChangeEvent<HTMLInputElement>) => void
+  disabled?: boolean
 }) => {
   const [isVisible, setIsVisible] = useState(false)
 
@@ -49,8 +51,9 @@ const InputCustom = ({
           name={name}
           type={inputType}
           placeholder={placeholder}
-          className={`${classes ?? ""} ${borderClass ?? ""} ${error ? "color-error placeholder:color-error" : "color-black placeholder:color-error"}`}
+          className={`${classes ?? ""} ${borderClass ?? ""} ${error ? "color-error placeholder:color-error border-color-error" : "color-black"}`}
           onChange={onChangeValue}
+          disabled={disabled}
         />
         {password && (
           <Button
@@ -63,7 +66,7 @@ const InputCustom = ({
             <span className="sr-only">{isVisible ? "Hide password" : "Show password"}</span>
           </Button>
         )}
-        {error && <p className="font-x075-400 color-main-error">{error}</p>}
+        {error && <p className="font-x075-400 color-error pl-1 pt-1">{error}</p>}
       </div>
     </div>
   )

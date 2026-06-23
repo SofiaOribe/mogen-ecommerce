@@ -57,7 +57,7 @@ const CountryDropdownComponent = (
 
   useEffect(() => {
     if (defaultValue) {
-      const initialCountry = options.find(country => country.alpha3 === defaultValue)
+      const initialCountry = options.find(country => country.name === defaultValue)
       if (initialCountry) {
         setSelectedCountry(initialCountry)
       } else {
@@ -72,7 +72,6 @@ const CountryDropdownComponent = (
 
   const handleSelect = useCallback(
     (country: Country) => {
-      console.log("🌍 CountryDropdown value: ", country)
       setSelectedCountry(country)
       onChange?.(country)
       setOpen(false)

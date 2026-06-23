@@ -1,6 +1,12 @@
-import { Outlet } from "react-router-dom"
+import { Navigate, Outlet } from "react-router-dom"
 import bgAuth from "../../assets/images/landing/bgAuth.png"
+import { useAuth } from "@/providers/AuthProvider"
 const Auth = () => {
+  const { session } = useAuth()
+  if (session?.user.id) {
+    return <Navigate to="/profile/account" replace />
+  }
+
   return (
     <div className="w-[100dvw] flex justify-center items-center h-[calc(100dvh_+_8em)] lg:h-dvh relative overflow-hidden">
       <img

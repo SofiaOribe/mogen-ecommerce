@@ -5,8 +5,8 @@ export const getProducts = async () => {
   return { data, error }
 }
 
-export const getProductById = async (_id: string) => {
-  const { data, error } = await supabase.from("products").select("*").eq("_id", _id).single()
+export const getProductById = async (id: string) => {
+  const { data, error } = await supabase.from("products").select("*").eq("id", id).single()
 
   return { data, error }
 }

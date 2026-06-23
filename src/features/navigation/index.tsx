@@ -5,13 +5,28 @@ import NavMobile from "./content/NavMobile"
 import { useEffect, useState } from "react"
 import { useAppDispatch } from "@/app/hooks"
 import { setShowCart } from "../cart/slice"
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
+import { useAuth } from "@/providers/AuthProvider"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { Button } from "@/components/ui/button"
+import { useAuthHook } from "../auth/useAuthHook"
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const dispatch = useAppDispatch()
-  const isUser = false
+  const { session } = useAuth()
+  const isUser = session?.user.id
   const location = useLocation()
+  const navigate = useNavigate()
+  const { handleLogout } = useAuthHook()
 
   useEffect(() => {
     setIsMenuOpen(false)
@@ -59,29 +74,60 @@ const Navigation = () => {
               }}
             />
             {isUser && (
-              <ButtonPrimary
-                variant="lightCream"
-                icon={UserRound}
-                classes={{
-                  paddingClass: "!p-1.5",
-                  borderClass: "rounded-full border border-color-black",
-                  roundedClass: "rounded-full",
-                }}
-              />
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className="rounded-full border border-color-black !p-1.5 bg-light-gray w-fit h-fit cursor-pointer"
+                  >
+                    <UserRound className="w-4 h-4 color-black stroke-[2.25]" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="mr-4">
+                  <DropdownMenuGroup>
+                    <DropdownMenuLabel className="font-x075-500-dark-gray">My Account</DropdownMenuLabel>
+                    <DropdownMenuItem
+                      onClick={() => {
+                        navigate("/profile/account")
+                      }}
+                    >
+                      Profile
+                    </DropdownMenuItem>
+                    <DropdownMenuItem
+                      onClick={() => {
+                        navigate("/profile/orders")
+                      }}
+                    >
+                      Orders
+                    </DropdownMenuItem>
+                  </DropdownMenuGroup>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem
+                    onClick={() => {
+                      handleLogout()
+                    }}
+                  >
+                    Log out
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             )}
-
-            <Link
-              to="/auth/register"
-              className="bg-white rounded-full border border-color-black hidden md:block w-fit- h-fit py-[0.375em] px-4py-[0.375em] px-4 min-w-[5.25em]"
-            >
-              <p className="font-x08125-500 color-black text-center">Sign up</p>
-            </Link>
-            <Link
-              to="/auth/login"
-              className="bg-black rounded-full border border-color-black hidden md:block w-fit- h-fit py-[0.375em] px-4py-[0.375em] px-4 min-w-[5.25em]"
-            >
-              <p className="font-x08125-500 color-white text-center">Log in</p>
-            </Link>
+            {!isUser && (
+              <>
+                <Link
+                  to="/auth/register"
+                  className="bg-white rounded-full border border-color-black hidden md:block w-fit h-fit py-[0.375em] px-4py-[0.375em] px-4 min-w-[5.25em]"
+                >
+                  <p className="font-x08125-500 color-black text-center">Sign up</p>
+                </Link>
+                <Link
+                  to="/auth/login"
+                  className="bg-black rounded-full border border-color-black hidden md:block w-fit h-fit py-[0.375em] px-4py-[0.375em] px-4 min-w-[5.25em]"
+                >
+                  <p className="font-x08125-500 color-white text-center">Log in</p>
+                </Link>
+              </>
+            )}
           </div>
         </div>
         {isMenuOpen && <NavMobile />}

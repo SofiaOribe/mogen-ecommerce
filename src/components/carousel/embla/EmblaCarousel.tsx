@@ -35,13 +35,13 @@ const EmblaCarousel: React.FC<PropType> = props => {
       <div className="embla__viewport border-y border-color-black" ref={emblaRef}>
         <div className="embla__container  divide-x-1 border-color-black divide-black divide ">
           {slides.map(item => (
-            <div className="embla__slide last:border-r last:border-black" key={item._id}>
+            <div className="embla__slide last:border-r last:border-black" key={item.id}>
               <div className="embla__slide__number ">
                 <ShopCard
                   title={item.name}
                   image={item.images[0]}
                   price={item.price}
-                  link={`/shop/product/${item._id}`}
+                  link={`/shop/product/${item.id}`}
                   onClick={() => {}}
                   onSave={() => {}}
                   onAddToCart={() => {}}
