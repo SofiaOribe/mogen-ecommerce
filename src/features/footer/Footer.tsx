@@ -8,10 +8,10 @@ const Footer = () => {
       <h3 className="font-honeypirls-x4-400-black">MÖGEN</h3>
       <div className="sm:absolute flex sm:flex-col gap-4 top-8 right-8">
         <Link to="https://github.com/SofiaOribe">
-          <img src={github} className="w-8 h-8" />
+          <img src={github} alt="GitHub" className="w-8 h-8" />
         </Link>
         <Link to="https://www.linkedin.com/in/sofiaoribe/">
-          <img src={linkedin} className="w-8 h-8" />
+          <img src={linkedin} alt="LinkedIn" className="w-8 h-8" />
         </Link>
       </div>
       <p className="font-x075-300-black text-center">

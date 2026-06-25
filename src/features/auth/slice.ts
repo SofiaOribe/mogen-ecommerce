@@ -3,7 +3,7 @@ import { RootState } from "../../app/store"
 import { createAppSlice } from "../../app/createAppSlice"
 import { auth_initial_state, TLogin, TRegister } from "./types"
 import { TStatus } from "../common/types"
-import { IRegister, sendPasswordResetEmail, userLogin, userLogout, userRegister } from "./api"
+import { IRegister, sendPasswordResetEmail, updatePassword, userLogin, userLogout, userRegister } from "./api"
 
 const initialState = auth_initial_state
 export const authSlice = createAppSlice({
@@ -119,6 +119,24 @@ export const authSlice = createAppSlice({
         },
       },
     ),
+    updatePasswordAsync: create.asyncThunk(
+      async (password: string) => {
+        const response = await updatePassword(password)
+        return response
+      },
+      {
+        pending: state => {
+          state.status = "PENDING"
+        },
+        fulfilled: (state, action) => {
+          state.status = "FULFILLED"
+          console.log(action)
+        },
+        rejected: state => {
+          state.status = "REJECTED"
+        },
+      },
+    ),
   }),
 })
 
@@ -133,6 +151,7 @@ export const {
   userLoginAsync,
   logoutAsync,
   sendPasswordResetEmailAsync,
+  updatePasswordAsync,
 } = authSlice.actions
 
 export const selectAuth = (state: RootState) => state.auth

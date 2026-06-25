@@ -2,7 +2,15 @@ import React from "react"
 import { Button } from "../ui/button"
 import { LucideIcon } from "lucide-react"
 
-export type TVariantSquare = "primary" | "secondary" | "green" | "coral" | "lightCream" | "lightGrey" | "yellow"
+export type TVariantSquare =
+  | "primary"
+  | "secondary"
+  | "green"
+  | "coral"
+  | "lightCream"
+  | "lightGrey"
+  | "yellow"
+  | "ghost"
 
 export const variantSquare = {
   primary: {
@@ -54,6 +62,13 @@ export const variantSquare = {
     iconClassName: "w-4 h-4 color-black",
     borderClass: "border-none",
   },
+  ghost: {
+    backgroundClass: "bg-transparent",
+    colorClass: "color-black",
+    textClass: "font-x0875-500",
+    iconClassName: "w-4 h-4 color-black",
+    borderClass: "border-none shadow-none",
+  },
 }
 
 type TButtonPrimaryProps = {
@@ -98,8 +113,10 @@ const ButtonPrimary = ({
       style={{ minWidth: style?.minWidth ?? "0em" }}
       disabled={disabled}
       onClick={e => {
-        e.preventDefault()
-        e.stopPropagation()
+        if (type !== "submit") {
+          e.preventDefault()
+          e.stopPropagation()
+        }
         onClick?.()
       }}
       type={type}
