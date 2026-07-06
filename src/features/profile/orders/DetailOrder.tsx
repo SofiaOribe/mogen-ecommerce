@@ -38,7 +38,7 @@ const DetailOrder = ({ details }: { details: TOrders }) => {
         {details.product.map(article => (
           <div key={article.id} className="flex flex-row gap-4 bg-light-gray rounded-md px-2.5 py-2 h-[90px]">
             <div className="h-full w-[4em] rounded-sm overflow-hidden">
-              <img src={article.image} alt="" className="w-full h-full object-cover object-bottom" />
+              <img src={article.image} alt={article.name} className="w-full h-full object-cover object-bottom" />
             </div>
             <div className="flex flex-col justify-between ">
               <Link to={""} className="font-x0875-500-black hover:underline">

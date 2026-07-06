@@ -1,5 +1,6 @@
 import { supabase } from "@/lib/supabaseClient"
 
+const redirectUrl = import.meta.env.PROD ? import.meta.env.VITE_APP_URL : import.meta.env.VITE_LOCAL_URL
 export interface IRegister {
   email: string
   password: string
@@ -37,7 +38,15 @@ export const userLogout = async () => {
 
 export const sendPasswordResetEmail = async (email: string) => {
   const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-    redirectTo: "http://localhost:400/reset-password",
+    redirectTo: `${redirectUrl}/auth/reset-password`,
+  })
+
+  return { data, error }
+}
+
+export const updatePassword = async (password: string) => {
+  const { data, error } = await supabase.auth.updateUser({
+    password,
   })
 
   return { data, error }

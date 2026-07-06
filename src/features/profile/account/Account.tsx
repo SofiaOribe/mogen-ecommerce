@@ -13,7 +13,7 @@ const Account = () => {
     <div className="w-full h-full border-t-1 border-color-black flex flex-col gap-4">
       <div className="flex flex-row items-center gap-4 pt-4">
         <Avatar className="w-10 h-10">
-          <AvatarImage src={profile.account.image} alt="" />
+          <AvatarImage src={profile.account.image} alt={`${profile.account.first_name + profile.account.last_name} image account`}/>
           <AvatarFallback>{initials}</AvatarFallback>
         </Avatar>
         <div className="flex flex-col ">

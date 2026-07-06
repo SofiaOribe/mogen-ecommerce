@@ -10,6 +10,7 @@ const InputCustom = ({
   name,
   password = false,
   error,
+  helperText,
   value,
   classes,
   borderClass,
@@ -22,6 +23,7 @@ const InputCustom = ({
   type: "email" | "password" | "text"
   password?: boolean
   error?: string | null
+  helperText?: string | null
   borderClass?: string
   classes?: string
   value?: string
@@ -57,6 +59,7 @@ const InputCustom = ({
         />
         {password && (
           <Button
+            type="button"
             variant="ghost"
             size="icon"
             onClick={() => setIsVisible(prevState => !prevState)}
@@ -67,6 +70,7 @@ const InputCustom = ({
           </Button>
         )}
         {error && <p className="font-x075-400 color-error pl-1 pt-1">{error}</p>}
+        {helperText && !error && <p className="font-x075-400 color-dark-gray pl-1 pt-1">{helperText}</p>}
       </div>
     </div>
   )

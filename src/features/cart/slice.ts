@@ -21,7 +21,7 @@ export const cartSlice = createAppSlice({
     setIncreaseQuantity: create.reducer((state, action: PayloadAction<string>) => {
       const product = state.items.find(item => item.id === action.payload)
 
-      if (product) {
+      if (product && product.quantity < product.stock) {
         product.quantity += 1
       }
     }),
@@ -58,9 +58,9 @@ export const cartSlice = createAppSlice({
           const existing = state.items.find(item => item.id === product.id)
 
           if (existing) {
-            existing.quantity += 1
+            existing.quantity += product.quantity
           } else {
-            state.items.push({ ...product, quantity: 1 })
+            state.items.push({ ...product, quantity: product.quantity })
           }
 
           state.status = "FULFILLED"
