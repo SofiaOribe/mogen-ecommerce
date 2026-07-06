@@ -40,6 +40,14 @@ const ResetPassword = () => {
     checkSession()
   }, [])
 
+  useEffect(() => {
+    const success = sessionStorage.getItem("password_reset_success")
+
+    if (success === "true") {
+      setPasswordSuccess(true)
+    }
+  }, [])
+
   const handlePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
 
@@ -77,18 +85,20 @@ const ResetPassword = () => {
     }
 
     dispatch(updatePasswordAsync(password.value)).then((res: any) => {
-      console.log(res)
-      if (res.payload?.error.message) {
-        toast.error(res.payload?.error.message, {
-          position: "bottom-center",
-          style: StyleToaster.error,
-        })
-      } else {
+      if (res.payload?.data.user) {
         toast.success("The password was successfully changed", {
           position: "bottom-center",
           style: StyleToaster.success,
         })
+
+        sessionStorage.setItem("password_reset_success", "true")
         setPasswordSuccess(true)
+      } else if (res.payload?.error.message) {
+        console.log(res.payload?.error.message)
+        toast.error(res.payload?.error.message, {
+          position: "bottom-center",
+          style: StyleToaster.error,
+        })
       }
     })
   }
@@ -166,6 +176,7 @@ const ResetPassword = () => {
               }}
               text="Log in now"
               onClick={() => {
+                sessionStorage.removeItem("password_reset_success")
                 navigate("/auth/login")
               }}
             />

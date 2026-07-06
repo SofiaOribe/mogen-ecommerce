@@ -36,7 +36,7 @@ const ForgotPassword = () => {
 
   const handleForgotPassword = () => {
     dispatch(sendPasswordResetEmailAsync(email)).then((res: any) => {
-      console.log(res.payload)
+      console.log("res pauload", res.payload)
       if (res.payload?.error?.message) {
         toast.error(capitalizeFirstLetter(res.payload?.error.message), {
           position: "bottom-center",
@@ -44,10 +44,13 @@ const ForgotPassword = () => {
         })
         return
       }
-      toast.success("Check your email for password reset link", {
-        position: "bottom-center",
-        style: StyleToaster.success,
-      })
+      toast.success(
+        "If there is an account associated with this email, you will receive a link to reset your password.",
+        {
+          position: "bottom-center",
+          style: StyleToaster.success,
+        },
+      )
       setEmailSent(true)
       setSecondsLeft(60)
     })
@@ -99,7 +102,7 @@ const ForgotPassword = () => {
               }}
               text={secondsLeft > 0 ? `Resend in ${secondsLeft}s` : "Resend email"}
               onClick={() => {
-                dispatch(sendPasswordResetEmailAsync(email))
+                handleForgotPassword()
               }}
             />
           </div>

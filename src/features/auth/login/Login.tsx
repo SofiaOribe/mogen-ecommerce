@@ -47,7 +47,12 @@ const Login = () => {
           //Redirect
           // Message
           if (dataPayload.error) {
-            if (dataPayload?.error.code === "email_not_confirmed") {
+            if (dataPayload?.error.code === "invalid_credentials") {
+              toast.error("The password is invalid or the email address you are trying to use does not exist, please try again.", {
+                position: "bottom-center",
+                style: StyleToaster.error,
+              })
+            } else if (dataPayload?.error.code === "email_not_confirmed") {
               toast.warning("Info: You must confirm your email address before logging in", {
                 position: "bottom-center",
                 style: StyleToaster.info,

@@ -128,9 +128,8 @@ export const authSlice = createAppSlice({
         pending: state => {
           state.status = "PENDING"
         },
-        fulfilled: (state, action) => {
+        fulfilled: (state) => {
           state.status = "FULFILLED"
-          console.log(action)
         },
         rejected: state => {
           state.status = "REJECTED"
