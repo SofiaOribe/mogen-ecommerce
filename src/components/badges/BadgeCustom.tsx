@@ -40,6 +40,11 @@ export const variantSquare = {
     colorClass: "color-black",
     iconClassName: "w-4 h-4 color-black",
   },
+  ghost: {
+    backgroundClass: "bg-transparent",
+    colorClass: "color-black",
+    iconClassName: "w-4 h-4 color-black",
+  },
 }
 
 const BadgeCustom = ({
