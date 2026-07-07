@@ -3,7 +3,7 @@ import { RootState } from "../../app/store"
 import { createAppSlice } from "../../app/createAppSlice"
 import { TStatus } from "../common/types"
 import { profile_initial_state, TAccount } from "./types"
-import { getUserProfile, updateUserProfile } from "./api"
+import { getOrders, getUserProfile, updateUserProfile } from "./api"
 
 const initialState = profile_initial_state
 export const profileSlice = createAppSlice({
@@ -45,6 +45,32 @@ export const profileSlice = createAppSlice({
         },
       },
     ),
+    getOrdersAsync: create.asyncThunk(
+      async ({ userId }: { userId: string }) => {
+        const response = await getOrders(userId)
+        return response
+      },
+      {
+        pending: state => {
+          state.status = "PENDING"
+        },
+
+        fulfilled: (state, action) => {
+          state.status = "FULFILLED"
+          if (action.payload.data) {
+            state.orders = action.payload.data
+          }
+
+          if (action.payload.error) {
+            state.error = action.payload.error.message
+          }
+        },
+
+        rejected: state => {
+          state.status = "REJECTED"
+        },
+      },
+    ),
     updateUserProfileAsync: create.asyncThunk(
       async ({ userId, form }: { userId: string; form: Partial<TAccount> }) => {
         const response = await updateUserProfile(userId, form)
@@ -71,8 +97,14 @@ export const profileSlice = createAppSlice({
   }),
 })
 
-export const { setProfileError, setProfileStatus, setAccount, getUserProfileAsync, updateUserProfileAsync } =
-  profileSlice.actions
+export const {
+  setProfileError,
+  setProfileStatus,
+  setAccount,
+  getUserProfileAsync,
+  updateUserProfileAsync,
+  getOrdersAsync,
+} = profileSlice.actions
 
 export const selectProfile = (state: RootState) => state.profile
 export default profileSlice.reducer

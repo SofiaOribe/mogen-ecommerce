@@ -36,7 +36,6 @@ const ForgotPassword = () => {
 
   const handleForgotPassword = () => {
     dispatch(sendPasswordResetEmailAsync(email)).then((res: any) => {
-      console.log("res pauload", res.payload)
       if (res.payload?.error?.message) {
         toast.error(capitalizeFirstLetter(res.payload?.error.message), {
           position: "bottom-center",

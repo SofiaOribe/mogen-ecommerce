@@ -18,6 +18,9 @@ export const cartSlice = createAppSlice({
     setCartFromServer: create.reducer((state, action: PayloadAction<TCartItem[]>) => {
       state.items = action.payload
     }),
+    setClearCart: create.reducer((state,) => {
+      state.items = []
+    }),
     setIncreaseQuantity: create.reducer((state, action: PayloadAction<string>) => {
       const product = state.items.find(item => item.id === action.payload)
 
@@ -80,6 +83,7 @@ export const {
   setIncreaseQuantity,
   setDecreaseQuantity,
   addToCartAsync,
+  setClearCart
 } = cartSlice.actions
 
 export const selectCart = (state: RootState) => state.cart

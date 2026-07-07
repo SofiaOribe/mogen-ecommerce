@@ -77,9 +77,8 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("ag")
     if (!form.name.valid && !form.subject.valid && !form.email.valid && !form.message.valid) {
-      console.log("ret")
+   
       return
     }
     /*     const { error } = await createContactMessage({

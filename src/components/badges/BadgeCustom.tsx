@@ -69,7 +69,7 @@ const BadgeCustom = ({
   return (
     <Badge
       variant="outline"
-      className={`${currentVariant.backgroundClass} ${currentVariant.colorClass} ${classes?.borderColor ?? "border-none"} w-fit h-6 font-x09-400 rounded-sm`}
+      className={`${currentVariant.backgroundClass} ${currentVariant.colorClass} ${classes?.borderColor ?? "border-none"} w-fit h-6 font-x09-400 rounded-sm capitalize`}
     >
       {iconPosition === "right" &&
         icon &&

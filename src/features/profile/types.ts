@@ -32,11 +32,12 @@ export type TOrders = {
   date: string
   total: string
   address: string
-  zipCode: string
+  zip_code: string
   city: string
   status: string
   country: string
-  product: {
+  order_number: string
+  order_items: {
     id: string
     name: string
     image: string

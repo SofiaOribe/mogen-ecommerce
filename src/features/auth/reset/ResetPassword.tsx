@@ -94,7 +94,6 @@ const ResetPassword = () => {
         sessionStorage.setItem("password_reset_success", "true")
         setPasswordSuccess(true)
       } else if (res.payload?.error.message) {
-        console.log(res.payload?.error.message)
         toast.error(res.payload?.error.message, {
           position: "bottom-center",
           style: StyleToaster.error,
