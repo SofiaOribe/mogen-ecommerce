@@ -24,7 +24,7 @@ const ProductImage = () => {
       />
 
       <div className="w-full 2xl:max-w-[15em] overflow-hidden">
-        <div className="flex flex-row 2xl:flex-col overflow-auto h-full scrollbar-none ">
+        <div className="flex flex-row 2xl:flex-col overflow-auto h-full scrollbar-none  overflow-y-hidden 2xl:overflow-y-auto">
           {article.images.map((image, index) => (
             <Button
               key={index + 1}

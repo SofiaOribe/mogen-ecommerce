@@ -12,3 +12,32 @@ export const updateUserProfile = async (userId: string, form: Partial<TAccount>)
 
   return { data, error }
 }
+
+export const getOrders = async (userId: string) => {
+  const { data, error } = await supabase
+    .from("orders")
+    .select(
+      `
+      id,
+      date,
+      total,
+      address,
+      zip_code,
+      city,
+      country,
+      status,
+      order_number,
+      order_items (
+        id,
+        name,
+        image,
+        price,
+        quantity
+      )
+    `,
+    )
+    .eq("user_id", userId)
+    .order("created_at", { ascending: false })
+
+  return { data, error }
+}

@@ -12,10 +12,12 @@ const Register = () => {
   const auth = useAppSelector(selectAuth)
   const dispatch = useAppDispatch()
   const { handlePassword, handleEmailChange, handleChangeData } = useAuthHook()
+
   const user = auth.register
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+
     if (user.first_name.valid && user.last_name.valid && user.email.valid && user.password.valid) {
       dispatch(
         userRegisterAsync({
@@ -111,7 +113,7 @@ const Register = () => {
               type="password"
               error={
                 !user.password.firstLoad && !user.password.valid
-                  ? "Password must be at least 8 characters and include uppercase and lowercase letters, numbers, and a special character. Please try again.”"
+                  ? "Password must be at least 8 characters and include uppercase and lowercase letters, numbers, and a special character. Please try again."
                   : ""
               }
               password={true}
@@ -127,7 +129,7 @@ const Register = () => {
         <div className="w-full flex justify-center ">
           <Button
             type="submit"
-            className="h-[3em] w-full max-w-[320px] border-none shadow-md rounded-full bg-black font-x0875-500-white "
+            className="h-[3em] w-full max-w-[320px] border-none shadow-md rounded-full bg-black font-x0875-500-white cursor-pointer"
           >
             Sign Up
           </Button>

@@ -195,17 +195,17 @@ const PersonalInformation = () => {
         <p className="font-x09-500-black">Contact</p>
       </div>
       <div className="grid grid-cols-2 gap-4 ">
-        <InputCustom
+        {/*   <InputCustom
           value={profile.account.email}
           label="Email"
           placeholder="email@example.com"
           type="email"
           disabled
-          /*    onChangeValue={res => {
+             onChangeValue={res => {
               const value = res.target.value
               handleChange("email", value)
-            }} */
-        />
+            }}
+        /> */}
 
         <PhoneInputComponent
           value={profile.account.phone_number}

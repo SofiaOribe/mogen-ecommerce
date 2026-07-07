@@ -17,7 +17,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <>
         <CartShop />
         <Navigation />
-        <div className="flex flex-col min-h-[100dvh] justify-between">
+        <div className="flex flex-col min-h-[100dvh] justify-between overflow-x-hidden">
           <div className="h-full w-full">{children}</div>
           <Footer />
         </div>

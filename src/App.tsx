@@ -18,6 +18,7 @@ import { getProductsAsync } from "./features/shop/slice"
 import ResetPassword from "./features/auth/reset/ResetPassword"
 import ForgotPassword from "./features/auth/reset/ForgotPassword"
 import { selectCart } from "./features/cart/slice"
+import Success from "./features/cart/content/Success"
 
 
 function App() {
@@ -54,6 +55,8 @@ function App() {
           <Route path="categories/:categoryId/:subcategoryId?" element={<Categories />} />
           <Route path="product/:productId" element={<Product />} />
         </Route>
+
+        <Route path="success" element={<Success />}/>
 
         <Route path="profile" element={<Profile />}>
           <Route path="account" element={<Account />} />

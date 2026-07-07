@@ -1,90 +1,40 @@
+import { useAppDispatch, useAppSelector } from "@/app/hooks"
+import { useEffect } from "react"
+import { selectProfile, getOrdersAsync } from "../slice"
 import DetailOrder from "./DetailOrder"
-
-const order = [
-  {
-    id: "156874A",
-    date: "2023-10-01T12:00:00Z",
-    total: "586",
-    address: "Park Street 123",
-    zipCode: "12345",
-    city: "New York",
-    status: "Paid",
-    country: "USA",
-    product: [
-      {
-        id: "1",
-        name: "Vital Power Serum Matcha",
-        image:
-          "https://acdn-us.mitiendanube.com/stores/817/155/products/veganis_catalogo_200225_43439-54631c3ec0e1a18fb817422425269236-1024-1024.webp",
-        price: "14.149",
-        quantity: 2,
-      },
-      {
-        id: "2",
-        name: "Vital Power Serum Matcha",
-        image:
-          "https://acdn-us.mitiendanube.com/stores/817/155/products/veganis_catalogo_200225_43439-54631c3ec0e1a18fb817422425269236-1024-1024.webp",
-        price: "14.149",
-        quantity: 2,
-      },
-      {
-        id: "3",
-        name: "Vital Power Serum Matcha",
-        image:
-          "https://acdn-us.mitiendanube.com/stores/817/155/products/veganis_catalogo_200225_43439-54631c3ec0e1a18fb817422425269236-1024-1024.webp",
-        price: "14.149",
-        quantity: 2,
-      },
-    ],
-  },
-  {
-    id: "156864A",
-    date: "2023-10-01T12:00:00Z",
-    total: "586",
-    address: "Park Street 123",
-    zipCode: "12345",
-    city: "New York",
-    status: "Declined",
-    country: "USA",
-    product: [
-      {
-        id: "1",
-        name: "Vital Power Serum Matcha",
-        image:
-          "https://acdn-us.mitiendanube.com/stores/817/155/products/veganis_catalogo_200225_43439-54631c3ec0e1a18fb817422425269236-1024-1024.webp",
-        price: "14.149",
-        quantity: 2,
-      },
-    ],
-  },
-  {
-    id: "158834A",
-    date: "2023-10-01T12:00:00Z",
-    total: "586",
-    address: "Park Street 123",
-    zipCode: "12345",
-    city: "New York",
-    status: "Pending",
-    country: "USA",
-    product: [
-      {
-        id: "1",
-        name: "Vital Power Serum Matcha",
-        image:
-          "https://acdn-us.mitiendanube.com/stores/817/155/products/veganis_catalogo_200225_43439-54631c3ec0e1a18fb817422425269236-1024-1024.webp",
-        price: "14.149",
-        quantity: 2,
-      },
-    ],
-  },
-]
+import { Link } from "react-router-dom"
+import { MoveUpRight } from "lucide-react"
 
 const Orders = () => {
+  const dispatch = useAppDispatch()
+  const profile = useAppSelector(selectProfile)
+  const orders = profile.orders
+
+  useEffect(() => {
+    if (profile.account.id) {
+      dispatch(getOrdersAsync({ userId: profile.account.id }))
+    }
+  }, [profile.account.id])
+
   return (
     <div className="w-full h-full border-t-1 border-color-black flex flex-col gap-4 pt-4">
-      {order.map(order => (
-        <DetailOrder key={order.id} details={order} />
-      ))}
+      {orders.length !== 0 ? (
+        orders.map(order => <DetailOrder key={order.id} details={order} />)
+      ) : (
+        <div className="w-full h-full justify-center items-center flex flex-col gap-9">
+          <div className="flex flex-col items-center gap-4">
+            <p className="font-x125-400-black">You haven't made any purchases so far.</p>
+          </div>
+
+          <Link
+            to="/shop"
+            className="font-x0875-600-black bg-black border-none rounded-full px-4 py-4 flex justify-center items-center gap-2 shadow-sm color-white"
+          >
+            Go to the store
+            <MoveUpRight className="w-4 h-4 stroke-2" />
+          </Link>
+        </div>
+      )}
     </div>
   )
 }

@@ -6,6 +6,7 @@ import useEmblaCarousel from "embla-carousel-react"
 import { NextButton, PrevButton, usePrevNextButtons } from "./EmblaButtons"
 import ShopCard from "@/components/cards/ShopCard"
 import { TProduct } from "@/features/shop/types"
+import useAddItemHook from "@/features/shop/useAddItemHook"
 
 type PropType = {
   slides: TProduct[]
@@ -15,6 +16,7 @@ type PropType = {
 const EmblaCarousel: React.FC<PropType> = props => {
   const { slides, options } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
+  const { handleAddToCart } = useAddItemHook()
 
   const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
     const autoplay = emblaApi?.plugins()?.autoplay
@@ -44,7 +46,9 @@ const EmblaCarousel: React.FC<PropType> = props => {
                   link={`/shop/product/${item.id}`}
                   onClick={() => {}}
                   onSave={() => {}}
-                  onAddToCart={() => {}}
+                  onAddToCart={() => {
+                    handleAddToCart(item)
+                  }}
                 />
               </div>
             </div>

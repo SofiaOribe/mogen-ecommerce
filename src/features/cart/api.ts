@@ -36,3 +36,75 @@ export const removeCartItem = async (userId: string, productId: string) => {
 
   return { data, error }
 }
+
+export const clearCart = async (userId: string) => {
+  const { data, error } = await supabase.from("cart_items").delete().eq("user_id", userId)
+
+  return { data, error }
+}
+
+export const createOrder = async (
+  userId: string,
+  items: TCartItem[],
+  total: number,
+  address: string,
+  zipCode: string,
+  city: string,
+  country: string,
+) => {
+  const { data: order, error } = await supabase
+    .from("orders")
+    .insert({
+      user_id: userId,
+      total,
+      address,
+      zip_code: zipCode,
+      city,
+      country,
+      status: "paid",
+    })
+    .select()
+    .single()
+
+  if (error) {
+    return {
+      data: null,
+      error,
+    }
+  }
+
+  const orderItems = items.map(item => ({
+    order_id: order.id,
+    product_id: item.id,
+    name: item.name,
+    image: item.image,
+    price: item.price,
+    quantity: item.quantity,
+  }))
+  const { data, error: itemError } = await supabase.from("order_items").insert(orderItems).select()
+
+  if (itemError) {
+    return {
+      data: null,
+      error: itemError,
+    }
+  }
+
+  return {
+    data: {
+      order,
+      items: data,
+    },
+    error: null,
+  }
+}
+
+export const createCheckout = async (items: TCartItem[]) => {
+  const { data, error } = await supabase.functions.invoke("create-checkout", {
+    body: {
+      items,
+    },
+  })
+
+  return { data, error }
+}

@@ -1,14 +1,20 @@
-import { useAppSelector } from "@/app/hooks"
+import { useAppDispatch, useAppSelector } from "@/app/hooks"
 import ButtonCounter from "@/components/buttons/ButtonCounter"
 import ButtonPrimary from "@/components/buttons/ButtonPrimary"
 import { CircleQuestionMark } from "lucide-react"
 import { useState } from "react"
 import { selectShop } from "../slice"
+import { useAuth } from "@/providers/AuthProvider"
+import { StyleToaster } from "@/components/ui/sonner"
+import { addToCartAsync } from "@/features/cart/slice"
+import { toast } from "sonner"
 
 const ProductDetails = () => {
   const { article } = useAppSelector(selectShop)
-  const [valueQuantity, setValueQuantity] = useState(0)
+  const dispatch = useAppDispatch()
+  const [valueQuantity, setValueQuantity] = useState(1)
   const [messageQuantity, setMessageQuantity] = useState("")
+  const { session } = useAuth()
 
   const handleIncrease = () => {
     if (valueQuantity < article.stock) {
@@ -19,8 +25,8 @@ const ProductDetails = () => {
   }
 
   const handleDecrease = () => {
-    if (valueQuantity !== 0) {
-      setValueQuantity(prev => prev + 1)
+    if (valueQuantity > 1) {
+      setValueQuantity(prev => prev - 1)
     }
   }
 
@@ -54,7 +60,7 @@ const ProductDetails = () => {
               value={valueQuantity}
               onIncrease={handleIncrease}
               onDecrease={handleDecrease}
-              disabledDecrease={valueQuantity === 0}
+              disabledDecrease={valueQuantity === 1}
               disabledIncrease={!!messageQuantity}
             />
           </div>
@@ -66,7 +72,35 @@ const ProductDetails = () => {
               textClass: "font-x1-500-black",
               borderClass: "border-none shadow-sm",
             }}
-            onClick={() => {}}
+            onClick={() => {
+              if (article.id)
+                dispatch(
+                  addToCartAsync({
+                    userId: session?.user.id,
+                    product: {
+                      id: article.id,
+                      name: article.name,
+                      image: article.images[0],
+                      price: article.price,
+                      stock: article.stock,
+                      quantity: valueQuantity,
+                    },
+                  }),
+                ).then(res => {
+                  if (res.meta.requestStatus === "fulfilled") {
+                    toast.success(article.name + "has been successfully added", {
+                      position: "bottom-center",
+                      style: StyleToaster.success,
+                      closeButton: true,
+                    })
+                  } else {
+                    toast.warning("Oops, an error has occurred", {
+                      position: "bottom-center",
+                      style: StyleToaster.warning,
+                    })
+                  }
+                })
+            }}
           />
         </div>
       </div>

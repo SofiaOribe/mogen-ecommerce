@@ -1,9 +1,10 @@
-import { Navigate, Outlet } from "react-router-dom"
+import { Navigate, Outlet, useLocation } from "react-router-dom"
 import bgAuth from "../../assets/images/landing/bgAuth.png"
 import { useAuth } from "@/providers/AuthProvider"
 const Auth = () => {
   const { session } = useAuth()
-  if (session?.user.id) {
+  const location = useLocation()
+  if (session?.user.id && !location.pathname.includes("/reset-password")) {
     return <Navigate to="/profile/account" replace />
   }
 

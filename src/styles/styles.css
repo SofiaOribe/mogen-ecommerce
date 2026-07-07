@@ -23681,7 +23681,7 @@
 }
 
 .disabledButton:disabled {
-  background-color: rgba(111, 111, 111, 0.8823529412) !important;
+  background-color: rgba(153, 153, 153, 0.8823529412) !important;
 }
 
 .capitalize-first::first-letter {
