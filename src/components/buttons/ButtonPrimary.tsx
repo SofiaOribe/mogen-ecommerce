@@ -107,7 +107,7 @@ const ButtonPrimary = ({
 
   return (
     <Button
-      className={`cursor-pointer gap-2 flex-row justify-center items-center w-fit h-fit  ${
+      className={`gap-2 flex-row justify-center items-center w-fit h-fit  ${
         classes?.backgroundClass ?? currentVariant.backgroundClass
       } ${classes?.borderClass ?? currentVariant.borderClass} ${classes?.paddingClass ?? "py-[0.375em] px-4"} ${classes?.roundedClass ?? "rounded-lg"} ${classes?.sizeClass ?? ""}`}
       style={{ minWidth: style?.minWidth ?? "0em" }}
