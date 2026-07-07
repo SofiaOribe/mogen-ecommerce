@@ -7,7 +7,7 @@ const Home = () => {
     <div className="flex flex-col gap-8">
       <Landing />
       <BestSellers />
-      <AppPresentation />
+  {/*     <AppPresentation /> */}
     </div>
   )
 }
