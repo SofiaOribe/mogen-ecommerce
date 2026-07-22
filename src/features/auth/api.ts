@@ -28,12 +28,7 @@ export const userLogin = async (email: string, password: string) => {
     email,
     password,
   })
-
-  if (error) {
-    throw error
-  }
-
-  return data
+  return { data, error }
 }
 
 export const userLogout = async () => {
