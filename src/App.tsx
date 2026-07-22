@@ -20,7 +20,6 @@ import ForgotPassword from "./features/auth/reset/ForgotPassword"
 import { selectCart } from "./features/cart/slice"
 import Success from "./features/cart/content/Success"
 
-
 function App() {
   const dispatch = useAppDispatch()
   const { pathname } = useLocation()
@@ -56,7 +55,7 @@ function App() {
           <Route path="product/:productId" element={<Product />} />
         </Route>
 
-        <Route path="success" element={<Success />}/>
+        <Route path="success" element={<Success />} />
 
         <Route path="profile" element={<Profile />}>
           <Route path="account" element={<Account />} />

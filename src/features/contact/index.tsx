@@ -8,6 +8,7 @@ import { createContactMessage } from "./api"
 import { toast } from "sonner"
 import { useState } from "react"
 import { TInputData, validEmailRegex } from "../common/types"
+import { StyleToaster } from "@/components/ui/sonner"
 
 type TContactForm = {
   name: TInputData
@@ -77,32 +78,38 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!form.name.valid && !form.subject.valid && !form.email.valid && !form.message.valid) {
-   
+
+    if (!form.name.valid || !form.subject.valid || !form.email.valid || !form.message.valid) {
       return
     }
-    /*     const { error } = await createContactMessage({
-      name: form.name,
-      email: form.email,
-      subject: form.subject,
-      message: form.message,
+
+    const { error } = await createContactMessage({
+      name: form.name.value,
+      email: form.email.value,
+      subject: form.subject.value,
+      message: form.message.value,
     })
-
     if (error) {
-      toast.error("Error sending message")
+      toast.error("Error sending message", {
+        position: "bottom-center",
+        style: StyleToaster.error,
+        closeButton: true,
+      })
       return
-    } */
+    }
 
-    toast.success("Message sent successfully")
-
+    toast.success("Message sent successfully", {
+      position: "bottom-center",
+      style: StyleToaster.success,
+      closeButton: true,
+    })
     setForm(emptyFormContact)
   }
-
   return (
     <form onSubmit={handleSubmit} className="w-full px-4 flex justify-center pb-[16em] pt-40 h-dvh">
-      <div className="w-full 2xl:max-w-[56em] flex flex-col gap-2 h-full">
+      <div className="w-full 2xl:max-w-[56em] flex flex-col gap-2 h-full ">
         <h2 className="font-x1-500-black border-b border-color-black text-base/10 text-center">Contact</h2>
-        <div className="w-full flex justify-center items-center p-16 h-full gap-16 relative">
+        <div className="w-full flex justify-center flex-col sm:flex-row items-center sm:p-16 h-full gap-16 relative pt-24">
           {/* Blur */}
           <div className="backgroundBlur top-[6em] left-[35%] w-[12em] h-[12em] filter-[blur(80px)]" />
           <div className="backgroundBlur bottom-[12em] left-[0%] w-[20em] h-[20em] filter-[blur(80px)]" />
@@ -141,6 +148,7 @@ const Contact = () => {
               classes={"bg-white"}
             />
             <InputCustom
+              name="email"
               value={form.email.value}
               label="Email"
               placeholder="email@example.com"
