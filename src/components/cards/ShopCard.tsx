@@ -20,7 +20,7 @@ const ShopCard = ({ onSave, onAddToCart, onClick, image, title, price, link, wis
       onClick={onClick}
       className="relative w-full h-full flex flex-col bg-white p-0 overflow-hidden shadow-none rounded-none"
     >
-      {onSave && (
+   {/*    {onSave && (
         <div className="absolute top-2 left-2">
           <ButtonPrimary
             variant={wishlist ? "coral" : "primary"}
@@ -30,12 +30,12 @@ const ShopCard = ({ onSave, onAddToCart, onClick, image, title, price, link, wis
               paddingClass: "!p-1.5",
               borderClass: "border border-color-black",
               roundedClass: "rounded-full",
-              /*     iconClassName: wishlist ? "fill-[#ffc3b7] stroke-[#ffc3b7]" : "", */
+                  iconClassName: wishlist ? "fill-[#ffc3b7] stroke-[#ffc3b7]" : "",
               backgroundClass: wishlist ? "" : "hover:bg-[#ffc3b7]",
             }}
           />
         </div>
-      )}
+      )} */}
       {onAddToCart && (
         <div className="absolute top-2 right-2">
           <ButtonPrimary

@@ -12,8 +12,8 @@ const ArticleCart = ({
 }) => {
   return (
     <div className="p-2 rounded-sm bg-light-gray h-[5em] flex  flex-row gap-3 items-center mb-4">
-      <div className="h-16 w-[5em] rounded-sm overflow-hidden">
-        <img src={article.image} alt="" className="w-full h-full object-cover object-bottom" />
+      <div className="h-16 w-[5em] rounded-sm overflow-hidden bg-white">
+        <img src={article.image} alt="" className="w-full h-full object-contain object-bottom" />
       </div>
       <div className="flex flex-col justify-between h-full w-full">
         <p className="font-x0875-600-black line-clamp-2">{article.name}</p>

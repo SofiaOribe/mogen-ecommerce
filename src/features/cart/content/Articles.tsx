@@ -1,19 +1,59 @@
 import ArticleCart from "@/components/cards/ArticleCart"
 import { useAppDispatch, useAppSelector } from "@/app/hooks"
-import { setIncreaseQuantity, selectCart, setDecreaseQuantity } from "../slice"
+import {
+  setIncreaseQuantity,
+  selectCart,
+  setDecreaseQuantity,
+  updateQuantityAsync,
+  removeCartItemAsync,
+} from "../slice"
+import { TCartItem } from "../types"
+import { useAuth } from "@/providers/AuthProvider"
 
 const Articles = () => {
   const cart = useAppSelector(selectCart)
-
+  const { session } = useAuth()
   const dispatch = useAppDispatch()
 
-  const handleIncrease = (id: string) => {
+  const handleIncrease = (product: TCartItem) => {
+    const newQuantity = product.quantity + 1
 
-    dispatch(setIncreaseQuantity(id))
+    if (session?.user.id) {
+      dispatch(
+        updateQuantityAsync({
+          userId: session.user.id,
+          productId: product.id,
+          quantity: newQuantity,
+        }),
+      )
+    } else {
+      dispatch(setIncreaseQuantity(product.id))
+    }
   }
 
-  const handleDecrease = (id: string) => {
-    dispatch(setDecreaseQuantity(id))
+  const handleDecrease = (product: TCartItem) => {
+    if (product.quantity > 1) {
+      dispatch(setDecreaseQuantity(product.id))
+
+      if (session?.user.id) {
+        dispatch(
+          updateQuantityAsync({
+            userId: session.user.id,
+            productId: product.id,
+            quantity: product.quantity - 1,
+          }),
+        )
+      }
+    } else if (session?.user.id) {
+      dispatch(
+        removeCartItemAsync({
+          userId: session.user.id,
+          productId: product.id,
+        }),
+      )
+    } else {
+      dispatch(setDecreaseQuantity(product.id))
+    }
   }
 
   return (
@@ -24,8 +64,8 @@ const Articles = () => {
             <ArticleCart
               key={product.id}
               article={product}
-              onIncrease={() => handleIncrease(product.id)}
-              onDecrease={() => handleDecrease(product.id)}
+              onIncrease={() => handleIncrease(product)}
+              onDecrease={() => handleDecrease(product)}
             />
           )
         })}

@@ -8,15 +8,33 @@ export const getCart = async (userId: string) => {
 }
 
 export const addToCart = async (userId: string, item: TCartItem) => {
-  const { data, error } = await supabase.from("cart_items").upsert({
-    user_id: userId,
-    product_id: item.id,
-    name: item.name,
-    image: item.image,
-    price: item.price,
-    stock: item.stock,
-    quantity: item.quantity,
-  })
+  const { data: existing, error: selectError } = await supabase
+    .from("cart_items")
+    .select("quantity")
+    .eq("user_id", userId)
+    .eq("product_id", item.id)
+    .single()
+
+  if (selectError && selectError.code !== "PGRST116") {
+    return { data: null, error: selectError }
+  }
+
+  const quantity = existing ? existing.quantity + item.quantity : item.quantity
+
+  const { data, error } = await supabase.from("cart_items").upsert(
+    {
+      user_id: userId,
+      product_id: item.id,
+      name: item.name,
+      image: item.image,
+      price: item.price,
+      stock: item.stock,
+      quantity,
+    },
+    {
+      onConflict: "user_id,product_id",
+    },
+  )
 
   return { data, error }
 }
