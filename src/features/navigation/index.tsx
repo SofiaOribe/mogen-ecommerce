@@ -64,7 +64,7 @@ const Navigation = () => {
                 dispatch(setShowCart(true))
               }}
             />
-            <ButtonPrimary
+         {/*    <ButtonPrimary
               variant="coral"
               icon={Bookmark}
               classes={{
@@ -72,7 +72,7 @@ const Navigation = () => {
                 borderClass: "border border-color-black",
                 roundedClass: "rounded-full",
               }}
-            />
+            /> */}
             {isUser && (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>

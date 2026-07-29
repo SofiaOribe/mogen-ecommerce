@@ -39,10 +39,10 @@ const ProductDetails = () => {
             <p itemProp="price" content="12" className="font-x15-400-black">
               ${article.price}
             </p>
-            <p className="font-x1-400-black">3 interest-free installments ${(article.price / 3).toFixed(2)} each</p>
+         {/*    <p className="font-x1-400-black">3 interest-free installments ${(article.price / 3).toFixed(2)} each</p> */}
           </div>
           <h2 className="font-x0875-400-black text-justify leading-[1.3em]">{article.description}</h2>
-          <div className="items-center flex gap-3">
+         {/*  <div className="items-center flex gap-3">
             <span className="font-x1-500-black">Payment Methods</span>
             <ButtonPrimary
               icon={CircleQuestionMark}
@@ -50,7 +50,7 @@ const ProductDetails = () => {
                 borderClass: "border-none shadow-none",
               }}
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="flex flex-col md:flex-row md:items-end gap-4 md:gap-12 justify-between">

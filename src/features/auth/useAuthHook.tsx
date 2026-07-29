@@ -92,7 +92,7 @@ export const useAuthHook = () => {
       dispatch(setCartFromServer([]))
     })
 
-    navigate("/")
+    navigate("/auth/login")
   }
 
   return {

@@ -2,7 +2,7 @@ import { PayloadAction } from "@reduxjs/toolkit"
 import { RootState } from "../../app/store"
 import { createAppSlice } from "../../app/createAppSlice"
 import { cart_initial_state, TCartItem } from "./types"
-import { addToCart } from "./api"
+import { addToCart, removeCartItem, updateCartItem } from "./api"
 
 const initialState = cart_initial_state
 export const cartSlice = createAppSlice({
@@ -18,7 +18,7 @@ export const cartSlice = createAppSlice({
     setCartFromServer: create.reducer((state, action: PayloadAction<TCartItem[]>) => {
       state.items = action.payload
     }),
-    setClearCart: create.reducer((state,) => {
+    setClearCart: create.reducer(state => {
       state.items = []
     }),
     setIncreaseQuantity: create.reducer((state, action: PayloadAction<string>) => {
@@ -47,7 +47,12 @@ export const cartSlice = createAppSlice({
         if (!userId) {
           return { product, userId: undefined }
         }
-        await addToCart(userId, product)
+
+        const { error } = await addToCart(userId, product)
+
+        if (error) {
+          throw error
+        }
 
         return { product, userId }
       },
@@ -63,13 +68,41 @@ export const cartSlice = createAppSlice({
           if (existing) {
             existing.quantity += product.quantity
           } else {
-            state.items.push({ ...product, quantity: product.quantity })
+            state.items.push(product)
           }
 
           state.status = "FULFILLED"
         },
         rejected: state => {
           state.status = "REJECTED"
+        },
+      },
+    ),
+    updateQuantityAsync: create.asyncThunk(
+      async (args: { userId: string; productId: string; quantity: number }) => {
+        await updateCartItem(args.userId, args.productId, args.quantity)
+
+        return args
+      },
+      {
+        fulfilled: (state, action) => {
+          const item = state.items.find(item => item.id === action.payload.productId)
+
+          if (item) {
+            item.quantity = action.payload.quantity
+          }
+        },
+      },
+    ),
+    removeCartItemAsync: create.asyncThunk(
+      async (args: { userId: string; productId: string }) => {
+        await removeCartItem(args.userId, args.productId)
+
+        return args.productId
+      },
+      {
+        fulfilled: (state, action) => {
+          state.items = state.items.filter(item => item.id !== action.payload)
         },
       },
     ),
@@ -83,7 +116,9 @@ export const {
   setIncreaseQuantity,
   setDecreaseQuantity,
   addToCartAsync,
-  setClearCart
+  setClearCart,
+  updateQuantityAsync,
+  removeCartItemAsync,
 } = cartSlice.actions
 
 export const selectCart = (state: RootState) => state.cart

@@ -1,12 +1,14 @@
 import { supabase } from "@/lib/supabaseClient"
 
-export const createContactMessage = async (payload: {
+type ContactMessage = {
   name: string
   email: string
-  subject?: string
+  subject: string
   message: string
-}) => {
-  const { data, error } = await supabase.from("contact_messages").insert(payload)
+}
+
+export const createContactMessage = async (message: ContactMessage) => {
+  const { data, error } = await supabase.from("contact_messages").insert(message)
 
   return { data, error }
 }
