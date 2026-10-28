@@ -51,7 +51,7 @@ const Success = () => {
   }, [user?.id])
 
   return (
-    <div className="w-[100dvw] flex justify-center items-center h-[calc(100dvh_+_8em)] lg:h-dvh relative overflow-hidden">
+    <div className="w-dvw flex justify-center items-center h-[calc(100dvh+8em)] lg:h-dvh relative overflow-hidden">
       <img
         src={bgAuth}
         alt=""

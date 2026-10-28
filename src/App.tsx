@@ -40,7 +40,7 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/*" element={<></>} />
+        <Route path="/*" element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="contact" element={<Contact />} />
         <Route path="wishlist" element={<Wishlist />} />
