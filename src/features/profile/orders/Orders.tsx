@@ -17,7 +17,7 @@ const Orders = () => {
   }, [profile.account.id])
 
   return (
-    <div className="w-full h-full border-t-1 border-color-black flex flex-col gap-4 pt-4">
+    <div className="w-full h-full border-t border-color-black flex flex-col gap-4 pt-4">
       {orders.length !== 0 ? (
         orders.map(order => <DetailOrder key={order.id} details={order} />)
       ) : (

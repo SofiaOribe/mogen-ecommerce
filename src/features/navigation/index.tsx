@@ -1,5 +1,5 @@
 import ButtonPrimary from "@/components/buttons/ButtonPrimary"
-import { Bookmark, Menu, ShoppingBag, UserRound, X } from "lucide-react"
+import { Menu, ShoppingBag, UserRound, X } from "lucide-react"
 import NavDesktop from "./content/NavDesktop"
 import NavMobile from "./content/NavMobile"
 import { useEffect, useState } from "react"
@@ -64,7 +64,7 @@ const Navigation = () => {
                 dispatch(setShowCart(true))
               }}
             />
-         {/*    <ButtonPrimary
+            {/*    <ButtonPrimary
               variant="coral"
               icon={Bookmark}
               classes={{

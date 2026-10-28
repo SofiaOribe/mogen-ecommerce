@@ -1,4 +1,4 @@
-import { Bookmark, ShoppingBag } from "lucide-react"
+import { ShoppingBag } from "lucide-react"
 import ButtonPrimary from "../buttons/ButtonPrimary"
 import { Link } from "react-router-dom"
 
@@ -13,14 +13,14 @@ type TCardProps = {
   wishlist?: boolean
 }
 
-const ShopCard = ({ onSave, onAddToCart, onClick, image, title, price, link, wishlist }: TCardProps) => {
+const ShopCard = ({ onAddToCart, onClick, image, title, price, link }: TCardProps) => {
   return (
     <Link
       to={link}
       onClick={onClick}
       className="relative w-full h-full flex flex-col bg-white p-0 overflow-hidden shadow-none rounded-none"
     >
-   {/*    {onSave && (
+      {/*    {onSave && (
         <div className="absolute top-2 left-2">
           <ButtonPrimary
             variant={wishlist ? "coral" : "primary"}

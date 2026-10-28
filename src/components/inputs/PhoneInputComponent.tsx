@@ -27,6 +27,7 @@ export default function PhoneInputComponent({ value, onChange }: TPhoneInputComp
       phone: value,
     },
   })
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const FormSchema = z.object({
     phone: z.string().refine(isValidPhoneNumber, { message: "Invalid phone number" }),
   })
@@ -34,7 +35,7 @@ export default function PhoneInputComponent({ value, onChange }: TPhoneInputComp
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast("You submitted the following values:", {
       description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+        <pre className="mt-2 w-85 rounded-md bg-slate-950 p-4">
           <code className="text-white">{JSON.stringify(data, null, 2)}</code>
         </pre>
       ),
