@@ -33,6 +33,21 @@
     }
   }
 }
+@each $size-name, $size-val in $fonts-sizes {
+  @each $weight-name, $weight-val in $font-weights {
+    @each $color-name, $color-val in $text-colors {
+      .font-kapakana-#{$size-name}-#{$weight-name}#{if($color-name != "none", "-#{$color-name}", "")} {
+        font-family: $kapakana-Family;
+        font-size: $size-val;
+        font-weight: $weight-val;
+        @if $color-val != null {
+          color: var(#{$color-val});
+        }
+        font-style: normal;
+      }
+    }
+  }
+}
 
 /*
   # Class generated: .border-color-{color}
