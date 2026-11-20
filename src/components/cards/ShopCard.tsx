@@ -1,4 +1,3 @@
-import { ShoppingBag } from "lucide-react"
 import ButtonPrimary from "../buttons/ButtonPrimary"
 import { Link } from "react-router-dom"
 
@@ -36,28 +35,31 @@ const ShopCard = ({ onAddToCart, onClick, image, title, price, link }: TCardProp
           />
         </div>
       )} */}
+      <div className="h-full w-full overflow-hidden">
+        <img src={image} alt={title} className="object-bottom object-contain w-full h-full " />
+      </div>
+      <div className="px-3 flex flex-col gap-2 justify-center w-full h-12">
+        <p className="font-x0875-500-black text-center  line-clamp-2">{title}</p>
+        {/*   <p className="font-x0875-500-black text-center">${price}</p> */}
+      </div>
       {onAddToCart && (
-        <div className="absolute top-2 right-2">
+        <div className="pb-4 px-2 pt-2 flex w-full justify-center items-center">
           <ButtonPrimary
             variant="green"
-            icon={ShoppingBag}
+            /*   icon={ShoppingBag} */
             onClick={onAddToCart}
             classes={{
               paddingClass: "!p-1.5",
               borderClass: "border border-color-black",
               roundedClass: "rounded-full",
               backgroundClass: "hover:bg-[#c9e7cb]",
+              textClass: "color-black font-x0875-500",
             }}
+            style={{ minWidth: "60%" }}
+            text={`Buy $${price}`}
           />
         </div>
       )}
-      <div className="h-full w-full overflow-hidden">
-        <img src={image} alt={title} className="object-bottom object-contain w-full h-full " />
-      </div>
-      <div className="p-3 flex flex-col gap-2 justify-center w-full h-16.5">
-        <p className="font-x0875-500-black text-center  line-clamp-2">{title}</p>
-        <p className="font-x0875-500-black text-center">${price}</p>
-      </div>
     </Link>
   )
 }
